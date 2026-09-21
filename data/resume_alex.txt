@@ -1,0 +1,16 @@
+Name: Alex Rivera
+
+Skills: Python, Django, PostgreSQL, Redis, Docker, AWS, React
+
+Projects:
+- Order Fulfillment Service: Rebuilt the order-processing microservice at a
+  previous internship, moving it from a monolithic cron job to an event-driven
+  queue using Celery and Redis. Personally redesigned the retry and
+  dead-letter logic. Cut average processing latency from 40 seconds to 3
+  seconds and the service handled 2x normal traffic during peak season without
+  falling over. [Python, Celery, Redis, PostgreSQL]
+- Campus Marketplace App: Built a full-stack marketplace app for campus
+  students to buy and sell used textbooks, from database schema design to a
+  deployed React frontend. Worked solo on the backend API and deployment
+  pipeline. Reached 300+ active users in the first month after launch.
+  [React, Node.js, MongoDB]

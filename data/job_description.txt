@@ -1,0 +1,14 @@
+Title: Software Engineer, Backend
+Seniority: Mid-level (2-4 years)
+
+Responsibilities:
+- Design and build scalable REST APIs used by both internal tools and external customers
+- Own services in production end to end, including on-call rotations
+- Collaborate with product and frontend teams to ship features from design to deployment
+- Improve system performance and reliability under real production load
+
+Must-Have Skills:
+- Python or Java, with strong fundamentals in data structures and algorithms
+- Relational databases (Postgres/MySQL) and query/index optimization
+- Distributed systems fundamentals: caching, message queues, load balancing
+- Git, CI/CD pipelines, and automated testing
