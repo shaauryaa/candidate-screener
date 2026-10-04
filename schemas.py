@@ -61,17 +61,24 @@ class Evidence(str, Enum):
     instead of a plain yes/no, because the value of this whole project is
     that a follow-up can target a *specific* gap instead of just asking
     "can you elaborate?" again.
+
+    The last two aren't evidence gaps - they describe the candidate's latest
+    reply itself, so the interview can move on or repeat instead of probing
+    someone who has already said "I don't know".
     """
     NO_CONCRETE_EXAMPLE = "NO_CONCRETE_EXAMPLE"
     NO_MEASURABLE_OUTCOME = "NO_MEASURABLE_OUTCOME"
     NO_PERSONAL_OWNERSHIP = "NO_PERSONAL_OWNERSHIP"  # answer says "we", never "I"
     UNCLEAR_SCOPE = "UNCLEAR_SCOPE"
     SUFFICIENT = "SUFFICIENT"
+    CANNOT_ANSWER = "CANNOT_ANSWER"    # "I don't know", "no", "can we move on?"
+    REPEAT_REQUEST = "REPEAT_REQUEST"  # "sorry, could you repeat the question?"
 
 
 class JudgeVerdict(BaseModel):
     missing: Evidence
     reasoning: str
+    topic: str = ""  # a phrase copied from the answer that the follow-up should ask about
 
     @property
     def sufficient(self) -> bool:

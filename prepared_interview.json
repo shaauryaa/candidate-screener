@@ -1,0 +1,49 @@
+{
+  "candidate_name": "Shaurya Nigam",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level (2-4 years)",
+  "dimensions": [
+    {
+      "name": "Backend API Design",
+      "description": "Good candidates demonstrate the ability to design and build scalable REST APIs using Python or Java while applying strong knowledge of data structures and algorithms.",
+      "jd_evidence": "Design and build scalable REST APIs; Python or Java; Data structures and algorithms"
+    },
+    {
+      "name": "Production Ownership & Reliability",
+      "description": "Good candidates show a strong track record of owning services end-to-end, actively participating in on-call rotations, and systematically improving system performance and reliability.",
+      "jd_evidence": "Own services in production end to end; Participate in on-call rotations; Improve system performance and reliability"
+    },
+    {
+      "name": "Database & Distributed Systems",
+      "description": "Good candidates exhibit deep proficiency in working with relational databases like Postgres or MySQL and designing resilient distributed systems.",
+      "jd_evidence": "Relational databases; Postgres/MySQL; Distributed systems"
+    },
+    {
+      "name": "Engineering Workflow & Collaboration",
+      "description": "Good candidates effectively collaborate with cross-functional product and frontend teams while utilizing Git, CI/CD pipelines, and automated testing best practices.",
+      "jd_evidence": "Collaborate with product and frontend teams; Git; CI/CD; Automated testing"
+    }
+  ],
+  "questions": [
+    {
+      "dimension": "Backend API Design",
+      "text": "For the NABHA Telemedicine Platform, how did you design the backend REST APIs to handle patient data securely?",
+      "grounded_project": "NABHA Telemedicine Platform"
+    },
+    {
+      "dimension": "Production Ownership & Reliability",
+      "text": "How did you handle on-call rotations and reliability for CivicFix?",
+      "grounded_project": "CivicFix — Civic Issue Reporting and Tracking Platform"
+    },
+    {
+      "dimension": "Database & Distributed Systems",
+      "text": "How did you store and manage the large volume of race telemetry data when building your Formula One Race Strategy Optimizer?",
+      "grounded_project": "Formula One Race Strategy Optimizer"
+    },
+    {
+      "dimension": "Engineering Workflow & Collaboration",
+      "text": "How did your team handle CI/CD pipelines and automated testing while building the NABHA Telemedicine Platform?",
+      "grounded_project": "NABHA Telemedicine Platform"
+    }
+  ]
+}

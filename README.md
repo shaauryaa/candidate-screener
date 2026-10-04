@@ -31,6 +31,26 @@ python main.py --mock
 The scorecard prints to the terminal and is also written to `report.html`
 (`--out` to change the path) as a single self-contained file.
 
+## Voice demo
+
+`agent.py` puts a voice on the same interview using LiveKit Agents: Silero VAD
+and LiveKit's multilingual turn detector decide when the candidate has
+finished, Deepgram (nova-3) transcribes, Cartesia speaks. There is no LLM on
+the voice session - the agent only ever says a prepared question or a
+template follow-up chosen by the judge. Needs the `LIVEKIT_*`, `DEEPGRAM_API_KEY`
+and `CARTESIA_API_KEY` values in `.env` as well as `GEMINI_API_KEY`.
+
+```bash
+python prep.py                  # parse JD + resume, write prepared_interview.json
+python agent.py download-files  # once: VAD + turn detector model files
+python agent.py console         # talk to it with your mic and speakers
+python agent.py dev             # or join via a LiveKit room (LiveKit Cloud)
+```
+
+Every line is printed with a timestamp, and each call is saved to
+`transcripts/<date>_<time>_<candidate>.json` with both sides' messages
+labelled, the judge verdict on each answer, and the per-question turns.
+
 ## Why follow-ups are capped at `MAX_FOLLOWUPS = 2`
 
 Two probes are enough to tell a genuinely thin answer from one that just

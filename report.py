@@ -37,11 +37,13 @@ def write_html_report(
     jd_title: str,
     scores: list[DimensionScore],
     transcript: list[TranscriptTurn],
-    p50_latency_ms: float,
+    p50_judge_ms: float | None,
     mock: bool,
 ) -> None:
     turns_by_dim = {t.dimension: t for t in transcript}
     avg = sum(s.score for s in scores) / len(scores) if scores else 0
+    judge_note = (f"{p50_judge_ms:.0f} ms per judged answer"
+                  if p50_judge_ms is not None else "not measured yet")
 
     cards = []
     for s in scores:
@@ -91,7 +93,7 @@ def write_html_report(
 <footer>
   Every score above is tied to a verbatim quote from the transcript, checked
   by exact substring match against what the candidate actually typed - not
-  trusted from the model's own claim. p50 turn latency: {p50_latency_ms:.0f} ms.
+  trusted from the model's own claim. p50 judge time: {judge_note}.
 </footer>
 </body>
 </html>"""

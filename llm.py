@@ -1,23 +1,29 @@
 """
 Everything that talks to Gemini lives behind one function: call_gemini().
 
-Two models are used on purpose:
-- MODEL_MAIN   (gemini-3.5-flash-lite) for question generation and scoring,
-                                        which happen once per dimension.
-- MODEL_JUDGE  (gemini-3.1-flash-lite) for the judge, which runs *inside*
-                                        the follow-up loop (up to 3 times per
-                                        question) and needs to be fast.
+Two names are kept so the two jobs can be pointed at different models:
+- MODEL_MAIN   for question generation and scoring, which happen once per
+               dimension.
+- MODEL_JUDGE  for the judge, which runs *inside* the follow-up loop (at
+               most twice per question) while the candidate waits, so it
+               needs to be fast.
 
-Both are pinned, separate lite-tier models rather than gemini-2.5-flash /
+Both currently point at gemini-3.5-flash-lite. The judge used to run on
+gemini-3.1-flash-lite to give it its own free-tier quota pool, but on voice
+calls it took 5-19 s per answer (and returned 503 "overloaded"), against
+about 1 s for gemini-3.5-flash-lite on the same test prompt - and that
+silence made candidates talk over the agent. The cost of sharing one model
+is one shared quota pool; call_gemini() backs off and retries on a 429.
+
+Both are pinned lite-tier models rather than gemini-2.5-flash /
 gemini-2.5-flash-lite from the original plan, or the "-latest" aliases:
 - gemini-2.5-flash and gemini-2.5-flash-lite are both 404 for this key
   ("no longer available to new users") - confirmed live.
 - The "-latest" alias for the full (non-lite) flash tier silently resolved
   to gemini-3.8-flash, a preview-ish model whose free tier is capped at 20
   requests/DAY - confirmed live, and exhausted mid-testing.
-- Pinning two separate lite-tier models gives each its own quota pool
-  (confirmed live: 8+ rapid calls with no 429s) and avoids a model swap
-  happening silently under an alias the night before the demo.
+- Pinning avoids a model swap happening silently under an alias the night
+  before the demo.
 
 MOCK controls whether call_gemini is even reachable. main.py flips it based
 on --mock before anything else runs; every module that needs a "did the demo
@@ -33,7 +39,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MODEL_MAIN = "gemini-3.5-flash-lite"
-MODEL_JUDGE = "gemini-3.1-flash-lite"
+MODEL_JUDGE = "gemini-3.5-flash-lite"
 
 MOCK = False  # flipped by main.py when --mock is passed
 

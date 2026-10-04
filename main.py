@@ -1,32 +1,21 @@
 """
-Entry point. Wires the pieces together and runs the interview.
+Entry point. Prepares the interview, runs it in the terminal, then scores it.
 
-The core loop (judge -> maybe follow-up -> record) is kept inline here on
-purpose, exactly as designed, instead of being hidden inside a helper -
-it's the part of this project you have to be able to explain line by line.
+The dialogue itself is the Interview state machine in interview_session.py
+(judge -> maybe follow-up -> record). This file only feeds it answers,
+prints what it says back, and handles scoring and the report.
 """
 
 import argparse
 import statistics
-import time
 
 import llm
-import parsing
+import prep
 from candidate import HumanCandidate
-from interview import (
-    EXCLUDED_ATTRIBUTES,
-    generate_dimensions,
-    generate_followup,
-    generate_question,
-    judge,
-    score_dimension,
-)
+from interview import EXCLUDED_ATTRIBUTES, score_dimension
+from interview_session import MAX_FOLLOWUPS
+from schemas import Evidence
 from report import write_html_report
-from schemas import TranscriptTurn
-
-MAX_FOLLOWUPS = 2  # deliberate cap: two probes is enough to separate a vague
-# answer from a genuinely thin one, without turning every question into an
-# interrogation. See README for the full rationale.
 
 
 def parse_args():
@@ -49,53 +38,46 @@ def main():
     print(f"Max follow-ups per question: {MAX_FOLLOWUPS}")
     print()
 
-    jd = parsing.parse_job_description(args.jd)
-    resume = parsing.parse_resume(args.resume)
-    if not resume.projects:
-        raise SystemExit(f"No projects found in {args.resume} - can't ground questions in nothing.")
+    prepared = prep.prepare(args.jd, args.resume)
+    interview = prep.build_interview(prepared)
 
-    print(f"Candidate: {resume.candidate_name}")
-    print(f"Role: {jd.title} ({jd.seniority})")
+    print(f"Candidate: {prepared['candidate_name']}")
+    print(f"Role: {prepared['role']} ({prepared['seniority']})")
     print()
 
-    dimensions = generate_dimensions(jd)
-    questions = [
-        generate_question(dim, resume.projects[i % len(resume.projects)])
-        for i, dim in enumerate(dimensions)
-    ]
-
     candidate = HumanCandidate()
-    transcript: list[TranscriptTurn] = []
-    latencies_ms: list[float] = []
+    judge_times_ms: list[float] = []  # time spent inside judge(), one entry per judged answer
 
-    for dimension, question in zip(dimensions, questions):
-        print(f"\n--- {dimension.name} ---")
-        print(f"(grounded in: {question.grounded_project})")
-        start = time.perf_counter()
+    text = interview.start()
+    new_question = True
+    while not interview.done:
+        if new_question:
+            question = interview.questions[interview.index]
+            print(f"\n--- {question.dimension} ---")
+            print(f"(grounded in: {question.grounded_project})")
+            question_judge_ms = 0.0
 
-        answer = candidate.get_answer(f"{question.text}\n> ")
+        answer = candidate.get_answer(f"{text}\n> ")
+        turns_before = len(interview.transcript)
+        text = interview.on_answer(answer)
 
-        followups_asked = 0
-        for _ in range(MAX_FOLLOWUPS):
-            verdict = judge(question, dimension, answer)
-            if verdict.sufficient:
-                break
-            print(f"  [probing: {verdict.missing.value}]")
-            followup_text = generate_followup(verdict.missing)
-            more = candidate.get_answer(f"{followup_text}\n> ")
-            answer = answer + " " + more
-            followups_asked += 1
+        if interview.last_judge_ms is not None:
+            judge_times_ms.append(interview.last_judge_ms)
+            question_judge_ms += interview.last_judge_ms
 
-        elapsed_ms = (time.perf_counter() - start) * 1000
-        latencies_ms.append(elapsed_ms)
-        print(f"  [{elapsed_ms:.0f} ms, {followups_asked} follow-up(s)]")
+        # A new transcript turn means this question is finished; otherwise
+        # `text` is a follow-up for the same question.
+        new_question = len(interview.transcript) > turns_before
+        if new_question:
+            turn = interview.transcript[-1]
+            print(f"  [judge time: {question_judge_ms:.0f} ms, {turn.followups_asked} follow-up(s)]")
+        elif interview.last_verdict.missing == Evidence.REPEAT_REQUEST:
+            print("  [repeat requested]")
+        else:
+            print(f"  [probing: {interview.last_verdict.missing.value}]")
 
-        transcript.append(TranscriptTurn(
-            dimension=dimension.name, question=question.text,
-            answer=answer, followups_asked=followups_asked,
-        ))
-
-    scores = [score_dimension(dim, turn) for dim, turn in zip(dimensions, transcript)]
+    transcript = interview.transcript
+    scores = [score_dimension(dim, turn) for dim, turn in zip(interview.dimensions, transcript)]
 
     print("\n" + "=" * 70)
     print("SCORECARD")
@@ -106,10 +88,13 @@ def main():
         print(f'  quote: "{s.quote}"')
         print(f"  reasoning: {s.reasoning}")
 
-    p50_ms = statistics.median(latencies_ms) if latencies_ms else 0.0
-    print(f"\np50 turn latency: {p50_ms:.0f} ms")
+    p50_judge_ms = statistics.median(judge_times_ms) if judge_times_ms else None
+    if p50_judge_ms is None:
+        print("\np50 judge time: not measured yet")
+    else:
+        print(f"\np50 judge time: {p50_judge_ms:.0f} ms per judged answer ({len(judge_times_ms)} judge calls)")
 
-    write_html_report(args.out, resume.candidate_name, jd.title, scores, transcript, p50_ms, llm.MOCK)
+    write_html_report(args.out, prepared["candidate_name"], prepared["role"], scores, transcript, p50_judge_ms, llm.MOCK)
     print(f"HTML report written to: {args.out}")
 
 

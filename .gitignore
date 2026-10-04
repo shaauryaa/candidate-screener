@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 report.html
 .venv/
+sarah api keys.txt
+transcripts/

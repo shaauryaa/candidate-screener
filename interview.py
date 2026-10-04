@@ -99,6 +99,10 @@ Project: {project_name}
 Description: {project_desc}
 Technologies: {project_tech}
 
+The question will be SPOKEN ALOUD to the candidate, so it must be easy to
+follow by ear: ONE short sentence, at most 25 words, asking about one thing
+only. No multi-part questions, no lists, no long lead-in.
+
 Return just the question text.
 """
 
@@ -143,8 +147,16 @@ for this rubric dimension: "{dim_name}" - {dim_desc}
 
 Question asked: {question}
 Candidate's answer so far: {answer}
+Their most recent reply: {latest}
 
-Decide which ONE of these is most true, in this priority order:
+First look ONLY at the most recent reply:
+- REPEAT_REQUEST: they ask to hear the question again, or say they didn't
+  hear or understand it
+- CANNOT_ANSWER: they say they don't know, don't remember, decline, say just
+  "no", or ask to skip / move on - and give no real content in that reply
+
+If neither applies, judge the whole answer so far and decide which ONE of
+these is most true, in this priority order:
 - NO_CONCRETE_EXAMPLE: the answer is vague/generic, with no specific instance
 - NO_MEASURABLE_OUTCOME: no quantified result (a number, %, time saved, etc.)
 - NO_PERSONAL_OWNERSHIP: answer only says "we"/"the team", never what THEY did
@@ -152,15 +164,24 @@ Decide which ONE of these is most true, in this priority order:
 - SUFFICIENT: none of the above gaps apply, the answer is well-evidenced
 
 Return `missing` (one of the above) and one sentence of `reasoning`.
+
+Also return `topic`: when `missing` is one of the four NO_/UNCLEAR_ gaps, the
+one thing the candidate mentioned that a follow-up should dig into - 2 to 6
+words copied VERBATIM, word-for-word, from the candidate's answer (for
+example a task, tool or claim they named without explaining). Prefer their
+most recent reply. Do not paraphrase or fix their wording. Otherwise, or if
+nothing fits, return an empty string.
 """
 
 
-def judge(question: Question, dimension: Dimension, answer: str) -> JudgeVerdict:
+def judge(question: Question, dimension: Dimension, answer: str, latest: str) -> JudgeVerdict:
+    """`answer` is everything said for this question so far; `latest` is just
+    the most recent reply (the last part of `answer`)."""
     if llm.MOCK:
-        return _mock_judge(answer)
+        return _mock_judge(answer, latest)
     prompt = _JUDGE_PROMPT.format(
         dim_name=dimension.name, dim_desc=dimension.description,
-        question=question.text, answer=answer,
+        question=question.text, answer=answer, latest=latest,
     )
     return llm.call_gemini(llm.MODEL_JUDGE, prompt, JudgeVerdict)
 
@@ -169,12 +190,31 @@ _CONCRETE_MARKERS = ["built", "designed", "implemented", "wrote", "created",
                      "refactored", "debugged", "fixed", "deployed", "led", "rebuilt"]
 _SCOPE_MARKERS = ["team of", "users", "requests", "traffic", "scale", "week",
                   "month", "solo", "alone", "day", "hour"]
+_REPEAT_PATTERN = r"\b(repeat|rephrase|say that again|come again|pardon)\b|didn't (hear|catch|understand)"
+_CANNOT_ANSWER_PATTERN = (r"\b(don't|do not|can't|cannot) (know|remember|recall)\b"
+                          r"|\b(no idea|not sure|move on|next question|skip|pass)\b|^(no|nope)\W*$")
 
 
-def _mock_judge(answer: str) -> JudgeVerdict:
+def _mock_judge(answer: str, latest: str) -> JudgeVerdict:
     """Offline stand-in for the judge: simple keyword/regex heuristics over
     the candidate's own typed answer, so --mock still reacts to what's typed
     instead of returning the same canned verdict every time."""
+    reply = latest.lower().strip()
+    if re.search(_REPEAT_PATTERN, reply):
+        return JudgeVerdict(missing=Evidence.REPEAT_REQUEST,
+                             reasoning="The candidate asked to hear the question again.")
+    if re.search(_CANNOT_ANSWER_PATTERN, reply) and not any(m in reply for m in _CONCRETE_MARKERS):
+        return JudgeVerdict(missing=Evidence.CANNOT_ANSWER,
+                             reasoning="The candidate said they can't answer or asked to move on.")
+
+    # The thing they named without explaining: the few words after "worked on",
+    # "used", ... stopping at the first filler word.
+    named = re.search(r"\b(?:worked on|working on|work on|used|built|designed|implemented)\s+"
+                      r"((?:(?:the|a|an|our|my)\s+)?"
+                      r"(?:(?!(?:and|but|so|for|to|with|in|on|at|as|it|that|which|together)\b)[\w'/-]+\s?){1,3})",
+                      latest)
+    topic = named.group(1).strip() if named else ""
+
     text = answer.lower()
     has_number = bool(re.search(r"\d", answer))
     has_first_person = bool(re.search(r"\bi\b", text))
@@ -183,22 +223,24 @@ def _mock_judge(answer: str) -> JudgeVerdict:
     has_scope = any(m in text for m in _SCOPE_MARKERS)
 
     if not has_concrete:
-        return JudgeVerdict(missing=Evidence.NO_CONCRETE_EXAMPLE,
+        return JudgeVerdict(missing=Evidence.NO_CONCRETE_EXAMPLE, topic=topic,
                              reasoning="No specific action or concrete example described.")
     if not has_number:
-        return JudgeVerdict(missing=Evidence.NO_MEASURABLE_OUTCOME,
+        return JudgeVerdict(missing=Evidence.NO_MEASURABLE_OUTCOME, topic=topic,
                              reasoning="No quantified outcome or metric mentioned.")
     if has_we and not has_first_person:
-        return JudgeVerdict(missing=Evidence.NO_PERSONAL_OWNERSHIP,
+        return JudgeVerdict(missing=Evidence.NO_PERSONAL_OWNERSHIP, topic=topic,
                              reasoning="Answer describes team work ('we') without the candidate's own part.")
     if not has_scope:
-        return JudgeVerdict(missing=Evidence.UNCLEAR_SCOPE,
+        return JudgeVerdict(missing=Evidence.UNCLEAR_SCOPE, topic=topic,
                              reasoning="Scale or context (team size, users, timeframe) is unclear.")
     return JudgeVerdict(missing=Evidence.SUFFICIENT,
                          reasoning="Concrete example, measurable outcome, ownership, and scope are all present.")
 
 
 # ---- 4. follow-up: a pure lookup from gap -> question, no LLM call needed --
+# Only the four evidence gaps have a follow-up. SUFFICIENT, CANNOT_ANSWER and
+# REPEAT_REQUEST are deliberately absent: none of them should be probed.
 
 FOLLOWUP_TEMPLATES = {
     Evidence.NO_CONCRETE_EXAMPLE: "Can you walk me through one specific example - what exactly did you do, step by step?",
@@ -207,14 +249,31 @@ FOLLOWUP_TEMPLATES = {
     Evidence.UNCLEAR_SCOPE: "Can you clarify the scale involved - team size, user base, or timeframe?",
 }
 
+# The same four follow-ups, pointed at something the candidate actually said.
+# {topic} is only ever a phrase copied from their own answer (checked below).
+TOPIC_FOLLOWUP_TEMPLATES = {
+    Evidence.NO_CONCRETE_EXAMPLE: 'You said "{topic}". What exactly did you do there, step by step?',
+    Evidence.NO_MEASURABLE_OUTCOME: 'You said "{topic}". Do you have a number for that - how much, how many, or how fast?',
+    Evidence.NO_PERSONAL_OWNERSHIP: 'You said "{topic}". Which part of that was your own work, not the team as a whole?',
+    Evidence.UNCLEAR_SCOPE: 'You said "{topic}". How big was that - team size, number of users, or timeframe?',
+}
 
-def generate_followup(missing: Evidence) -> str:
+
+def generate_followup(missing: Evidence, topic: str, answer: str) -> str:
     """
-    The follow-up depends only on WHICH evidence is missing, not on the full
-    answer text - that's what makes it possible to target the gap exactly
-    instead of asking a generic "can you elaborate?". No API call: this is
-    a template lookup, real or mock alike.
+    The follow-up is a fixed template chosen by WHICH evidence is missing -
+    that's what makes it possible to target the gap exactly instead of asking
+    a generic "can you elaborate?". No API call: this is a template lookup,
+    real or mock alike.
+
+    If the judge also named a `topic`, it is slotted into the template so the
+    follow-up refers to what the candidate said. Like a score's quote, the
+    topic is never trusted: it must be a short phrase found word-for-word in
+    the candidate's own answer, otherwise the plain template is used.
     """
+    topic = topic.strip(" .,;:!?\"'")
+    if topic and len(topic.split()) <= 6 and topic.lower() in answer.lower():
+        return TOPIC_FOLLOWUP_TEMPLATES[missing].format(topic=topic)
     return FOLLOWUP_TEMPLATES[missing]
 
 
