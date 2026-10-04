@@ -152,10 +152,12 @@ Their most recent reply: {latest}
 First look ONLY at the most recent reply:
 - REPEAT_REQUEST: they ask to hear the question again, or say they didn't
   hear or understand it
+- WAIT_REQUEST: they ask for a moment to think ("give me a second", "let me
+  think", "one moment") and give no real content in that reply
 - CANNOT_ANSWER: they say they don't know, don't remember, decline, say just
   "no", or ask to skip / move on - and give no real content in that reply
 
-If neither applies, judge the whole answer so far and decide which ONE of
+If none of those applies, judge the whole answer so far and decide which ONE of
 these is most true, in this priority order:
 - NO_CONCRETE_EXAMPLE: the answer is vague/generic, with no specific instance
 - NO_MEASURABLE_OUTCOME: no quantified result (a number, %, time saved, etc.)
@@ -169,7 +171,8 @@ Also return `topic`: when `missing` is one of the four NO_/UNCLEAR_ gaps, the
 one thing the candidate mentioned that a follow-up should dig into - 2 to 6
 words copied VERBATIM, word-for-word, from the candidate's answer (for
 example a task, tool or claim they named without explaining). Prefer their
-most recent reply. Do not paraphrase or fix their wording. Otherwise, or if
+most recent reply. Do not paraphrase or fix their wording, and do not just
+return the name of the project the question is about. Otherwise, or if
 nothing fits, return an empty string.
 """
 
@@ -191,6 +194,8 @@ _CONCRETE_MARKERS = ["built", "designed", "implemented", "wrote", "created",
 _SCOPE_MARKERS = ["team of", "users", "requests", "traffic", "scale", "week",
                   "month", "solo", "alone", "day", "hour"]
 _REPEAT_PATTERN = r"\b(repeat|rephrase|say that again|come again|pardon)\b|didn't (hear|catch|understand)"
+_WAIT_PATTERN = (r"\b(give me|just|one) a? ?(second|sec|moment|minute)\b"
+                 r"|\b(let me think|hold on|bear with me)\b")
 _CANNOT_ANSWER_PATTERN = (r"\b(don't|do not|can't|cannot) (know|remember|recall)\b"
                           r"|\b(no idea|not sure|move on|next question|skip|pass)\b|^(no|nope)\W*$")
 
@@ -203,6 +208,9 @@ def _mock_judge(answer: str, latest: str) -> JudgeVerdict:
     if re.search(_REPEAT_PATTERN, reply):
         return JudgeVerdict(missing=Evidence.REPEAT_REQUEST,
                              reasoning="The candidate asked to hear the question again.")
+    if re.search(_WAIT_PATTERN, reply) and not any(m in reply for m in _CONCRETE_MARKERS):
+        return JudgeVerdict(missing=Evidence.WAIT_REQUEST,
+                             reasoning="The candidate asked for a moment to think.")
     if re.search(_CANNOT_ANSWER_PATTERN, reply) and not any(m in reply for m in _CONCRETE_MARKERS):
         return JudgeVerdict(missing=Evidence.CANNOT_ANSWER,
                              reasoning="The candidate said they can't answer or asked to move on.")
@@ -239,8 +247,8 @@ def _mock_judge(answer: str, latest: str) -> JudgeVerdict:
 
 
 # ---- 4. follow-up: a pure lookup from gap -> question, no LLM call needed --
-# Only the four evidence gaps have a follow-up. SUFFICIENT, CANNOT_ANSWER and
-# REPEAT_REQUEST are deliberately absent: none of them should be probed.
+# Only the four evidence gaps have a follow-up. SUFFICIENT, CANNOT_ANSWER,
+# REPEAT_REQUEST and WAIT_REQUEST are deliberately absent: none should be probed.
 
 FOLLOWUP_TEMPLATES = {
     Evidence.NO_CONCRETE_EXAMPLE: "Can you walk me through one specific example - what exactly did you do, step by step?",

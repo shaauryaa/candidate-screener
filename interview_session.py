@@ -2,11 +2,12 @@
 The dialogue manager: a bounded finite-state controller, not a free chatbot.
 
 Interview walks through a fixed list of questions. For each reply it asks the
-judge for ONE verdict, and that verdict picks one of four fixed moves:
+judge for ONE verdict, and that verdict picks one of five fixed moves:
 
   an evidence gap   -> the template follow-up for that gap (at most
                        MAX_FOLLOWUPS per question, never the same one twice)
   REPEAT_REQUEST    -> say the last thing again (at most MAX_REPEATS per question)
+  WAIT_REQUEST      -> "take your time", stay on the question (at most MAX_WAITS)
   CANNOT_ANSWER     -> stop probing and go to the next question
   SUFFICIENT        -> go to the next question
 
@@ -30,9 +31,12 @@ MAX_FOLLOWUPS = 2  # deliberate cap: two probes is enough to separate a vague
 MAX_REPEATS = 1  # "could you repeat that?" is honoured once per question, so
 # the conversation can never loop on it.
 
+MAX_WAITS = 2  # "give me a second" is honoured twice per question, then we move on.
+
 # Said before the next question, so the change of topic isn't abrupt.
 MOVING_ON = "Thank you. Moving on."
 MOVING_ON_AFTER_SKIP = "No problem, let's move on."
+TAKE_YOUR_TIME = "Sure, take your time."
 
 
 class Interview:
@@ -44,7 +48,8 @@ class Interview:
         self.answer = None         # answer so far for this question (None = not answered yet)
         self.followups_asked = 0   # follow-ups asked for this question
         self.repeats_used = 0      # repeats given for this question
-        self.last_gap = None       # the gap the previous follow-up was about
+        self.waits_used = 0        # "take your time" replies given for this question
+        self.last_gap = None      # the gap the previous follow-up was about
         self.last_said = None      # the last thing we asked, in case we must repeat it
         self.last_verdict = None   # most recent JudgeVerdict, None if judge didn't run
         self.last_judge_ms = None  # time spent inside judge() for the last answer
@@ -80,6 +85,11 @@ class Interview:
             self.repeats_used += 1
             return self.last_said
 
+        # "Give me a second" is not an answer either: stay on this question and wait.
+        if missing == Evidence.WAIT_REQUEST and self.waits_used < MAX_WAITS:
+            self.waits_used += 1
+            return TAKE_YOUR_TIME
+
         self.answer = combined
 
         # An evidence gap gets its template follow-up - unless we just probed
@@ -101,13 +111,14 @@ class Interview:
         self.answer = None
         self.followups_asked = 0
         self.repeats_used = 0
+        self.waits_used = 0
         self.last_gap = None
 
         if self.index == len(self.questions):
             self.done = True
             return None
 
-        skipped = missing in (Evidence.CANNOT_ANSWER, Evidence.REPEAT_REQUEST)
+        skipped = missing in (Evidence.CANNOT_ANSWER, Evidence.REPEAT_REQUEST, Evidence.WAIT_REQUEST)
         transition = MOVING_ON_AFTER_SKIP if skipped else MOVING_ON
         self.last_said = self.questions[self.index].text
         return transition + " " + self.last_said

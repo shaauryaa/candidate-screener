@@ -62,9 +62,9 @@ class Evidence(str, Enum):
     that a follow-up can target a *specific* gap instead of just asking
     "can you elaborate?" again.
 
-    The last two aren't evidence gaps - they describe the candidate's latest
-    reply itself, so the interview can move on or repeat instead of probing
-    someone who has already said "I don't know".
+    The last three aren't evidence gaps - they describe the candidate's latest
+    reply itself, so the interview can move on, repeat or wait instead of
+    probing someone who has already said "I don't know" or "give me a second".
     """
     NO_CONCRETE_EXAMPLE = "NO_CONCRETE_EXAMPLE"
     NO_MEASURABLE_OUTCOME = "NO_MEASURABLE_OUTCOME"
@@ -73,6 +73,7 @@ class Evidence(str, Enum):
     SUFFICIENT = "SUFFICIENT"
     CANNOT_ANSWER = "CANNOT_ANSWER"    # "I don't know", "no", "can we move on?"
     REPEAT_REQUEST = "REPEAT_REQUEST"  # "sorry, could you repeat the question?"
+    WAIT_REQUEST = "WAIT_REQUEST"      # "give me a second", "let me think"
 
 
 class JudgeVerdict(BaseModel):

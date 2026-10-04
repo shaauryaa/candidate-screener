@@ -37,13 +37,14 @@ def write_html_report(
     jd_title: str,
     scores: list[DimensionScore],
     transcript: list[TranscriptTurn],
-    p50_judge_ms: float | None,
+    timing_notes: list[str],
     mock: bool,
 ) -> None:
+    """`timing_notes` are printed in the footer exactly as given, one per line,
+    so each must already say precisely what it measures (or "not measured yet")."""
     turns_by_dim = {t.dimension: t for t in transcript}
     avg = sum(s.score for s in scores) / len(scores) if scores else 0
-    judge_note = (f"{p50_judge_ms:.0f} ms per judged answer"
-                  if p50_judge_ms is not None else "not measured yet")
+    timing_html = "".join(f"<div>{html.escape(note)}</div>" for note in timing_notes)
 
     cards = []
     for s in scores:
@@ -92,8 +93,10 @@ def write_html_report(
 
 <footer>
   Every score above is tied to a verbatim quote from the transcript, checked
-  by exact substring match against what the candidate actually typed - not
-  trusted from the model's own claim. p50 judge time: {judge_note}.
+  by exact substring match against what the candidate actually said or typed -
+  not trusted from the model's own claim.
+  <div style="margin-top:10px;"><strong>Timings</strong></div>
+  {timing_html}
 </footer>
 </body>
 </html>"""

@@ -73,6 +73,8 @@ def main():
             print(f"  [judge time: {question_judge_ms:.0f} ms, {turn.followups_asked} follow-up(s)]")
         elif interview.last_verdict.missing == Evidence.REPEAT_REQUEST:
             print("  [repeat requested]")
+        elif interview.last_verdict.missing == Evidence.WAIT_REQUEST:
+            print("  [wait requested]")
         else:
             print(f"  [probing: {interview.last_verdict.missing.value}]")
 
@@ -88,13 +90,14 @@ def main():
         print(f'  quote: "{s.quote}"')
         print(f"  reasoning: {s.reasoning}")
 
-    p50_judge_ms = statistics.median(judge_times_ms) if judge_times_ms else None
-    if p50_judge_ms is None:
-        print("\np50 judge time: not measured yet")
+    if judge_times_ms:
+        timing_note = (f"Time inside judge() per judged answer: p50 {statistics.median(judge_times_ms):.0f} ms "
+                       f"(n={len(judge_times_ms)} judge calls). Typed interview, so there are no speech timings.")
     else:
-        print(f"\np50 judge time: {p50_judge_ms:.0f} ms per judged answer ({len(judge_times_ms)} judge calls)")
+        timing_note = "Time inside judge() per judged answer: not measured yet"
+    print("\n" + timing_note)
 
-    write_html_report(args.out, prepared["candidate_name"], prepared["role"], scores, transcript, p50_judge_ms, llm.MOCK)
+    write_html_report(args.out, prepared["candidate_name"], prepared["role"], scores, transcript, [timing_note], llm.MOCK)
     print(f"HTML report written to: {args.out}")
 
 
