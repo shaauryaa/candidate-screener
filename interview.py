@@ -22,6 +22,8 @@ from schemas import (
     Question,
     QuestionText,
     RawScore,
+    RawVerdict,
+    ReplyType,
     TranscriptTurn,
 )
 
@@ -149,44 +151,77 @@ Question asked: {question}
 Candidate's answer so far: {answer}
 Their most recent reply: {latest}
 
-First look ONLY at the most recent reply:
+First look ONLY at the most recent reply and return `reply`:
 - REPEAT_REQUEST: they ask to hear the question again, or say they didn't
   hear or understand it
 - WAIT_REQUEST: they ask for a moment to think ("give me a second", "let me
   think", "one moment") and give no real content in that reply
 - CANNOT_ANSWER: they say they don't know, don't remember, decline, say just
   "no", or ask to skip / move on - and give no real content in that reply
+- ANSWER: anything else
 
-If none of those applies, judge the whole answer so far and decide which ONE of
-these is most true, in this priority order:
-- NO_CONCRETE_EXAMPLE: the answer is vague/generic, with no specific instance
-- NO_MEASURABLE_OUTCOME: no quantified result (a number, %, time saved, etc.)
-- NO_PERSONAL_OWNERSHIP: answer only says "we"/"the team", never what THEY did
-- UNCLEAR_SCOPE: scale/context (team size, users, timeframe) is unclear
-- SUFFICIENT: none of the above gaps apply, the answer is well-evidenced
+If `reply` is ANSWER, go through the whole answer so far and check each of these
+four elements on its own. For each one, copy the shortest words that prove it
+VERBATIM, word-for-word, from the candidate's answer. Do not paraphrase or fix
+their wording. If the answer doesn't contain that element, return an empty
+string. Otherwise, return an empty string for all four.
+- concrete_example_quote: a specific event, decision or technical step that
+  happened. Buzzwords, general claims and a bare result do not count. Who did
+  it does not matter here: "we set up X" counts just like "I set up X"
+- measurable_outcome_quote: a quantified result (a number, %, time saved, etc.)
+- personal_ownership_quote: what THEY did, in their own words ("I ..."). Only
+  saying "we" or "the team" does not count
+- clear_scope_quote: scale or context (team size, users, timeframe). A project
+  or product name does not count
 
-Return `missing` (one of the above) and one sentence of `reasoning`.
+Return one sentence of `reasoning`.
 
-Also return `topic`: when `missing` is one of the four NO_/UNCLEAR_ gaps, the
-one thing the candidate mentioned that a follow-up should dig into - 2 to 6
-words copied VERBATIM, word-for-word, from the candidate's answer (for
-example a task, tool or claim they named without explaining). Prefer their
-most recent reply. Do not paraphrase or fix their wording, and do not just
-return the name of the project the question is about. Otherwise, or if
-nothing fits, return an empty string.
+Also return `topic`: if any of the four quotes is empty, the one thing the
+candidate mentioned that a follow-up should dig into - 2 to 6 words copied
+VERBATIM, word-for-word, from the candidate's answer (for example a task, tool
+or claim they named without explaining). Prefer their most recent reply. Do not
+paraphrase or fix their wording, and do not just return the name of the project
+the question is about. Otherwise, or if nothing fits, return an empty string.
 """
 
 
-def judge(question: Question, dimension: Dimension, answer: str, latest: str) -> JudgeVerdict:
+def judge(question: Question, dimension: Dimension, answer: str, latest: str,
+          proven: dict[str, str]) -> JudgeVerdict:
     """`answer` is everything said for this question so far; `latest` is just
-    the most recent reply (the last part of `answer`)."""
+    the most recent reply (the last part of `answer`). `proven` is the evidence
+    already verified for this question, as gap -> quote.
+
+    The LLM only supplies quotes. Which gaps exist, and which comes first, is
+    worked out here, so `missing` and `gaps` can never disagree."""
     if llm.MOCK:
         return _mock_judge(answer, latest)
     prompt = _JUDGE_PROMPT.format(
         dim_name=dimension.name, dim_desc=dimension.description,
         question=question.text, answer=answer, latest=latest,
     )
-    return llm.call_gemini(llm.MODEL_JUDGE, prompt, JudgeVerdict)
+    raw = llm.call_gemini(llm.MODEL_JUDGE, prompt, RawVerdict)
+    if raw.reply != ReplyType.ANSWER:
+        return JudgeVerdict(missing=Evidence(raw.reply.value), reasoning=raw.reasoning)
+
+    # In priority order, so the first gap found is the verdict.
+    quotes = {
+        Evidence.NO_CONCRETE_EXAMPLE: raw.concrete_example_quote,
+        Evidence.NO_MEASURABLE_OUTCOME: raw.measurable_outcome_quote,
+        Evidence.NO_PERSONAL_OWNERSHIP: raw.personal_ownership_quote,
+        Evidence.UNCLEAR_SCOPE: raw.clear_scope_quote,
+    }
+    # Same rule as a score's quote: never trusted, verified by substring match.
+    # A quote that isn't really in the answer proves nothing, so it's a gap -
+    # unless earlier evidence already proved it: proven stays proven even if
+    # the LLM forgets it, and a new reply can only add to it.
+    gaps = [gap for gap, quote in quotes.items()
+            if gap.value not in proven and (not quote or quote not in answer)]
+    return JudgeVerdict(
+        missing=gaps[0] if gaps else Evidence.SUFFICIENT,
+        reasoning=raw.reasoning, topic=raw.topic, gaps=gaps,
+        quotes={gap.value: proven.get(gap.value, quote) for gap, quote in quotes.items() if gap not in gaps},
+        bad_quotes=[quote for quote in quotes.values() if quote and quote not in answer],
+    )
 
 
 _CONCRETE_MARKERS = ["built", "designed", "implemented", "wrote", "created",
@@ -230,18 +265,18 @@ def _mock_judge(answer: str, latest: str) -> JudgeVerdict:
     has_concrete = any(m in text for m in _CONCRETE_MARKERS) and len(answer.split()) > 8
     has_scope = any(m in text for m in _SCOPE_MARKERS)
 
-    if not has_concrete:
-        return JudgeVerdict(missing=Evidence.NO_CONCRETE_EXAMPLE, topic=topic,
-                             reasoning="No specific action or concrete example described.")
-    if not has_number:
-        return JudgeVerdict(missing=Evidence.NO_MEASURABLE_OUTCOME, topic=topic,
-                             reasoning="No quantified outcome or metric mentioned.")
-    if has_we and not has_first_person:
-        return JudgeVerdict(missing=Evidence.NO_PERSONAL_OWNERSHIP, topic=topic,
-                             reasoning="Answer describes team work ('we') without the candidate's own part.")
-    if not has_scope:
-        return JudgeVerdict(missing=Evidence.UNCLEAR_SCOPE, topic=topic,
-                             reasoning="Scale or context (team size, users, timeframe) is unclear.")
+    # In priority order, so the first gap found is the verdict.
+    checks = [
+        (not has_concrete, Evidence.NO_CONCRETE_EXAMPLE, "No specific action or concrete example described."),
+        (not has_number, Evidence.NO_MEASURABLE_OUTCOME, "No quantified outcome or metric mentioned."),
+        (has_we and not has_first_person, Evidence.NO_PERSONAL_OWNERSHIP,
+         "Answer describes team work ('we') without the candidate's own part."),
+        (not has_scope, Evidence.UNCLEAR_SCOPE, "Scale or context (team size, users, timeframe) is unclear."),
+    ]
+    found = [(gap, reasoning) for failed, gap, reasoning in checks if failed]
+    if found:
+        return JudgeVerdict(missing=found[0][0], topic=topic, reasoning=found[0][1],
+                             gaps=[gap for gap, _ in found])
     return JudgeVerdict(missing=Evidence.SUFFICIENT,
                          reasoning="Concrete example, measurable outcome, ownership, and scope are all present.")
 

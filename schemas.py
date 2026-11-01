@@ -76,10 +76,32 @@ class Evidence(str, Enum):
     WAIT_REQUEST = "WAIT_REQUEST"      # "give me a second", "let me think"
 
 
+class ReplyType(str, Enum):
+    ANSWER = "ANSWER"
+    CANNOT_ANSWER = "CANNOT_ANSWER"
+    REPEAT_REQUEST = "REPEAT_REQUEST"
+    WAIT_REQUEST = "WAIT_REQUEST"
+
+
+class RawVerdict(BaseModel):
+    """What the LLM itself returns - before we've verified its quotes. An empty
+    quote means the answer doesn't contain that element."""
+    reply: ReplyType
+    reasoning: str
+    topic: str = ""  # a phrase copied from the answer that the follow-up should ask about
+    concrete_example_quote: str
+    measurable_outcome_quote: str
+    personal_ownership_quote: str
+    clear_scope_quote: str
+
+
 class JudgeVerdict(BaseModel):
     missing: Evidence
     reasoning: str
-    topic: str = ""  # a phrase copied from the answer that the follow-up should ask about
+    topic: str = ""
+    gaps: list[Evidence] = []  # every evidence gap in the answer, in priority order
+    quotes: dict[str, str] = {}  # gap -> the verified quote that closed it
+    bad_quotes: list[str] = []  # quotes the judge gave that aren't in the answer
 
     @property
     def sufficient(self) -> bool:

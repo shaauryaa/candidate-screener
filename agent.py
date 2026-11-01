@@ -241,7 +241,7 @@ class InterviewAgent(Agent):
         elif held:
             print(f"  [{held} requested]")
         else:
-            print(f"  [probing: {verdict.missing.value}]")
+            print(f"  [probing: {self.interview.last_gap.value}]")
 
         if next_text is None:
             reply_metrics = await self.speak(CLOSING, interruptible=False, kind="closing")

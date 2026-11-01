@@ -76,7 +76,7 @@ def main():
         elif interview.last_verdict.missing == Evidence.WAIT_REQUEST:
             print("  [wait requested]")
         else:
-            print(f"  [probing: {interview.last_verdict.missing.value}]")
+            print(f"  [probing: {interview.last_gap.value}]")
 
     transcript = interview.transcript
     scores = [score_dimension(dim, turn) for dim, turn in zip(interview.dimensions, transcript)]

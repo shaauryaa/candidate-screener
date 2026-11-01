@@ -4,8 +4,8 @@ The dialogue manager: a bounded finite-state controller, not a free chatbot.
 Interview walks through a fixed list of questions. For each reply it asks the
 judge for ONE verdict, and that verdict picks one of five fixed moves:
 
-  an evidence gap   -> the template follow-up for that gap (at most
-                       MAX_FOLLOWUPS per question, never the same one twice)
+  an evidence gap   -> the template follow-up for the first gap we didn't just
+                       probe (at most MAX_FOLLOWUPS per question)
   REPEAT_REQUEST    -> say the last thing again (at most MAX_REPEATS per question)
   WAIT_REQUEST      -> "take your time", stay on the question (at most MAX_WAITS)
   CANNOT_ANSWER     -> stop probing and go to the next question
@@ -50,6 +50,7 @@ class Interview:
         self.repeats_used = 0      # repeats given for this question
         self.waits_used = 0        # "take your time" replies given for this question
         self.last_gap = None      # the gap the previous follow-up was about
+        self.proven = {}           # gap -> verified quote, for this question only
         self.last_said = None      # the last thing we asked, in case we must repeat it
         self.last_verdict = None   # most recent JudgeVerdict, None if judge didn't run
         self.last_judge_ms = None  # time spent inside judge() for the last answer
@@ -76,9 +77,10 @@ class Interview:
             question = self.questions[self.index]
             dimension = self.dimensions[self.index]
             start = time.perf_counter()
-            self.last_verdict = judge(question, dimension, combined, text)
+            self.last_verdict = judge(question, dimension, combined, text, self.proven)
             self.last_judge_ms = (time.perf_counter() - start) * 1000
             missing = self.last_verdict.missing
+            self.proven.update(self.last_verdict.quotes)
 
         # "Could you repeat that?" is not an answer: don't keep it, just say it again.
         if missing == Evidence.REPEAT_REQUEST and self.repeats_used < MAX_REPEATS:
@@ -93,11 +95,17 @@ class Interview:
         self.answer = combined
 
         # An evidence gap gets its template follow-up - unless we just probed
-        # that same gap, in which case asking again won't help.
-        if missing in FOLLOWUP_TEMPLATES and missing != self.last_gap:
+        # that same gap, in which case asking again won't help, so we try the
+        # next gap the judge found. FOLLOWUP_TEMPLATES is in priority order.
+        followup = None
+        if missing in FOLLOWUP_TEMPLATES:
+            gaps = [missing] + [gap for gap in FOLLOWUP_TEMPLATES if gap in self.last_verdict.gaps]
+            followup = next((gap for gap in gaps if gap != self.last_gap), None)
+
+        if followup:
             self.followups_asked += 1
-            self.last_gap = missing
-            self.last_said = generate_followup(missing, self.last_verdict.topic, self.answer)
+            self.last_gap = followup
+            self.last_said = generate_followup(followup, self.last_verdict.topic, self.answer)
             return self.last_said
 
         # Otherwise this question is finished: record the turn and move on.
@@ -113,6 +121,7 @@ class Interview:
         self.repeats_used = 0
         self.waits_used = 0
         self.last_gap = None
+        self.proven = {}
 
         if self.index == len(self.questions):
             self.done = True
