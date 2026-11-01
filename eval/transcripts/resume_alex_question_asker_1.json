@@ -1,0 +1,441 @@
+{
+  "resume": "resume_alex",
+  "persona": "question_asker",
+  "group": "mixed",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates design robust, scalable REST APIs and demonstrate solid understanding of distributed systems fundamentals.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Backend Engineering and Reliability",
+      "description": "Good candidates write clean, maintainable code in Python and Java, optimize system performance, and effectively manage relational databases.",
+      "jd_evidence": "Improve system performance and reliability"
+    },
+    {
+      "name": "Production Ownership and Operations",
+      "description": "Good candidates take full responsibility for deploying, monitoring, and maintaining services in production using CI/CD pipelines and automated testing.",
+      "jd_evidence": "Own services in production end to end"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates communicate effectively with product and frontend teams to deliver features while utilizing Git for seamless version control collaboration.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, for the retry and dead-letter logic in that project, I configured Celery task bound retries with custom exception catching and then I routed failed messages to a Redis queue so I could inspect them later.",
+      "instruction": "This reply must contain: concrete_example, personal_ownership. It must leave out: measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "I configured Celery task bound retries with custom exception catching",
+        "NO_PERSONAL_OWNERSHIP": "I configured Celery task bound retries with custom exception catching"
+      },
+      "new_quotes": [
+        "I configured Celery task bound retries with custom exception catching",
+        "I configured Celery task bound retries with custom exception catching"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1600.1450000039767,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"Celery task bound retries\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, the team just worked on improving things generally, and we made the system handle the traffic better without focusing on specific numbers or timeframes.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "I configured Celery task bound retries with custom exception catching",
+        "NO_PERSONAL_OWNERSHIP": "I configured Celery task bound retries with custom exception catching"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1097.5424999996903,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"custom exception catching\". How big was that - team size, number of users, or timeframe?",
+      "followup_gap": "UNCLEAR_SCOPE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, the team just worked on that part as part of our normal work, without really tracking any team sizes or user counts for it.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, for the Campus Marketplace App, I designed the database schema by setting up MongoDB collections with specific indexes and embedded documents for the user profiles and listings, and I got three hundred plus active users in the first month.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome, personal_ownership. It must leave out: clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "setting up MongoDB collections with specific indexes and embedded documents for the user profiles and listings",
+        "NO_MEASURABLE_OUTCOME": "three hundred plus active users in the first month",
+        "NO_PERSONAL_OWNERSHIP": "I designed the database schema",
+        "UNCLEAR_SCOPE": "Campus Marketplace App"
+      },
+      "new_quotes": [
+        "setting up MongoDB collections with specific indexes and embedded documents for the user profiles and listings",
+        "three hundred plus active users in the first month",
+        "I designed the database schema",
+        "Campus Marketplace App"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1424.4008000023314,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, the team monitored the retry logic to achieve a latency of three seconds and handled twice normal traffic.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "latency of three seconds and handled twice normal traffic"
+      },
+      "new_quotes": [
+        "latency of three seconds and handled twice normal traffic"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 960.6735999986995,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, the team just worked on the system step by step in general ways, and we improved the whole setup without focusing on any specific steps or individual tasks.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "latency of three seconds and handled twice normal traffic"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1286.2150000000838,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"improved the whole setup\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, I personally redesigned the retry and dead-letter logic for the service.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: concrete_example, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you coordinate with other teams or users while launching the Campus Marketplace App?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Could you please repeat that question?",
+      "instruction": "Ask the interviewer to repeat the question. Say nothing else.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "REPEAT_REQUEST"
+      ],
+      "verdict": "REPEAT_REQUEST",
+      "gaps": [],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1247.2913999954471,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "How did you coordinate with other teams or users while launching the Campus Marketplace App?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, the team reached three hundred plus active users in the first month.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "three hundred plus active users",
+        "UNCLEAR_SCOPE": "in the first month"
+      },
+      "new_quotes": [
+        "three hundred plus active users",
+        "in the first month"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1401.957099995343,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"three hundred plus active users\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, the team just worked on the launch process together, and we handled the user coordination broadly without focusing on any specific technical steps.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "three hundred plus active users",
+        "UNCLEAR_SCOPE": "in the first month"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1553.4855000005336,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"launch process together\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, well, the team just handled all of that together as a group effort without any individual parts standing out.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?",
+      "answer": "Um, well, for the retry and dead-letter logic in that project, I configured Celery task bound retries with custom exception catching and then I routed failed messages to a Redis queue so I could inspect them later. Um, well, the team just worked on improving things generally, and we made the system handle the traffic better without focusing on specific numbers or timeframes. Um, well, the team just worked on that part as part of our normal work, without really tracking any team sizes or user counts for it.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "question": "For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?",
+      "answer": "Um, well, for the Campus Marketplace App, I designed the database schema by setting up MongoDB collections with specific indexes and embedded documents for the user profiles and listings, and I got three hundred plus active users in the first month.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "question": "How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?",
+      "answer": "Um, well, the team monitored the retry logic to achieve a latency of three seconds and handled twice normal traffic. Um, well, the team just worked on the system step by step in general ways, and we improved the whole setup without focusing on any specific steps or individual tasks. Um, well, I personally redesigned the retry and dead-letter logic for the service.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "How did you coordinate with other teams or users while launching the Campus Marketplace App?",
+      "answer": "Um, well, the team reached three hundred plus active users in the first month. Um, well, the team just worked on the launch process together, and we handled the user coordination broadly without focusing on any specific technical steps. Um, well, the team just handled all of that together as a group effort without any individual parts standing out.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 2,
+      "quote": "I configured Celery task bound retries with custom exception catching and then I routed failed messages to a Redis queue so I could inspect them later.",
+      "reasoning": "The candidate mentions using Celery task bound retries and a Redis queue for failed messages, which shows a basic understanding of asynchronous retry mechanisms. However, the explanation lacks depth regarding architectural patterns, exponential backoff, rate limiting, or specific strategies for handling peak traffic safely, as seen in the vague follow-up statements.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "score": 2,
+      "quote": "I designed the database schema by setting up MongoDB collections with specific indexes and embedded documents for the user profiles and listings",
+      "reasoning": "The candidate mentions using MongoDB collections and indexes, which touches on data modeling, but the dimension specifically requires managing relational databases and the response lacks depth on schema design principles, normalization, or handling relational growth.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "score": 2,
+      "quote": "Um, well, the team monitored the retry logic to achieve a latency of three seconds and handled twice normal traffic.",
+      "reasoning": "The candidate mentions monitoring the retry logic and handling increased traffic, but the explanation is vague and leans heavily on team efforts rather than detailing their personal involvement in CI/CD, automated testing, or production operations. Although they later state they redesigned the logic, the overall response lacks specific technical depth regarding production ownership and operations.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 1,
+      "quote": "Um, well, the team just handled all of that together as a group effort without any individual parts standing out.",
+      "reasoning": "The candidate fails to provide specific details on how they collaborated with product or frontend teams, nor do they mention using Git or technical workflows. The response is vague and generic, stating only that the team worked together without explaining the candidate's actual contribution or cross-functional communication.",
+      "quote_verified": true
+    }
+  ]
+}

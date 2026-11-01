@@ -1,0 +1,354 @@
+{
+  "resume": "resume_alex",
+  "persona": "rambler",
+  "group": "strong",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates design robust, scalable REST APIs and demonstrate solid understanding of distributed systems fundamentals.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Backend Engineering and Reliability",
+      "description": "Good candidates write clean, maintainable code in Python and Java, optimize system performance, and effectively manage relational databases.",
+      "jd_evidence": "Improve system performance and reliability"
+    },
+    {
+      "name": "Production Ownership and Operations",
+      "description": "Good candidates take full responsibility for deploying, monitoring, and maintaining services in production using CI/CD pipelines and automated testing.",
+      "jd_evidence": "Own services in production end to end"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates communicate effectively with product and frontend teams to deliver features while utilizing Git for seamless version control collaboration.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, you know, when I was working on that order-processing microservice over a three-month internship with a team of four other developers, we had this massive issue with cron jobs just timing out during peak traffic, so I personally rewrote the whole queueing system in Celery and Redis by adding an exponential backoff decorator to the task definitions that pushed failed jobs to a Redis-backed dead-letter queue after three attempts, which totally saved us because when peak season hit, we handled double the normal traffic and I managed to cut the average processing latency all the way down from 40 seconds to 3 seconds flat, which reminds me of the coffee machine we had in the break room that also used to break down all the time.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome, personal_ownership, clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "adding an exponential backoff decorator to the task definitions that pushed failed jobs to a Redis-backed dead-letter queue after three attempts",
+        "NO_MEASURABLE_OUTCOME": "cut the average processing latency all the way down from 40 seconds to 3 seconds flat",
+        "NO_PERSONAL_OWNERSHIP": "I personally rewrote the whole queueing system in Celery and Redis",
+        "UNCLEAR_SCOPE": "three-month internship with a team of four other developers"
+      },
+      "new_quotes": [
+        "adding an exponential backoff decorator to the task definitions that pushed failed jobs to a Redis-backed dead-letter queue after three attempts",
+        "cut the average processing latency all the way down from 40 seconds to 3 seconds flat",
+        "I personally rewrote the whole queueing system in Celery and Redis",
+        "three-month internship with a team of four other developers"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1707.7740999957314,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "For the Campus Marketplace App, I designed the database schema entirely by myself during a two-month period for a community of over 300 active users, where I set up MongoDB collections for users, listings, and messages with indexing on the item category fields, which honestly reminds me of when I used to organize my entire comic book collection alphabetically by publisher and genre in these big plastic bins that I kept under my bed, but getting back to the database, I made sure the schema could handle rapid queries as new student listings poured in during the start of the semester.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome, personal_ownership, clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "set up MongoDB collections for users, listings, and messages with indexing on the item category fields",
+        "NO_MEASURABLE_OUTCOME": "community of over 300 active users",
+        "NO_PERSONAL_OWNERSHIP": "I designed the database schema entirely by myself",
+        "UNCLEAR_SCOPE": "during a two-month period for a community of over 300 active users"
+      },
+      "new_quotes": [
+        "set up MongoDB collections for users, listings, and messages with indexing on the item category fields",
+        "community of over 300 active users",
+        "I designed the database schema entirely by myself",
+        "during a two-month period for a community of over 300 active users"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 2061.752100002195,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "When the team monitored and maintained the retry logic for the Order Fulfillment Service, we relied on standard logging practices across the infrastructure, which cut average processing latency down to 3 seconds for a user base of 500 people during a 4-month period, much like how traffic lights manage city flow.",
+      "instruction": "This reply must contain: measurable_outcome, clear_scope. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "cut average processing latency down to 3 seconds",
+        "UNCLEAR_SCOPE": "for a user base of 500 people during a 4-month period"
+      },
+      "new_quotes": [
+        "cut average processing latency down to 3 seconds",
+        "for a user base of 500 people during a 4-month period"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1711.0413999980665,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"standard logging practices\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "When the team implemented the logging framework for the order service, we first set up custom log formatters in Python to catch unhandled exceptions, and then routed those error streams into a centralized monitoring dashboard that triggered Slack alerts whenever a retry task failed repeatedly, which is sort of like how automated weather stations constantly ping satellites with atmospheric updates before a big storm rolls in.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: personal_ownership.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "gaps": [
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "set up custom log formatters in Python to catch unhandled exceptions",
+        "NO_MEASURABLE_OUTCOME": "cut average processing latency down to 3 seconds",
+        "UNCLEAR_SCOPE": "for a user base of 500 people during a 4-month period"
+      },
+      "new_quotes": [
+        "set up custom log formatters in Python to catch unhandled exceptions"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1339.4091000009212,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"custom log formatters in Python\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, when it came to those custom log formatters in Python, I personally wrote the entire traceback parsing script myself from scratch in my apartment over a single weekend while listening to lo-fi beats, which actually reminds me of this time I tried to build a custom bookshelf out of old apple crates and ended up staining my entire living room floor dark walnut because I forgot to lay down a drop cloth, but regarding the code, I configured the exact regex patterns to strip out sensitive customer data before it hit the logs.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you coordinate with other teams or users while launching the Campus Marketplace App?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "When the development group coordinated with campus students and student union leaders during the initial rollout across the university over a two-week window, we held weekly feedback sessions where we gathered user bug reports and then integrated those feature requests directly into our sprint planning backlog, which is honestly a lot like how my roommates and I used to organize our weekly grocery shopping lists on a big whiteboard on the refrigerator, always arguing over who forgot to buy oat milk.",
+      "instruction": "This reply must contain: concrete_example, clear_scope. It must leave out: measurable_outcome, personal_ownership.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "held weekly feedback sessions",
+        "UNCLEAR_SCOPE": "over a two-week window"
+      },
+      "new_quotes": [
+        "held weekly feedback sessions",
+        "over a two-week window"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1785.4131999993115,
+      "key_breaks": [
+        "personal_ownership leaked"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"weekly feedback sessions\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "When the group ran those weekly feedback sessions, we managed to process exactly 45 student bug reports per meeting, which is kind of like how I used to count every single jelly bean in those giant plastic jars at the county fair.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: personal_ownership.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "gaps": [
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "held weekly feedback sessions",
+        "NO_MEASURABLE_OUTCOME": "45 student bug reports per meeting",
+        "UNCLEAR_SCOPE": "over a two-week window"
+      },
+      "new_quotes": [
+        "45 student bug reports per meeting"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1738.2526000001235,
+      "key_breaks": [
+        "personal_ownership leaked"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said 'we' - what part of that was specifically your own work, versus the team's?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, when it came to gathering those student bug reports during the feedback sessions, I personally sat down at the campus coffee shop every single afternoon by myself with my laptop to triage every single issue and update our development board, which is actually pretty funny because it reminds me of this time I tried to sort my entire digital photo library into folders by year and location and accidentally deleted my favorite vacation album, but anyway, I handled all of the direct user communication and issue tracking entirely on my own.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?",
+      "answer": "Well, you know, when I was working on that order-processing microservice over a three-month internship with a team of four other developers, we had this massive issue with cron jobs just timing out during peak traffic, so I personally rewrote the whole queueing system in Celery and Redis by adding an exponential backoff decorator to the task definitions that pushed failed jobs to a Redis-backed dead-letter queue after three attempts, which totally saved us because when peak season hit, we handled double the normal traffic and I managed to cut the average processing latency all the way down from 40 seconds to 3 seconds flat, which reminds me of the coffee machine we had in the break room that also used to break down all the time.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "question": "For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?",
+      "answer": "For the Campus Marketplace App, I designed the database schema entirely by myself during a two-month period for a community of over 300 active users, where I set up MongoDB collections for users, listings, and messages with indexing on the item category fields, which honestly reminds me of when I used to organize my entire comic book collection alphabetically by publisher and genre in these big plastic bins that I kept under my bed, but getting back to the database, I made sure the schema could handle rapid queries as new student listings poured in during the start of the semester.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "question": "How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?",
+      "answer": "When the team monitored and maintained the retry logic for the Order Fulfillment Service, we relied on standard logging practices across the infrastructure, which cut average processing latency down to 3 seconds for a user base of 500 people during a 4-month period, much like how traffic lights manage city flow. When the team implemented the logging framework for the order service, we first set up custom log formatters in Python to catch unhandled exceptions, and then routed those error streams into a centralized monitoring dashboard that triggered Slack alerts whenever a retry task failed repeatedly, which is sort of like how automated weather stations constantly ping satellites with atmospheric updates before a big storm rolls in. Well, when it came to those custom log formatters in Python, I personally wrote the entire traceback parsing script myself from scratch in my apartment over a single weekend while listening to lo-fi beats, which actually reminds me of this time I tried to build a custom bookshelf out of old apple crates and ended up staining my entire living room floor dark walnut because I forgot to lay down a drop cloth, but regarding the code, I configured the exact regex patterns to strip out sensitive customer data before it hit the logs.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "How did you coordinate with other teams or users while launching the Campus Marketplace App?",
+      "answer": "When the development group coordinated with campus students and student union leaders during the initial rollout across the university over a two-week window, we held weekly feedback sessions where we gathered user bug reports and then integrated those feature requests directly into our sprint planning backlog, which is honestly a lot like how my roommates and I used to organize our weekly grocery shopping lists on a big whiteboard on the refrigerator, always arguing over who forgot to buy oat milk. When the group ran those weekly feedback sessions, we managed to process exactly 45 student bug reports per meeting, which is kind of like how I used to count every single jelly bean in those giant plastic jars at the county fair. Well, when it came to gathering those student bug reports during the feedback sessions, I personally sat down at the campus coffee shop every single afternoon by myself with my laptop to triage every single issue and update our development board, which is actually pretty funny because it reminds me of this time I tried to sort my entire digital photo library into folders by year and location and accidentally deleted my favorite vacation album, but anyway, I handled all of the direct user communication and issue tracking entirely on my own.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 4,
+      "quote": "adding an exponential backoff decorator to the task definitions that pushed failed jobs to a Redis-backed dead-letter queue after three attempts",
+      "reasoning": "The candidate demonstrates a solid understanding of API design and distributed systems fundamentals in the context of asynchronous task processing by correctly utilizing exponential backoff and dead-letter queues in Celery and Redis to handle traffic spikes.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "score": 2,
+      "quote": "I set up MongoDB collections for users, listings, and messages with indexing on the item category fields",
+      "reasoning": "The candidate mentions using MongoDB collections and indexing for performance, which touches upon database design. However, the explanation is very brief, lacks depth regarding relational database requirements specified in the rubric, and is bogged down by an irrelevant personal anecdote about comic books. Therefore, the score is a 2.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "score": 3,
+      "quote": "When the team implemented the logging framework for the order service, we first set up custom log formatters in Python to catch unhandled exceptions, and then routed those error streams into a centralized monitoring dashboard that triggered Slack alerts whenever a retry task failed repeatedly",
+      "reasoning": "The candidate demonstrates some understanding of production monitoring by setting up custom log formatters, centralized monitoring dashboards, and alerting mechanisms for failed retry tasks. However, the explanation is padded with irrelevant anecdotes and lacks deep details on advanced maintenance practices or post-deployment reliability metrics beyond basic alerting.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 3,
+      "quote": "When the development group coordinated with campus students and student union leaders during the initial rollout across the university over a two-week window, we held weekly feedback sessions where we gathered user bug reports and then integrated those feature requests directly into our sprint planning backlog",
+      "reasoning": "The candidate demonstrates an ability to coordinate with users and stakeholders by organizing weekly feedback sessions and integrating requests into sprint planning, fulfilling the core criteria of cross-functional communication, though the answer is bogged down by excessive tangents.",
+      "quote_verified": true
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "resume": "resume_alex",
+  "persona": "strong_specific",
+  "group": "strong",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates design robust, scalable REST APIs and demonstrate solid understanding of distributed systems fundamentals.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Backend Engineering and Reliability",
+      "description": "Good candidates write clean, maintainable code in Python and Java, optimize system performance, and effectively manage relational databases.",
+      "jd_evidence": "Improve system performance and reliability"
+    },
+    {
+      "name": "Production Ownership and Operations",
+      "description": "Good candidates take full responsibility for deploying, monitoring, and maintaining services in production using CI/CD pipelines and automated testing.",
+      "jd_evidence": "Own services in production end to end"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates communicate effectively with product and frontend teams to deliver features while utilizing Git for seamless version control collaboration.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally configured custom retry intervals in Celery and routed failed tasks to a Redis-backed dead-letter queue so we could manually inspect them later, which cut average processing latency down to 3 seconds.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome, personal_ownership. It must leave out: clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "UNCLEAR_SCOPE",
+      "gaps": [
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "routed failed tasks to a Redis-backed dead-letter queue",
+        "NO_MEASURABLE_OUTCOME": "cut average processing latency down to 3 seconds",
+        "NO_PERSONAL_OWNERSHIP": "I personally configured custom retry intervals"
+      },
+      "new_quotes": [
+        "routed failed tasks to a Redis-backed dead-letter queue",
+        "cut average processing latency down to 3 seconds",
+        "I personally configured custom retry intervals"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1058.3585999993375,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"dead-letter queue\". How big was that - team size, number of users, or timeframe?",
+      "followup_gap": "UNCLEAR_SCOPE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "For that service, I worked on a team of four developers during a three-month internship leading up to our peak holiday season.",
+      "instruction": "This reply must contain: clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "routed failed tasks to a Redis-backed dead-letter queue",
+        "NO_MEASURABLE_OUTCOME": "cut average processing latency down to 3 seconds",
+        "NO_PERSONAL_OWNERSHIP": "I personally configured custom retry intervals",
+        "UNCLEAR_SCOPE": "team of four developers during a three-month internship"
+      },
+      "new_quotes": [
+        "team of four developers during a three-month internship"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1547.1911000058753,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I designed the database schema to handle growing user traffic, and it achieved 300 active users in the first month.",
+      "instruction": "This reply must contain: measurable_outcome, personal_ownership. It must leave out: concrete_example, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "300 active users in the first month",
+        "NO_PERSONAL_OWNERSHIP": "I designed the database schema to handle growing user traffic"
+      },
+      "new_quotes": [
+        "300 active users in the first month",
+        "I designed the database schema to handle growing user traffic"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1211.4097000012407,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"designed the database schema\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "I set up the user and item collections in MongoDB, adding indexes on the search fields so queries ran faster when users searched for textbooks.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "UNCLEAR_SCOPE",
+      "gaps": [
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "adding indexes on the search fields",
+        "NO_MEASURABLE_OUTCOME": "300 active users in the first month",
+        "NO_PERSONAL_OWNERSHIP": "I designed the database schema to handle growing user traffic"
+      },
+      "new_quotes": [
+        "adding indexes on the search fields"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1536.395100003574,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"adding indexes on the search fields\". How big was that - team size, number of users, or timeframe?",
+      "followup_gap": "UNCLEAR_SCOPE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "I worked solo on that project over the course of a single month leading up to the initial launch.",
+      "instruction": "This reply must contain: clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I monitored and maintained the retry logic in production to ensure we achieved a two times increase in normal traffic handling without the service falling over.",
+      "instruction": "This reply must contain: measurable_outcome, personal_ownership. It must leave out: concrete_example, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "two times increase in normal traffic handling",
+        "NO_PERSONAL_OWNERSHIP": "I monitored and maintained"
+      },
+      "new_quotes": [
+        "two times increase in normal traffic handling",
+        "I monitored and maintained"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 5196.292200002063,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "I configured a custom alert trigger in the logging pipeline to fire whenever a task hit its maximum retry limit, which immediately notified us so we could inspect the Redis dead-letter queue.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "UNCLEAR_SCOPE",
+      "gaps": [
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "configured a custom alert trigger in the logging pipeline",
+        "NO_MEASURABLE_OUTCOME": "two times increase in normal traffic handling",
+        "NO_PERSONAL_OWNERSHIP": "I monitored and maintained"
+      },
+      "new_quotes": [
+        "configured a custom alert trigger in the logging pipeline"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 5977.969499996107,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"Redis dead-letter queue\". How big was that - team size, number of users, or timeframe?",
+      "followup_gap": "UNCLEAR_SCOPE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "I worked on a team of four engineers over a three-month period managing that queue during peak traffic.",
+      "instruction": "This reply must contain: clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you coordinate with other teams or users while launching the Campus Marketplace App?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I coordinated with the student users to gather feedback, achieving three hundred active users in the first month.",
+      "instruction": "This reply must contain: measurable_outcome, personal_ownership, clear_scope. It must leave out: concrete_example.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "three hundred active users in the first month",
+        "NO_PERSONAL_OWNERSHIP": "I coordinated with the student users",
+        "UNCLEAR_SCOPE": "in the first month"
+      },
+      "new_quotes": [
+        "three hundred active users in the first month",
+        "I coordinated with the student users",
+        "in the first month"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 5960.378799994942,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"gather feedback\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "I set up a feedback form directly inside the React frontend and reviewed each submission every evening to patch bugs in the Node.js backend.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "set up a feedback form directly inside the React frontend",
+        "NO_MEASURABLE_OUTCOME": "three hundred active users in the first month",
+        "NO_PERSONAL_OWNERSHIP": "I coordinated with the student users",
+        "UNCLEAR_SCOPE": "in the first month"
+      },
+      "new_quotes": [
+        "set up a feedback form directly inside the React frontend"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 5979.150500003016,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?",
+      "answer": "I personally configured custom retry intervals in Celery and routed failed tasks to a Redis-backed dead-letter queue so we could manually inspect them later, which cut average processing latency down to 3 seconds. For that service, I worked on a team of four developers during a three-month internship leading up to our peak holiday season.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "question": "For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?",
+      "answer": "I designed the database schema to handle growing user traffic, and it achieved 300 active users in the first month. I set up the user and item collections in MongoDB, adding indexes on the search fields so queries ran faster when users searched for textbooks. I worked solo on that project over the course of a single month leading up to the initial launch.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "question": "How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?",
+      "answer": "I monitored and maintained the retry logic in production to ensure we achieved a two times increase in normal traffic handling without the service falling over. I configured a custom alert trigger in the logging pipeline to fire whenever a task hit its maximum retry limit, which immediately notified us so we could inspect the Redis dead-letter queue. I worked on a team of four engineers over a three-month period managing that queue during peak traffic.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "How did you coordinate with other teams or users while launching the Campus Marketplace App?",
+      "answer": "I coordinated with the student users to gather feedback, achieving three hundred active users in the first month. I set up a feedback form directly inside the React frontend and reviewed each submission every evening to patch bugs in the Node.js backend.",
+      "followups_asked": 1
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 3,
+      "quote": "I personally configured custom retry intervals in Celery and routed failed tasks to a Redis-backed dead-letter queue so we could manually inspect them later",
+      "reasoning": "The candidate demonstrates a solid understanding of fundamental distributed systems and API reliability patterns by correctly employing retry intervals and a dead-letter queue in Celery and Redis to handle peak traffic, scoring a moderate 3 as the technical implementation is sound but lacks deeper architectural details on scaling or idempotency.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "score": 2,
+      "quote": "I set up the user and item collections in MongoDB, adding indexes on the search fields so queries ran faster when users searched for textbooks.",
+      "reasoning": "The candidate mentions adding indexes to improve query performance for search fields, which touches on database optimization. However, the explanation is very basic and lacks depth regarding relational databases, scaling strategies, partitioning, or handling complex concurrency issues, which is expected for strong backend and reliability engineering.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "score": 4,
+      "quote": "I configured a custom alert trigger in the logging pipeline to fire whenever a task hit its maximum retry limit, which immediately notified us so we could inspect the Redis dead-letter queue.",
+      "reasoning": "The candidate demonstrates strong production ownership by setting up automated alerting for retry limits and actively managing the dead-letter queue during peak traffic to maintain service stability.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 4,
+      "quote": "I set up a feedback form directly inside the React frontend and reviewed each submission every evening to patch bugs in the Node.js backend.",
+      "reasoning": "The candidate demonstrates strong cross-functional awareness by actively bridging the gap between the frontend implementation and backend systems based on user feedback. While explicit mention of Git is missing, the collaboration with frontend and backend layers is clearly articulated through this quote, earning a solid score.",
+      "quote_verified": true
+    }
+  ]
+}

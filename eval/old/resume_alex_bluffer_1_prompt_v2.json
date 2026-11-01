@@ -1,0 +1,311 @@
+{
+  "resume": "resume_alex",
+  "persona": "bluffer",
+  "group": "weak",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates design robust, scalable REST APIs and demonstrate solid understanding of distributed systems fundamentals.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Backend Engineering and Reliability",
+      "description": "Good candidates write clean, maintainable code in Python and Java, optimize system performance, and effectively manage relational databases.",
+      "jd_evidence": "Improve system performance and reliability"
+    },
+    {
+      "name": "Production Ownership and Operations",
+      "description": "Good candidates take full responsibility for deploying, monitoring, and maintaining services in production using CI/CD pipelines and automated testing.",
+      "jd_evidence": "Own services in production end to end"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates communicate effectively with product and frontend teams to deliver features while utilizing Git for seamless version control collaboration.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I totally revolutionized the entire architectural philosophy of the retry and dead-letter logic. I took complete control of the system dynamics to ensure absolute operational supremacy under intense peak demands, purely through my visionary engineering.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 880.6790000016917,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"retry and dead-letter logic\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached the core architectural challenges of the system by completely transforming how the team managed the underlying operational workflows, ensuring that everything performed at the highest possible level of engineering excellence.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1089.7072000007029,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "The team architected the database schema to scale effortlessly to support three hundred active users within the first month, while ensuring phenomenal performance during peak operational periods.",
+      "instruction": "This reply must contain: measurable_outcome, clear_scope. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "judge_ms": 906.7326999938814,
+      "key_breaks": [
+        "measurable_outcome missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"The team architected the database schema\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We collaborated extensively to shape the structural foundation of the application through a unified team vision, ensuring that the backend infrastructure met our highest collective standards of excellence.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "judge_ms": 874.3977999984054,
+      "key_breaks": [
+        "measurable_outcome missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "The monitoring systems were optimized to achieve a massive latency reduction down to three seconds while cutting overall processing time by ninety percent.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "judge_ms": 994.278199999826,
+      "key_breaks": [
+        "measurable_outcome missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"monitoring systems\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely streamlined all the monitoring workflows together to guarantee total operational excellence and maximum performance across the entire system.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1101.0689000031562,
+      "key_breaks": [
+        "measurable_outcome missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"streamlined all the monitoring workflows\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached the monitoring and management workflows as a unified collective, leveraging our shared expertise to elevate the entire system to unprecedented heights of engineering brilliance.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "judge_ms": null,
+      "key_breaks": [
+        "measurable_outcome missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you coordinate with other teams or users while launching the Campus Marketplace App?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally drove every single aspect of the coordination effort to ensure absolute success during the launch.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1155.6120999957784,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"coordination effort\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely synchronized all the overarching coordination efforts as a unified team to ensure flawless execution across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1088.4558000034303,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?",
+      "answer": "I totally revolutionized the entire architectural philosophy of the retry and dead-letter logic. I took complete control of the system dynamics to ensure absolute operational supremacy under intense peak demands, purely through my visionary engineering. We approached the core architectural challenges of the system by completely transforming how the team managed the underlying operational workflows, ensuring that everything performed at the highest possible level of engineering excellence.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "question": "For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?",
+      "answer": "The team architected the database schema to scale effortlessly to support three hundred active users within the first month, while ensuring phenomenal performance during peak operational periods. We collaborated extensively to shape the structural foundation of the application through a unified team vision, ensuring that the backend infrastructure met our highest collective standards of excellence.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "question": "How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?",
+      "answer": "The monitoring systems were optimized to achieve a massive latency reduction down to three seconds while cutting overall processing time by ninety percent. We completely streamlined all the monitoring workflows together to guarantee total operational excellence and maximum performance across the entire system. We approached the monitoring and management workflows as a unified collective, leveraging our shared expertise to elevate the entire system to unprecedented heights of engineering brilliance.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "How did you coordinate with other teams or users while launching the Campus Marketplace App?",
+      "answer": "I personally drove every single aspect of the coordination effort to ensure absolute success during the launch. We completely synchronized all the overarching coordination efforts as a unified team to ensure flawless execution across the board.",
+      "followups_asked": 1
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 1,
+      "quote": "I totally revolutionized the entire architectural philosophy of the retry and dead-letter logic.",
+      "reasoning": "The candidate's response consists entirely of vague buzzwords and self-aggrandizing claims without providing any technical details on how Celery, Redis, retry mechanisms, or dead-letter queues were actually designed to handle peak traffic. The quoted statement exemplifies this lack of concrete architectural substance.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "score": 1,
+      "quote": "The team architected the database schema to scale effortlessly to support three hundred active users within the first month, while ensuring phenomenal performance during peak operational periods.",
+      "reasoning": "The candidate fails to provide any technical details about how the database schema was actually designed or optimized to handle growing traffic, instead using vague buzzwords and mentioning a very low user count of 300 active users.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "score": 1,
+      "quote": "We approached the monitoring and management workflows as a unified collective, leveraging our shared expertise to elevate the entire system to unprecedented heights of engineering brilliance.",
+      "reasoning": "The candidate's answer is filled with vague buzzwords and corporate jargon instead of addressing the specific question about how they monitored and maintained the retry logic in production. As shown in the quote, they resort to grandiose phrasing about 'engineering brilliance' rather than discussing concrete tools, metrics, alerts, or operational processes.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 1,
+      "quote": "I personally drove every single aspect of the coordination effort to ensure absolute success during the launch.",
+      "reasoning": "The candidate provides a very vague and generic response about coordination without giving any specific examples of how they actually collaborated with product or frontend teams, or how they used Git for version control. The quoted statement demonstrates buzzword-heavy self-praise rather than concrete details about cross-functional collaboration.",
+      "quote_verified": true
+    }
+  ]
+}

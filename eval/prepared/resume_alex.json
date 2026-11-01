@@ -1,0 +1,49 @@
+{
+  "candidate_name": "Alex Rivera",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level",
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates design robust, scalable REST APIs and demonstrate solid understanding of distributed systems fundamentals.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Backend Engineering and Reliability",
+      "description": "Good candidates write clean, maintainable code in Python and Java, optimize system performance, and effectively manage relational databases.",
+      "jd_evidence": "Improve system performance and reliability"
+    },
+    {
+      "name": "Production Ownership and Operations",
+      "description": "Good candidates take full responsibility for deploying, monitoring, and maintaining services in production using CI/CD pipelines and automated testing.",
+      "jd_evidence": "Own services in production end to end"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates communicate effectively with product and frontend teams to deliver features while utilizing Git for seamless version control collaboration.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    }
+  ],
+  "questions": [
+    {
+      "dimension": "API Design and Architecture",
+      "text": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?",
+      "grounded_project": "Order Fulfillment Service"
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "text": "For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?",
+      "grounded_project": "Campus Marketplace App"
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "text": "How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?",
+      "grounded_project": "Order Fulfillment Service"
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "text": "How did you coordinate with other teams or users while launching the Campus Marketplace App?",
+      "grounded_project": "Campus Marketplace App"
+    }
+  ]
+}

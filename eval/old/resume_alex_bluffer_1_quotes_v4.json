@@ -1,0 +1,460 @@
+{
+  "resume": "resume_alex",
+  "persona": "bluffer",
+  "group": "weak",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates design robust, scalable REST APIs and demonstrate solid understanding of distributed systems fundamentals.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Backend Engineering and Reliability",
+      "description": "Good candidates write clean, maintainable code in Python and Java, optimize system performance, and effectively manage relational databases.",
+      "jd_evidence": "Improve system performance and reliability"
+    },
+    {
+      "name": "Production Ownership and Operations",
+      "description": "Good candidates take full responsibility for deploying, monitoring, and maintaining services in production using CI/CD pipelines and automated testing.",
+      "jd_evidence": "Own services in production end to end"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates communicate effectively with product and frontend teams to deliver features while utilizing Git for seamless version control collaboration.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally pioneered the entire retry and dead-letter architecture to ensure our systems performed at the highest possible level.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I personally pioneered the entire retry and dead-letter architecture"
+      },
+      "bad_quotes": [],
+      "judge_ms": 1164.6990000008373,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"retry and dead-letter architecture\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized the entire workflow from the ground up to achieve maximum operational excellence across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "bad_quotes": [],
+      "judge_ms": 1530.5679000011878,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"completely revolutionized the entire workflow\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely transformed our metrics to deliver unprecedented performance gains across every single benchmark.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We engineered a massive architectural triumph for the campus marketplace that scaled effortlessly to support thousands of active users within a timeframe of several months.",
+      "instruction": "This reply must contain: measurable_outcome, clear_scope. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "thousands of active users",
+        "UNCLEAR_SCOPE": "thousands of active users within a timeframe of several months"
+      },
+      "bad_quotes": [],
+      "judge_ms": 1581.58839999669,
+      "key_breaks": [
+        "measurable_outcome missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"massive architectural triumph\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized the entire data architecture from the ground up to achieve maximum operational excellence across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "bad_quotes": [],
+      "judge_ms": 1229.7203999987687,
+      "key_breaks": [
+        "measurable_outcome missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"data architecture\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": false
+    },
+    {
+      "speaker": "candidate",
+      "text": "We achieved a monumental milestone of 300 active users.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely transformed our operational metrics to deliver an unprecedented 3x performance boost across every single benchmark.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "3x performance boost"
+      },
+      "bad_quotes": [],
+      "judge_ms": 1463.0376999994041,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"3x performance boost\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized the entire system monitoring workflow from the ground up to achieve maximum operational excellence across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "bad_quotes": [],
+      "judge_ms": 1169.0524000005098,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"system monitoring workflow\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": false
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized our metrics to deliver a 40 second reduction.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you coordinate with other teams or users while launching the Campus Marketplace App?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally spearheaded all of the coordination efforts to ensure total alignment across the board.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I personally spearheaded all of the coordination efforts"
+      },
+      "bad_quotes": [],
+      "judge_ms": 1004.3647000056808,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"coordination efforts\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized the entire collaborative framework from the ground up to achieve maximum operational excellence across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I personally spearheaded all of the coordination efforts"
+      },
+      "bad_quotes": [],
+      "judge_ms": 1294.2544000034104,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"collaborative framework\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely transformed our metrics to deliver unprecedented performance gains across every single benchmark.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?",
+      "answer": "I personally pioneered the entire retry and dead-letter architecture to ensure our systems performed at the highest possible level. We completely revolutionized the entire workflow from the ground up to achieve maximum operational excellence across the board. We completely transformed our metrics to deliver unprecedented performance gains across every single benchmark.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "question": "For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?",
+      "answer": "We engineered a massive architectural triumph for the campus marketplace that scaled effortlessly to support thousands of active users within a timeframe of several months. We completely revolutionized the entire data architecture from the ground up to achieve maximum operational excellence across the board. We achieved a monumental milestone of 300 active users.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "question": "How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?",
+      "answer": "We completely transformed our operational metrics to deliver an unprecedented 3x performance boost across every single benchmark. We completely revolutionized the entire system monitoring workflow from the ground up to achieve maximum operational excellence across the board. We completely revolutionized our metrics to deliver a 40 second reduction.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "How did you coordinate with other teams or users while launching the Campus Marketplace App?",
+      "answer": "I personally spearheaded all of the coordination efforts to ensure total alignment across the board. We completely revolutionized the entire collaborative framework from the ground up to achieve maximum operational excellence across the board. We completely transformed our metrics to deliver unprecedented performance gains across every single benchmark.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 1,
+      "quote": "I personally pioneered the entire retry and dead-letter architecture to ensure our systems performed at the highest possible level.",
+      "reasoning": "The candidate uses excessive buzzwords and self-aggrandizing language without providing any concrete technical details about how Celery, Redis, retry logic, or dead-letter queues were actually designed or implemented to handle peak traffic.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "score": 1,
+      "quote": "We achieved a monumental milestone of 300 active users.",
+      "reasoning": "The candidate uses grandiose, vague language ('architectural triumph', 'operational excellence') without providing any technical details about the database schema, indexing, partitioning, or query optimization strategies used to handle growing traffic. The specific metric provided (300 active users) is very low for a system claiming to scale effortlessly, demonstrating a lack of substance regarding backend engineering and reliability.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "score": 1,
+      "quote": "We completely transformed our operational metrics to deliver an unprecedented 3x performance boost across every single benchmark.",
+      "reasoning": "The candidate provides vague, buzzword-heavy claims about transforming metrics and achieving performance boosts, but completely fails to explain how they actually monitored, maintained, or operated the retry logic for the Order Fulfillment Service in production. The quote demonstrates a lack of concrete operational practices.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 1,
+      "quote": "We completely revolutionized the entire collaborative framework from the ground up to achieve maximum operational excellence across the board.",
+      "reasoning": "The candidate uses buzzwords and vague corporate jargon without providing any concrete examples of how they actually collaborated with product, frontend, or other teams using Git or other practical methods.",
+      "quote_verified": true
+    }
+  ]
+}

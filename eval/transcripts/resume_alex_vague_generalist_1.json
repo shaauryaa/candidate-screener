@@ -1,0 +1,483 @@
+{
+  "resume": "resume_alex",
+  "persona": "vague_generalist",
+  "group": "weak",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates design robust, scalable REST APIs and demonstrate solid understanding of distributed systems fundamentals.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Backend Engineering and Reliability",
+      "description": "Good candidates write clean, maintainable code in Python and Java, optimize system performance, and effectively manage relational databases.",
+      "jd_evidence": "Improve system performance and reliability"
+    },
+    {
+      "name": "Production Ownership and Operations",
+      "description": "Good candidates take full responsibility for deploying, monitoring, and maintaining services in production using CI/CD pipelines and automated testing.",
+      "jd_evidence": "Own services in production end to end"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates communicate effectively with product and frontend teams to deliver features while utilizing Git for seamless version control collaboration.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "When the team approached the retry and dead-letter architecture, we leveraged Celery's task routing capabilities alongside Redis to establish a robust buffering mechanism that gracefully re-enqueued failing payloads without overwhelming upstream dependencies.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1123.023699998157,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"Celery's task routing capabilities\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": false
+    },
+    {
+      "speaker": "candidate",
+      "text": "The engineering group implemented custom exception handlers and configured specific queue bindings to automatically route unsuccessful message payloads into dedicated failure exchanges for subsequent evaluation.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "implemented custom exception handlers and configured specific queue bindings"
+      },
+      "new_quotes": [
+        "implemented custom exception handlers and configured specific queue bindings"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1066.3112000038382,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"custom exception handlers\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The group successfully optimized various performance metrics across the board, driving significant improvements in overall system efficiency and throughput for all stakeholders involved.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "The team aligned our scalable data architecture strategies to drive incredible performance gains and achieve over three hundred active users effortlessly.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "over three hundred active users",
+        "UNCLEAR_SCOPE": "three hundred active users"
+      },
+      "new_quotes": [
+        "over three hundred active users",
+        "three hundred active users"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1126.7884999979287,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"scalable data architecture strategies\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The engineering group focused on leveraging modern database paradigms and optimized query patterns to ensure seamless scalability and robust data integrity across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "over three hundred active users",
+        "UNCLEAR_SCOPE": "three hundred active users"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 924.7289999984787,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"optimized query patterns\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The entire group collaborated cohesively on every aspect of the data architecture, combining our collective expertise to drive those architectural decisions seamlessly forward as a unified unit.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "The engineering group achieved cutting latency down to three seconds across the board.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "three seconds"
+      },
+      "new_quotes": [
+        "three seconds"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1364.887900002941,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"cutting latency down to three seconds\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The team aligned our monitoring paradigms and system analytics strategies to drive continuous improvement and maintain optimal operational excellence for all stakeholders.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "three seconds"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1333.0197999966913,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"monitoring paradigms\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The collective group worked in total synergy to oversee every monitoring initiative, ensuring that our shared vision drove the operational success forward without any individual division of labor.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you coordinate with other teams or users while launching the Campus Marketplace App?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "The engineering group successfully achieved three hundred active users within the initial timeframe effortlessly.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "three hundred active users",
+        "UNCLEAR_SCOPE": "initial timeframe"
+      },
+      "new_quotes": [
+        "three hundred active users",
+        "initial timeframe"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1262.2924000024796,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"three hundred active users\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The team collaborated seamlessly on our engagement initiatives and strategic deployment paradigms to maximize stakeholder value across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "three hundred active users",
+        "UNCLEAR_SCOPE": "initial timeframe"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1408.5797000007005,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"engagement initiatives\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The collective group joined forces to synchronize our outreach strategies and deployment methodologies, ensuring that every facet of the launch was driven by our shared collaborative vision as a unified unit.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?",
+      "answer": "When the team approached the retry and dead-letter architecture, we leveraged Celery's task routing capabilities alongside Redis to establish a robust buffering mechanism that gracefully re-enqueued failing payloads without overwhelming upstream dependencies. The engineering group implemented custom exception handlers and configured specific queue bindings to automatically route unsuccessful message payloads into dedicated failure exchanges for subsequent evaluation. The group successfully optimized various performance metrics across the board, driving significant improvements in overall system efficiency and throughput for all stakeholders involved.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "question": "For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?",
+      "answer": "The team aligned our scalable data architecture strategies to drive incredible performance gains and achieve over three hundred active users effortlessly. The engineering group focused on leveraging modern database paradigms and optimized query patterns to ensure seamless scalability and robust data integrity across the board. The entire group collaborated cohesively on every aspect of the data architecture, combining our collective expertise to drive those architectural decisions seamlessly forward as a unified unit.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "question": "How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?",
+      "answer": "The engineering group achieved cutting latency down to three seconds across the board. The team aligned our monitoring paradigms and system analytics strategies to drive continuous improvement and maintain optimal operational excellence for all stakeholders. The collective group worked in total synergy to oversee every monitoring initiative, ensuring that our shared vision drove the operational success forward without any individual division of labor.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "How did you coordinate with other teams or users while launching the Campus Marketplace App?",
+      "answer": "The engineering group successfully achieved three hundred active users within the initial timeframe effortlessly. The team collaborated seamlessly on our engagement initiatives and strategic deployment paradigms to maximize stakeholder value across the board. The collective group joined forces to synchronize our outreach strategies and deployment methodologies, ensuring that every facet of the launch was driven by our shared collaborative vision as a unified unit.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 2,
+      "quote": "The engineering group implemented custom exception handlers and configured specific queue bindings to automatically route unsuccessful message payloads into dedicated failure exchanges for subsequent evaluation.",
+      "reasoning": "The candidate mentions using Celery and Redis to handle retry and dead-letter logic, and briefly touches on custom exception handlers and queue bindings. However, the response remains high-level and buzzword-heavy, lacking concrete details on backoff strategies, idempotency, or how Redis specifically supports the Celery broker configuration under peak traffic.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "score": 1,
+      "quote": "The team aligned our scalable data architecture strategies to drive incredible performance gains and achieve over three hundred active users effortlessly.",
+      "reasoning": "The candidate uses highly vague and buzzword-heavy language instead of providing any concrete technical details about the database schema design, indexing, partitioning, or handling relational databases for growth.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "score": 1,
+      "quote": "The engineering group achieved cutting latency down to three seconds across the board.",
+      "reasoning": "The candidate fails to provide any specific details about monitoring or maintaining the retry logic for the Order Fulfillment Service, instead offering generic corporate buzzwords and corporate-speak as highlighted by the quote.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 1,
+      "quote": "The team collaborated seamlessly on our engagement initiatives and strategic deployment paradigms to maximize stakeholder value across the board.",
+      "reasoning": "The candidate uses vague buzzwords and corporate jargon instead of providing concrete examples of cross-functional collaboration with product or frontend teams, or mentioning Git for version control. The quote provided merely states that the team collaborated seamlessly without any specific behavioral details.",
+      "quote_verified": true
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "resume": "resume_alex",
+  "persona": "bluffer",
+  "group": "weak",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates design robust, scalable REST APIs and demonstrate solid understanding of distributed systems fundamentals.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Backend Engineering and Reliability",
+      "description": "Good candidates write clean, maintainable code in Python and Java, optimize system performance, and effectively manage relational databases.",
+      "jd_evidence": "Improve system performance and reliability"
+    },
+    {
+      "name": "Production Ownership and Operations",
+      "description": "Good candidates take full responsibility for deploying, monitoring, and maintaining services in production using CI/CD pipelines and automated testing.",
+      "jd_evidence": "Own services in production end to end"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates communicate effectively with product and frontend teams to deliver features while utilizing Git for seamless version control collaboration.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally pioneered a completely visionary and transformative approach to the core architecture, ensuring total ownership over the entire paradigm shift.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I personally pioneered"
+      },
+      "new_quotes": [
+        "I personally pioneered"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1030.4219999961788,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"core architecture\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized the entire system to achieve unprecedented levels of excellence and seamless scalability across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I personally pioneered"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1117.9824999999255,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"transformative approach to the core architecture\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely outperformed every expectation and achieved astronomical results that redefined the entire operational landscape for the team.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "The team architected a massively scalable solution that supported over three hundred active users within the very first month of deployment.",
+      "instruction": "This reply must contain: measurable_outcome, clear_scope. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "over three hundred active users",
+        "UNCLEAR_SCOPE": "within the very first month"
+      },
+      "new_quotes": [
+        "over three hundred active users",
+        "within the very first month"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1062.844899999618,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"massively scalable solution\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized the entire data infrastructure through pure vision and unmatched technical execution to ensure flawless performance.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "over three hundred active users",
+        "UNCLEAR_SCOPE": "within the very first month"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1332.5719999993453,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"pure vision and unmatched technical execution\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The entire team collaborated seamlessly to drive those monumental breakthroughs together as a unified force.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized the monitoring systems and achieved a processing latency of three seconds.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "processing latency of three seconds"
+      },
+      "new_quotes": [
+        "processing latency of three seconds"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1025.1040000002831,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"monitoring systems\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized the entire oversight framework to ensure total operational excellence across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "processing latency of three seconds"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1094.812000003003,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"entire oversight framework\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The entire team worked together seamlessly to deliver those breathtaking milestones.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you coordinate with other teams or users while launching the Campus Marketplace App?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally spearheaded the entire strategic coordination effort to ensure absolute harmony and alignment across every single stakeholder.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I personally spearheaded the entire strategic coordination effort"
+      },
+      "new_quotes": [
+        "I personally spearheaded the entire strategic coordination effort"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1177.0477000027313,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"strategic coordination effort\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized the entire collaborative framework to achieve total synergy across all channels.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I personally spearheaded the entire strategic coordination effort"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1105.9510999984923,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"collaborative framework\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely outperformed every benchmark to deliver astronomical success across the board.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "For your Order Fulfillment Service, how did you design the retry and dead-letter logic using Celery and Redis to handle peak traffic?",
+      "answer": "I personally pioneered a completely visionary and transformative approach to the core architecture, ensuring total ownership over the entire paradigm shift. We completely revolutionized the entire system to achieve unprecedented levels of excellence and seamless scalability across the board. We completely outperformed every expectation and achieved astronomical results that redefined the entire operational landscape for the team.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "question": "For your Campus Marketplace App, how did you design the database schema to handle growing user traffic?",
+      "answer": "The team architected a massively scalable solution that supported over three hundred active users within the very first month of deployment. We completely revolutionized the entire data infrastructure through pure vision and unmatched technical execution to ensure flawless performance. The entire team collaborated seamlessly to drive those monumental breakthroughs together as a unified force.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "question": "How did you monitor and maintain the retry logic for the Order Fulfillment Service in production?",
+      "answer": "We completely revolutionized the monitoring systems and achieved a processing latency of three seconds. We completely revolutionized the entire oversight framework to ensure total operational excellence across the board. The entire team worked together seamlessly to deliver those breathtaking milestones.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "How did you coordinate with other teams or users while launching the Campus Marketplace App?",
+      "answer": "I personally spearheaded the entire strategic coordination effort to ensure absolute harmony and alignment across every single stakeholder. We completely revolutionized the entire collaborative framework to achieve total synergy across all channels. We completely outperformed every benchmark to deliver astronomical success across the board.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 1,
+      "quote": "I personally pioneered a completely visionary and transformative approach to the core architecture, ensuring total ownership over the entire paradigm shift.",
+      "reasoning": "The candidate's answer is filled with vague buzzwords and self-aggrandizing statements (\"completely visionary and transformative approach\") without providing any technical details about API design, Celery, Redis, retry logic, or dead-letter queues. Because the response completely lacks substance regarding the prompt's focus on distributed systems and API architecture, it receives the lowest possible score.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Backend Engineering and Reliability",
+      "score": 1,
+      "quote": "The team architected a massively scalable solution that supported over three hundred active users within the very first month of deployment.",
+      "reasoning": "The candidate's response relies entirely on vague buzzwords and corporate-speak without providing any concrete details about database schema design, indexing, partitioning, or handling growing user traffic in Python or Java. The quoted text exaggerates metrics (three hundred active users) and lacks technical depth.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Operations",
+      "score": 1,
+      "quote": "We completely revolutionized the monitoring systems and achieved a processing latency of three seconds.",
+      "reasoning": "The candidate provides entirely buzzword-heavy and vague statements without explaining any concrete mechanisms for monitoring, maintaining, or handling the retry logic in production. The quoted sentence merely boasts about latency and revolutionizing systems without giving technical details or taking specific operational responsibility.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 1,
+      "quote": "I personally spearheaded the entire strategic coordination effort to ensure absolute harmony and alignment across every single stakeholder.",
+      "reasoning": "The candidate uses excessive corporate buzzwords and vague generalizations like \"strategic coordination effort\" and \"absolute harmony\" instead of providing concrete, actionable examples of how they actually collaborated with product, frontend, or other teams using version control tools like Git.",
+      "quote_verified": true
+    }
+  ]
+}
