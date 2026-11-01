@@ -2,4 +2,5 @@ google-genai
 pydantic
 python-dotenv
 pypdf
+scikit-learn
 livekit-agents[deepgram,cartesia,silero,turn-detector]~=1.8

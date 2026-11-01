@@ -461,6 +461,7 @@ def write_summary(out: str) -> None:
     spreads = []
     changes = defaultdict(list)  # fairness sentence -> signed score changes
     unchanged, fair_turns = 0, 0
+    verbosity = []  # score change from the filler copy
     for r in ok:
         for turn, rescore in r.get("rescores", {}).items():
             original = r["scores"][int(turn)]["score"]
@@ -471,6 +472,8 @@ def write_summary(out: str) -> None:
                 changes[copy["sentence"]].append(change)
             unchanged += not any(copies)
             fair_turns += 1
+            if "verbosity" in rescore:
+                verbosity.append(rescore["verbosity"]["score"] - original)
     w.append(f"- All 4 scores match: {rate(sum(s == 0 for s in spreads), len(spreads))} of turns")
     w.append(f"- Mean max-min spread: {mean_of(spreads)}")
 
@@ -480,6 +483,11 @@ def write_summary(out: str) -> None:
     w.append(f"- Mean absolute change: {mean_of([abs(c) for values in changes.values() for c in values])}")
     for sentence, values in changes.items():
         w.append(f'- Mean signed change for "{sentence}": {mean_of(values)}')
+
+    w += ["", "## Verbosity attack",
+          "Filler adds no evidence. Read against repeat consistency: a change may be the model's own noise.",
+          f"- Score rose: {rate(sum(c > 0 for c in verbosity), len(verbosity))} of turns",
+          f"- Mean change: {mean_of(verbosity)}"]
 
     w += ["", "## Judge timing"]
     if judge_ms:

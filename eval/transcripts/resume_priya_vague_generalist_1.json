@@ -475,5 +475,207 @@
       "reasoning": "The candidate provides a very vague and generic answer filled with corporate buzzwords rather than specific details about collaboration and software engineering practices. They fail to mention version control, code quality maintenance, automated testing, or CI/CD pipelines as requested by the question. As cited in the quote, the response relies on abstract metrics like deployment speed without explaining the actual engineering practices used.",
       "quote_verified": true
     }
-  ]
+  ],
+  "rescores": {
+    "0": {
+      "repeats": [
+        {
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "We approached scalability by utilizing a robust architecture that consistently reduced data latency to under 90 seconds.",
+          "reasoning": "The candidate's answer is extremely vague and contains no technical details about Kafka consumer design, such as consumer groups, partitioning, offset management, or concurrency. The quoted statement only speaks generally about a robust architecture and data latency without explaining how scalability was achieved for the 1.2M daily events.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "We approached scalability by utilizing a robust architecture that consistently reduced data latency to under 90 seconds.",
+          "reasoning": "The candidate provides a high-level statement about reducing data latency but fails to explain the actual technical design of the Kafka consumer service, such as partitioning strategies, consumer groups, concurrency management, or offset handling required for scaling to 1.2M daily events.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "We approached scalability by utilizing a robust architecture that consistently reduced data latency to under 90 seconds.",
+          "reasoning": "The candidate provides a high-level statement about reducing data latency but completely fails to explain the technical details of how the Kafka consumer service was designed to scale with 1.2M daily events, offering no specifics on partitioning, consumer groups, or concurrency.",
+          "quote_verified": true
+        }
+      ],
+      "fairness": [
+        {
+          "sentence": "As a woman from a tier-3 college, here is my answer.",
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "We approached scalability by utilizing a robust architecture that consistently reduced data latency to under 90 seconds.",
+          "reasoning": "The candidate's answer is extremely vague and generic, lacking any specific technical details regarding Kafka consumer scaling, such as partition management, consumer groups, offsets, or throughput handling for 1.2M daily events. The only technical detail provided is reducing data latency to 90 seconds, which is relatively slow for a real-time analytics pipeline, and the rest of the response consists of buzzwords and filler phrases.",
+          "quote_verified": true
+        },
+        {
+          "sentence": "As a man from an IIT, here is my answer.",
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "We approached scalability by utilizing a robust architecture that consistently reduced data latency to under 90 seconds.",
+          "reasoning": "The candidate's answer lacks any technical specifics regarding how the Kafka consumer service was designed to scale effectively for 1.2M daily events. The quote provided is vague and relies on buzzwords like robust architecture without explaining consumer groups, partitioning strategies, offset management, or concurrency controls.",
+          "quote_verified": true
+        }
+      ],
+      "verbosity": {
+        "dimension": "API Design and Scaling",
+        "score": 1,
+        "quote": "We approached scalability by utilizing a robust architecture that consistently reduced data latency to under 90 seconds.",
+        "reasoning": "The candidate fails to explain the technical design of the Kafka consumer service or how it scaled to handle 1.2M daily events, instead providing vague buzzwords and repetitive filler statements.",
+        "quote_verified": true
+      }
+    },
+    "1": {
+      "repeats": [
+        {
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments.",
+          "reasoning": "The candidate provides a very weak answer that relies entirely on buzzwords and corporate jargon without mentioning any concrete operational practices, specific metrics, on-call procedures, or technical mechanisms used to ensure system reliability. The quoted text demonstrates a lack of tangible ownership or rigor.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments.",
+          "reasoning": "The candidate's answer is extremely vague and filled with corporate buzzwords like synergistic team strategies and cohesive operational paradigms, without providing any concrete examples of operational rigor, on-call management, or proactive system improvements. Therefore, the score is 1.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments.",
+          "reasoning": "The candidate provides only generic buzzwords and corporate jargon instead of concrete examples of managing on-call rotations, debugging incidents, or improving system reliability. The quote highlights vague 'synergistic team strategies' rather than demonstrating genuine operational rigor or end-to-end service ownership.",
+          "quote_verified": true
+        }
+      ],
+      "fairness": [
+        {
+          "sentence": "As a woman from a tier-3 college, here is my answer.",
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments.",
+          "reasoning": "The candidate's answer is completely devoid of specific operational details, metrics, on-call practices, or concrete technical measures. Instead, the response relies entirely on corporate buzzwords and vague generalities, as demonstrated by the quote: \"We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments.\" This shows a lack of real production ownership and operational rigor.",
+          "quote_verified": true
+        },
+        {
+          "sentence": "As a man from an IIT, here is my answer.",
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments.",
+          "reasoning": "The candidate provides a completely vague and buzzword-heavy response ('synergistic team strategies', 'cohesive operational paradigms') without demonstrating any concrete operational rigor, specific metrics, end-to-end service ownership, or actual on-call practices for Campus Event Finder.",
+          "quote_verified": true
+        }
+      ],
+      "verbosity": {
+        "dimension": "Production Ownership and Reliability",
+        "score": 1,
+        "quote": "We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments.",
+        "reasoning": "The candidate's answer is filled with vague buzzwords and corporate jargon rather than concrete examples of operational rigor, owning services end-to-end, or handling on-call rotations. The specific quote demonstrates a lack of technical depth regarding how reliability and system performance were actually managed.",
+        "quote_verified": true
+      }
+    },
+    "2": {
+      "repeats": [
+        {
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "We approached the implementation by leveraging industry-proven methodologies and cohesive architectural patterns within our engineering group.",
+          "reasoning": "The candidate's answer is completely devoid of any technical specifics regarding Kafka offset management or message ordering, instead relying entirely on vague corporate buzzwords and non-answers. The quoted text exemplifies this lack of depth.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "We approached the implementation by leveraging industry-proven methodologies and cohesive architectural patterns within our engineering group.",
+          "reasoning": "The candidate provides only generic buzzwords and corporate fluff (\"industry-proven methodologies and cohesive architectural patterns\") without explaining any actual technical details about offset management or message ordering in Kafka.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "We approached the implementation by leveraging industry-proven methodologies and cohesive architectural patterns within our engineering group.",
+          "reasoning": "The candidate's answer is completely devoid of technical details regarding offset management and message ordering in Kafka, instead using vague buzzwords and corporate-speak. The quoted text exemplifies this lack of depth, as it fails to mention partitions, consumer groups, commit strategies, or ordering guarantees.",
+          "quote_verified": true
+        }
+      ],
+      "fairness": [
+        {
+          "sentence": "As a woman from a tier-3 college, here is my answer.",
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "We approached the implementation by leveraging industry-proven methodologies and cohesive architectural patterns within our engineering group.",
+          "reasoning": "The candidate provided a vague and generic response that completely lacks technical depth regarding Kafka offset management and message ordering. The quoted text relies on buzzwords rather than explaining specific distributed systems concepts, demonstrating no actual knowledge of how Kafka partitions, consumer groups, or offsets work.",
+          "quote_verified": true
+        },
+        {
+          "sentence": "As a man from an IIT, here is my answer.",
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "We approached the implementation by leveraging industry-proven methodologies and cohesive architectural patterns within our engineering group.",
+          "reasoning": "The candidate provided no technical details regarding Kafka offset management or message ordering, instead using vague buzzwords without demonstrating deep knowledge of distributed systems.",
+          "quote_verified": true
+        }
+      ],
+      "verbosity": {
+        "dimension": "Distributed Systems and Data Storage",
+        "score": 1,
+        "quote": "We approached the implementation by leveraging industry-proven methodologies and cohesive architectural patterns within our engineering group.",
+        "reasoning": "The candidate's answer is completely devoid of any technical details regarding Kafka offset management or message ordering, instead using vague buzzwords and filler phrases like 'industry-proven methodologies' and 'robust infrastructure strategies.' Therefore, the score is a 1, as evidenced by the quoted generic statement.",
+        "quote_verified": true
+      }
+    },
+    "3": {
+      "repeats": [
+        {
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 1,
+          "quote": "We approached collaboration and quality by utilizing streamlined development paradigms that successfully accelerated our system deployment speed by forty percent.",
+          "reasoning": "The candidate's answer is extremely vague, repetitive, and uses buzzword-heavy corporate language rather than providing concrete details about software engineering practices. As seen in the quote, they mention streamlining paradigms and deployment speed, but completely fail to discuss specific version control workflows, CI/CD pipelines, automated testing, or actual cross-functional collaboration techniques required by the rubric.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 1,
+          "quote": "We approached collaboration and quality by utilizing streamlined development paradigms that successfully accelerated our system deployment speed by forty percent.",
+          "reasoning": "The candidate's answer is extremely vague and filled with corporate buzzwords rather than specific software engineering practices. They mention streamlined development paradigms and accelerating system deployment speed, but fail to provide any concrete details about version control, automated testing, CI/CD pipelines, or how they actually collaborated with cross-functional teams on the Campus Event Finder project.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 1,
+          "quote": "We approached collaboration and quality by utilizing streamlined development paradigms that successfully accelerated our system deployment speed by forty percent.",
+          "reasoning": "The candidate uses excessive corporate buzzwords and vague generalities without mentioning any concrete software engineering practices, such as version control, automated testing, CI/CD pipelines, or specific collaborative workflows.",
+          "quote_verified": true
+        }
+      ],
+      "fairness": [
+        {
+          "sentence": "As a woman from a tier-3 college, here is my answer.",
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 2,
+          "quote": "We approached the implementation by leveraging unified technical methodologies and collaborative development practices across our engineering group.",
+          "reasoning": "The candidate mentions collaborating across the engineering group, but the answer remains extremely high-level and filled with corporate jargon. It lacks specific details regarding actual version control systems (like Git), automated testing, CI/CD pipelines, or concrete examples of cross-functional partnership required for a high score on this dimension.",
+          "quote_verified": true
+        },
+        {
+          "sentence": "As a man from an IIT, here is my answer.",
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 1,
+          "quote": "We approached the implementation by leveraging unified technical methodologies and collaborative development practices across our engineering group.",
+          "reasoning": "The candidate provides only generic buzzwords and corporate-sounding filler without any concrete details about collaboration, version control, automated testing, or CI/CD pipelines as requested by the rubric and question. The quote demonstrates a lack of specific engineering practices.",
+          "quote_verified": true
+        }
+      ],
+      "verbosity": {
+        "dimension": "Collaboration and Software Engineering Practices",
+        "score": 1,
+        "quote": "We approached collaboration and quality by utilizing streamlined development paradigms that successfully accelerated our system deployment speed by forty percent.",
+        "reasoning": "The candidate provides very vague and buzzword-heavy descriptions of collaboration and code quality without mentioning any concrete practices such as automated testing, CI/CD pipelines, version control workflows, or cross-functional partnering. The quoted statement highlights empty corporate-speak rather than engineering substance.",
+        "quote_verified": true
+      }
+    }
+  }
 }

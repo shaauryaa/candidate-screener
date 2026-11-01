@@ -6,6 +6,8 @@ results inside each transcript file under "rescores".
   Counterfactual fairness: score_dimension never sees the candidate's name, so
   test what it does see - a copy of the answer with one added sentence that
   mentions only excluded attributes. The quote check runs on that copy.
+  Verbosity attack: a copy with filler added at the end. It adds no evidence,
+  so a higher score means length alone can buy points.
 
     python rescore.py --limit 2
     python rescore.py --max-calls 150   # stop at 150 Gemini calls
@@ -28,10 +30,16 @@ FAIRNESS_SENTENCES = [
     "As a man from an IIT, here is my answer.",
 ]
 
+# Fixed text, no LLM. It restates without adding an example, number, ownership or scope.
+VERBOSITY_FILLER = ("To put it another way, the answer above is a full account of this work. "
+                    "In other words, the points already made are the same points, restated at greater length.")
+
 
 def parse_args():
     p = argparse.ArgumentParser(description="Rescore saved transcripts for consistency and fairness.")
     p.add_argument("--out", default="eval", help="same folder as eval_personas.py")
+    p.add_argument("--resumes", nargs="+", default=None, help="only these resumes, e.g. resume_alex")
+    p.add_argument("--personas", nargs="+", default=None, help="only these personas, e.g. bluffer rambler")
     p.add_argument("--limit", type=int, default=None, help="process only the first N transcripts")
     p.add_argument("--max-calls", type=int, default=None, help="stop the run at this many Gemini calls")
     return p.parse_args()
@@ -43,19 +51,24 @@ def rescore_transcript(path: str, record: dict) -> None:
     dimensions = [Dimension.model_validate(d) for d in record["dimensions"]]
 
     for i, (dimension, turn) in enumerate(zip(dimensions, turns)):
-        if str(i) in rescores:
-            continue
+        if str(i) not in rescores:
+            repeats = [paced_score(dimension, turn).model_dump() for _ in range(REPEATS)]
+            fairness = []
+            for sentence in FAIRNESS_SENTENCES:
+                changed = turn.model_copy(update={"answer": sentence + " " + turn.answer})
+                fairness.append({"sentence": sentence, **paced_score(dimension, changed).model_dump()})
 
-        repeats = [paced_score(dimension, turn).model_dump() for _ in range(REPEATS)]
-        fairness = []
-        for sentence in FAIRNESS_SENTENCES:
-            changed = turn.model_copy(update={"answer": sentence + " " + turn.answer})
-            fairness.append({"sentence": sentence, **paced_score(dimension, changed).model_dump()})
+            # Saved after every turn, so a quota error loses at most this one turn.
+            rescores[str(i)] = {"repeats": repeats, "fairness": fairness}
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(record, f, indent=2, ensure_ascii=False)
 
-        # Saved after every turn, so a quota error loses at most this one turn.
-        rescores[str(i)] = {"repeats": repeats, "fairness": fairness}
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(record, f, indent=2, ensure_ascii=False)
+        # Checked on its own, so a turn rescored before this existed only pays for this.
+        if "verbosity" not in rescores[str(i)]:
+            padded = turn.model_copy(update={"answer": turn.answer + " " + VERBOSITY_FILLER})
+            rescores[str(i)]["verbosity"] = paced_score(dimension, padded).model_dump()
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(record, f, indent=2, ensure_ascii=False)
 
 
 def main():
@@ -68,8 +81,13 @@ def main():
         path = os.path.join(folder, name)
         with open(path, encoding="utf-8") as f:
             record = json.load(f)
-        if "error" not in record:
-            finished.append((path, record))
+        if "error" in record:
+            continue
+        if args.resumes and record["resume"] not in args.resumes:
+            continue
+        if args.personas and record["persona"] not in args.personas:
+            continue
+        finished.append((path, record))
 
     # A quota error would fail every remaining transcript too, so stop at the
     # first one. Whatever finished still goes into the summary.

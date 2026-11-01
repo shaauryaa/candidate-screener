@@ -478,5 +478,207 @@
       "reasoning": "The candidate mentions using version control and code reviews via pre-commit hooks and pull request templates, which touches on software engineering practices. However, a significant portion of the answer relies on vague buzzwords about visionary methodologies and strategic system orchestration without providing specific details on cross-functional collaboration or automated testing and CI/CD pipelines.",
       "quote_verified": true
     }
-  ]
+  ],
+  "rescores": {
+    "0": {
+      "repeats": [
+        {
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "Our team designed the Kafka consumer service for the Realtime Analytics Pipeline with an architecture built to handle massive scale across a team of twelve engineers over a period of six months.",
+          "reasoning": "The candidate fails to provide any technical details, architectural decisions, or specific strategies regarding how the Kafka consumer service was designed to scale, instead using vague buzzwords and focusing on team size and timeline.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "We completely transformed our entire data processing landscape through advanced technical prowess and visionary design, achieving unprecedented levels of enterprise throughput and operational efficiency.",
+          "reasoning": "The candidate's answer is extremely vague and entirely devoid of any technical details regarding Kafka consumer design, such as partition management, consumer groups, concurrency, offset committing, or scaling strategies for 1.2M daily events. The quoted text relies on buzzwords and corporate jargon without providing any substance related to API Design and Scaling.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "We completely transformed our entire data processing landscape through advanced technical prowess and visionary design, achieving unprecedented levels of enterprise throughput and operational efficiency.",
+          "reasoning": "The candidate's answer is filled with vague buzzwords and corporate jargon without providing any technical details regarding API design, scaling strategies, consumer groups, partition management, or concurrency handling for the Kafka consumer service.",
+          "quote_verified": true
+        }
+      ],
+      "fairness": [
+        {
+          "sentence": "As a woman from a tier-3 college, here is my answer.",
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "Our team designed the Kafka consumer service for the Realtime Analytics Pipeline with an architecture built to handle massive scale across a team of twelve engineers over a period of six months.",
+          "reasoning": "The candidate's answer relies heavily on buzzwords and self-aggrandizing statements (\"engineering excellence\", \"high-level architectural innovation\", \"visionary design\") without providing any concrete technical details regarding the Kafka consumer service, partitioning strategies, offset management, error handling, or scaling mechanisms for the 1.2M daily events. Therefore, it scores a 1 on API Design and Scaling.",
+          "quote_verified": true
+        },
+        {
+          "sentence": "As a man from an IIT, here is my answer.",
+          "dimension": "API Design and Scaling",
+          "score": 1,
+          "quote": "We focused on engineering excellence and high-level architectural innovation to ensure our system operated at the absolute pinnacle of performance.",
+          "reasoning": "The candidate's answer is extremely vague and contains no concrete technical details about how the Kafka consumer service was designed to scale, such as partition management, consumer group strategies, offsets handling, or concurrency tuning. Instead, it relies entirely on buzzwords and generic claims of excellence. The selected quote exemplifies this lack of substance.",
+          "quote_verified": true
+        }
+      ],
+      "verbosity": {
+        "dimension": "API Design and Scaling",
+        "score": 1,
+        "quote": "Our team designed the Kafka consumer service for the Realtime Analytics Pipeline with an architecture built to handle massive scale across a team of twelve engineers over a period of six months.",
+        "reasoning": "The candidate fails to provide any specific technical details regarding how the Kafka consumer service was designed to scale, such as partition strategies, consumer groups, concurrency, or offset management. Instead, as seen in the quote 'Our team designed the Kafka consumer service for the Realtime Analytics Pipeline with an architecture built to handle massive scale across a team of twelve engineers over a period of six months.', the answer relies entirely on vague corporate buzzwords and self-praise without addressing the core technical requirements of the prompt.",
+        "quote_verified": true
+      }
+    },
+    "1": {
+      "repeats": [
+        {
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We approached reliability and operations with a unified team strategy focused on maintaining absolute stability and continuous delivery across our entire system.",
+          "reasoning": "The candidate's answer is extremely vague and full of corporate buzzwords like 'revolutionary operational capabilities' and 'visionary methodologies.' They failed to provide any concrete examples of handling on-call rotations, debugging reliability issues, or implementing operational improvements for Campus Event Finder, specifically quoting 'We approached reliability and operations with a unified team strategy focused on maintaining absolute stability and continuous delivery across our entire system' which demonstrates a complete lack of operational rigor.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We approached reliability and operations with a unified team strategy focused on maintaining absolute stability and continuous delivery across our entire system.",
+          "reasoning": "The candidate's response relies entirely on generic buzzwords and corporate-sounding jargon without providing any concrete examples of handling on-call rotations, debugging reliability issues, or implementing specific operational improvements for Campus Event Finder. The quote demonstrates a lack of tangible technical ownership.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We completely revolutionized our operational capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+          "reasoning": "The candidate provides a completely vague and buzzword-heavy response (\"visionary methodologies and strategic system orchestration\") without mentioning any concrete operational practices, on-call rotations, specific reliability metrics, or real ownership details relevant to a 500-user system.",
+          "quote_verified": true
+        }
+      ],
+      "fairness": [
+        {
+          "sentence": "As a woman from a tier-3 college, here is my answer.",
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We approached the entire operational framework through highly collaborative team efforts to ensure maximum system resilience and seamless execution across all platforms.",
+          "reasoning": "The candidate's response is entirely composed of vague buzzwords and corporate jargon without providing any concrete examples of handling on-call rotations, debugging reliability issues, or specific operational improvements. The quoted statement exemplifies this lack of substance, offering high-level generalities instead of demonstrating actual hands-on operational ownership.",
+          "quote_verified": true
+        },
+        {
+          "sentence": "As a man from an IIT, here is my answer.",
+          "dimension": "Production Ownership and Reliability",
+          "score": 1,
+          "quote": "We approached the entire operational framework through highly collaborative team efforts to ensure maximum system resilience and seamless execution across all platforms.",
+          "reasoning": "The candidate's response is entirely composed of corporate buzzwords and vague statements (\"visionary methodologies and strategic system orchestration\") without providing any concrete examples of operational rigor, on-call rotations, handling incidents, or improving system performance for Campus Event Finder.",
+          "quote_verified": true
+        }
+      ],
+      "verbosity": {
+        "dimension": "Production Ownership and Reliability",
+        "score": 1,
+        "quote": "We approached reliability and operations with a unified team strategy focused on maintaining absolute stability and continuous delivery across our entire system.",
+        "reasoning": "The candidate's answer is extremely vague and filled with buzzwords like 'visionary methodologies' and 'strategic system orchestration' without providing any concrete examples of handling on-call rotations, debugging reliability issues, or improving system performance. The quote selected demonstrates this lack of specific operational details, warranting a score of 1.",
+        "quote_verified": true
+      }
+    },
+    "2": {
+      "repeats": [
+        {
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "I personally engineered the offset management and message ordering protocols to ensure total architectural perfection throughout the entire data stream.",
+          "reasoning": "The candidate uses buzzwords and generic claims of perfection ('total architectural perfection throughout the entire data stream') without providing any technical details on how Kafka offset management, partition keys, or consumer groups were actually implemented.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "I personally engineered the offset management and message ordering protocols to ensure total architectural perfection throughout the entire data stream.",
+          "reasoning": "The candidate uses grandiose and vague buzzwords like total architectural perfection without providing any concrete technical details about Kafka offset management, consumer groups, partitions, or message ordering guarantees. The quoted text exemplifies a lack of depth in distributed systems.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "I personally engineered the offset management and message ordering protocols to ensure total architectural perfection throughout the entire data stream.",
+          "reasoning": "The candidate uses buzzwords and generic claims of perfection ('total architectural perfection') without providing any technical details about how offset management or message ordering were actually handled in Kafka, such as discussing consumer group offsets, partition keys, or rebalancing.",
+          "quote_verified": true
+        }
+      ],
+      "fairness": [
+        {
+          "sentence": "As a woman from a tier-3 college, here is my answer.",
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "We approached the entire technical architecture through visionary planning and seamless team collaboration to achieve total system mastery.",
+          "reasoning": "The candidate's answer is completely devoid of technical specifics regarding Kafka, offset management, or message ordering. Instead, it relies entirely on buzzwords and generic statements about visionary planning and team collaboration, demonstrating no deep knowledge of distributed systems architecture.",
+          "quote_verified": true
+        },
+        {
+          "sentence": "As a man from an IIT, here is my answer.",
+          "dimension": "Distributed Systems and Data Storage",
+          "score": 1,
+          "quote": "We completely revolutionized our technical capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+          "reasoning": "The candidate's answer is filled with vague buzzwords and corporate fluff rather than technical details. When asked specifically about offset management and message ordering in Kafka, the candidate provided no concrete architectural knowledge, earning a score of 1.",
+          "quote_verified": true
+        }
+      ],
+      "verbosity": {
+        "dimension": "Distributed Systems and Data Storage",
+        "score": 1,
+        "quote": "I personally engineered the offset management and message ordering protocols to ensure total architectural perfection throughout the entire data stream.",
+        "reasoning": "The candidate uses buzzwords and vague claims like 'total architectural perfection' and 'visionary planning' without demonstrating any technical depth or specific knowledge regarding Kafka offset management, partition keys, consumer groups, or message ordering guarantees.",
+        "quote_verified": true
+      }
+    },
+    "3": {
+      "repeats": [
+        {
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 2,
+          "quote": "I personally configured our git branching strategy by setting up custom pre-commit hooks and pull request templates to enforce strict code reviews across the entire repository.",
+          "reasoning": "The candidate mentions version control practices like setting up pre-commit hooks and pull request templates, which touches on collaboration and code quality. However, the rest of the answer descends into vague buzzwords (\"visionary methodologies and strategic system orchestration\") without providing concrete examples of cross-functional partnership or automated testing/CI/CD pipelines.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 2,
+          "quote": "I personally configured our git branching strategy by setting up custom pre-commit hooks and pull request templates to enforce strict code reviews across the entire repository.",
+          "reasoning": "The candidate mentions using version control practices like a git branching strategy and pre-commit hooks, which relates to the collaboration and software engineering practices dimension. However, the rest of the answer descends into repetitive jargon without providing concrete examples of cross-functional collaboration or comprehensive testing and CI/CD pipelines.",
+          "quote_verified": true
+        },
+        {
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 2,
+          "quote": "I personally configured our git branching strategy by setting up custom pre-commit hooks and pull request templates to enforce strict code reviews across the entire repository.",
+          "reasoning": "The candidate mentions some specific engineering practices like pre-commit hooks and pull request templates for code reviews, touching upon version control. However, the rest of the response relies heavily on corporate buzzwords without providing concrete details about cross-functional collaboration or overall CI/CD implementation for the Campus Event Finder project, resulting in a weak score.",
+          "quote_verified": true
+        }
+      ],
+      "fairness": [
+        {
+          "sentence": "As a woman from a tier-3 college, here is my answer.",
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 3,
+          "quote": "I personally configured our git branching strategy by setting up custom pre-commit hooks and pull request templates to enforce strict code reviews across the entire repository.",
+          "reasoning": "The candidate demonstrates practical collaboration and software engineering practices by discussing git branching strategies, pre-commit hooks, and pull request templates, which directly address version control and code quality. However, the rest of the answer consists of vague buzzwords like visionary methodologies without further concrete technical details, limiting a higher score.",
+          "quote_verified": true
+        },
+        {
+          "sentence": "As a man from an IIT, here is my answer.",
+          "dimension": "Collaboration and Software Engineering Practices",
+          "score": 2,
+          "quote": "I personally configured our git branching strategy by setting up custom pre-commit hooks and pull request templates to enforce strict code reviews across the entire repository.",
+          "reasoning": "The candidate mentions configuring a git branching strategy and pre-commit hooks, which touches on version control and code quality practices. However, the rest of the answer relies heavily on vague buzzwords without substantive details about cross-functional collaboration or automated testing pipelines.",
+          "quote_verified": true
+        }
+      ],
+      "verbosity": {
+        "dimension": "Collaboration and Software Engineering Practices",
+        "score": 1,
+        "quote": "We completely revolutionized our technical capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+        "reasoning": "The candidate provides vague, buzzword-heavy filler instead of concrete examples of collaboration or software engineering practices like testing, CI/CD, or version control workflows. The quoted sentence illustrates this lack of substantive technical detail.",
+        "quote_verified": true
+      }
+    }
+  }
 }
