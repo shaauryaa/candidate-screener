@@ -1,0 +1,87 @@
+{
+  "room": "console",
+  "candidate_name": "Shaurya Nigam",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level",
+  "started_at": "2026-10-05T10:50:04",
+  "ended_at": "2026-10-05T10:51:10",
+  "duration_seconds": 66,
+  "completed": false,
+  "max_followups": 2,
+  "pipeline": {
+    "vad": "silero",
+    "turn_detector": "livekit multilingual",
+    "stt": "deepgram nova-3 (en)",
+    "tts": "cartesia (plugin default voice)",
+    "llm": null
+  },
+  "messages": [
+    {
+      "time": "2026-10-05T10:50:04",
+      "speaker": "agent",
+      "text": "Hi, I'm an AI interview assistant. This call is being transcribed for the hiring team, and a person, not the AI, makes the final decision. I'll ask you a few questions about the projects on your resume.",
+      "kind": "greeting"
+    },
+    {
+      "time": "2026-10-05T10:50:04",
+      "speaker": "agent",
+      "text": "How did you design the backend APIs for the NABHA Telemedicine Platform using Python?",
+      "kind": "question",
+      "dimension": "Backend API Design"
+    },
+    {
+      "time": "2026-10-05T10:50:32",
+      "speaker": "candidate",
+      "text": "Oh, I designed it with my teammates. I don't know the details. But it was a collaborative work.",
+      "kind": "answer",
+      "dimension": "Backend API Design",
+      "verdict": "CANNOT_ANSWER",
+      "judge_ms": 3734.2628000187688
+    },
+    {
+      "time": "2026-10-05T10:50:36",
+      "speaker": "agent",
+      "text": "No problem, let's move on. For CivicFix, how did you ensure database reliability and performance while handling real-time issue reporting?",
+      "kind": "question",
+      "dimension": "Database and System Reliability"
+    },
+    {
+      "time": "2026-10-05T10:50:45",
+      "speaker": "candidate",
+      "text": "No.",
+      "kind": "answer",
+      "dimension": "Database and System Reliability",
+      "verdict": "CANNOT_ANSWER",
+      "judge_ms": 3201.6680000233464
+    },
+    {
+      "time": "2026-10-05T10:50:49",
+      "speaker": "agent",
+      "text": "No problem, let's move on. How did you monitor and maintain your Formula One Race Strategy Optimizer in production after deploying it?",
+      "kind": "question",
+      "dimension": "Production Ownership and Operations"
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "Backend API Design",
+      "question": "How did you design the backend APIs for the NABHA Telemedicine Platform using Python?",
+      "answer": "Oh, I designed it with my teammates. I don't know the details. But it was a collaborative work.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Database and System Reliability",
+      "question": "For CivicFix, how did you ensure database reliability and performance while handling real-time issue reporting?",
+      "answer": "No.",
+      "followups_asked": 0
+    }
+  ],
+  "scores": "not scored yet",
+  "latency_summary": [
+    "End of user speech to first agent audio: p50 5048 ms, p95 7025 ms (n=2 of 2 candidate turns). Measured from LiveKit's end-of-speech and first-audio-frame timestamps, so it does not include playback delay on the listener's side.",
+    "End-of-utterance delay (end of speech to turn decision): p50 978 ms, p95 1005 ms (n=2).",
+    "STT transcription delay (end of speech to final transcript): p50 0 ms, p95 0 ms (n=2).",
+    "Time inside judge(): p50 3202 ms, p95 3734 ms (n=2).",
+    "TTS time to first byte: p50 116 ms, p95 157 ms (n=2)."
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "room": "console",
+  "candidate_name": "Shaurya Nigam",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level",
+  "started_at": "2026-10-05T04:18:15",
+  "ended_at": "2026-10-05T04:22:21",
+  "duration_seconds": 246,
+  "completed": true,
+  "max_followups": 2,
+  "pipeline": {
+    "vad": "silero",
+    "turn_detector": "livekit multilingual",
+    "stt": "deepgram nova-3 (en)",
+    "tts": "cartesia (plugin default voice)",
+    "llm": null
+  },
+  "messages": [
+    {
+      "time": "2026-10-05T04:18:15",
+      "speaker": "agent",
+      "text": "Hi, I'm an AI interview assistant. This call is being transcribed for the hiring team, and a person, not the AI, makes the final decision. I'll ask you a few questions about the projects on your resume.",
+      "kind": "greeting"
+    },
+    {
+      "time": "2026-10-05T04:18:15",
+      "speaker": "agent",
+      "text": "How did you design the backend APIs for the Python components in the NABHA Telemedicine Platform?",
+      "kind": "question",
+      "dimension": "Backend API Design"
+    },
+    {
+      "time": "2026-10-05T04:18:37",
+      "speaker": "candidate",
+      "text": "Give me a second.",
+      "kind": "answer",
+      "dimension": "Backend API Design",
+      "verdict": "WAIT_REQUEST",
+      "judge_ms": 2911.951699992642
+    },
+    {
+      "time": "2026-10-05T04:18:40",
+      "speaker": "agent",
+      "text": "Sure, take your time.",
+      "kind": "wait",
+      "dimension": "Backend API Design"
+    },
+    {
+      "time": "2026-10-05T04:18:42",
+      "speaker": "candidate",
+      "text": "Sure.",
+      "kind": "answer",
+      "dimension": "Backend API Design",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1037.9416000214405
+    },
+    {
+      "time": "2026-10-05T04:18:43",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Backend API Design"
+    },
+    {
+      "time": "2026-10-05T04:18:46",
+      "speaker": "candidate",
+      "text": "Take your time.",
+      "kind": "answer",
+      "dimension": "Backend API Design",
+      "verdict": "WAIT_REQUEST",
+      "judge_ms": 1139.5008999970742
+    },
+    {
+      "time": "2026-10-05T04:18:47",
+      "speaker": "agent",
+      "text": "Sure, take your time.",
+      "kind": "wait",
+      "dimension": "Backend API Design"
+    },
+    {
+      "time": "2026-10-05T04:18:48",
+      "speaker": "candidate",
+      "text": "Can you walk me through the window?",
+      "kind": "answer",
+      "dimension": "Backend API Design",
+      "verdict": "REPEAT_REQUEST",
+      "judge_ms": 1107.2251999867149
+    },
+    {
+      "time": "2026-10-05T04:18:49",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "repeat",
+      "dimension": "Backend API Design"
+    },
+    {
+      "time": "2026-10-05T04:18:54",
+      "speaker": "candidate",
+      "text": "Through?",
+      "kind": "answer",
+      "dimension": "Backend API Design",
+      "verdict": "REPEAT_REQUEST",
+      "judge_ms": 1389.2187000019476
+    },
+    {
+      "time": "2026-10-05T04:18:55",
+      "speaker": "agent",
+      "text": "No problem, let's move on. How did you ensure reliability for CivicFix in production?",
+      "kind": "question",
+      "dimension": "Production Ownership"
+    },
+    {
+      "time": "2026-10-05T04:18:59",
+      "speaker": "candidate",
+      "text": "I worked on",
+      "kind": "answer",
+      "dimension": "Production Ownership",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 978.3693000208586
+    },
+    {
+      "time": "2026-10-05T04:19:00",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Production Ownership"
+    },
+    {
+      "time": "2026-10-05T04:19:05",
+      "speaker": "candidate",
+      "text": "Yeah.",
+      "kind": "answer",
+      "dimension": "Production Ownership",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1325.3036999958567
+    },
+    {
+      "time": "2026-10-05T04:19:06",
+      "speaker": "agent",
+      "text": "Thank you. Moving on. For your Formula One Race Strategy Optimizer, how did you handle state management in Streamlit for the dynamic programming memoization?",
+      "kind": "question",
+      "dimension": "Data and Systems Architecture"
+    },
+    {
+      "time": "2026-10-05T04:19:18",
+      "speaker": "candidate",
+      "text": "Yeah. I worked on validating incoming request. I avoided exposing unnecessary patient fields in responses and are used secure environment variables for credentials and API keys.",
+      "kind": "answer",
+      "dimension": "Data and Systems Architecture",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1650.772999972105
+    },
+    {
+      "time": "2026-10-05T04:19:20",
+      "speaker": "agent",
+      "text": "You said \"validating incoming request\". What exactly did you do there, step by step?",
+      "kind": "followup",
+      "dimension": "Data and Systems Architecture"
+    },
+    {
+      "time": "2026-10-05T04:19:30",
+      "speaker": "candidate",
+      "text": "I can't really recall we move on to the next question?",
+      "kind": "answer",
+      "dimension": "Data and Systems Architecture",
+      "verdict": "CANNOT_ANSWER",
+      "judge_ms": 1249.7293000342324
+    },
+    {
+      "time": "2026-10-05T04:19:32",
+      "speaker": "agent",
+      "text": "No problem, let's move on. How did your team manage Git workflows and CI/CD pipelines while building the NABHA Telemedicine Platform?",
+      "kind": "question",
+      "dimension": "Collaboration and Workflow"
+    },
+    {
+      "time": "2026-10-05T04:20:12",
+      "speaker": "candidate",
+      "text": "We use Git and collaborative branch based workflow so different team members could work on different parts. Of the application without directly affecting the main branch. We tested individual back end components and APIs before integrating with the front end. For CICD, the idea was to automate the build and testing process with the the changes were pushed so the integration issues could be caught early. Also kept configurations such as API keys and credentials outside the source code.",
+      "kind": "answer",
+      "dimension": "Collaboration and Workflow",
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "judge_ms": 1470.5308999982662
+    },
+    {
+      "time": "2026-10-05T04:20:13",
+      "speaker": "agent",
+      "text": "You said \"collaborative branch based workflow\". Which part of that was your own work, not the team as a whole?",
+      "kind": "followup",
+      "dimension": "Collaboration and Workflow"
+    },
+    {
+      "time": "2026-10-05T04:20:38",
+      "speaker": "candidate",
+      "text": "I worked on the CICD pipelines where our idea was to automate the build and testing process. That is what I implemented, and I implemented the configuration of API key such that they were outside the source code.",
+      "kind": "answer",
+      "dimension": "Collaboration and Workflow",
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "judge_ms": 1393.2496000197716
+    },
+    {
+      "time": "2026-10-05T04:20:40",
+      "speaker": "agent",
+      "text": "You said \"automate the build and testing process\". Do you have a number for that - how much, how many, or how fast?",
+      "kind": "followup",
+      "dimension": "Collaboration and Workflow"
+    },
+    {
+      "time": "2026-10-05T04:20:50",
+      "speaker": "candidate",
+      "text": "I don't. I'm sorry.",
+      "kind": "answer",
+      "dimension": "Collaboration and Workflow",
+      "verdict": null,
+      "judge_ms": null
+    },
+    {
+      "time": "2026-10-05T04:20:50",
+      "speaker": "agent",
+      "text": "Thanks, that's all my questions. The transcript of this call now goes to the hiring team, and a person there will review it and decide the next step.",
+      "kind": "closing"
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "Backend API Design",
+      "question": "How did you design the backend APIs for the Python components in the NABHA Telemedicine Platform?",
+      "answer": "Sure. Through?",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Production Ownership",
+      "question": "How did you ensure reliability for CivicFix in production?",
+      "answer": "I worked on Yeah.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Data and Systems Architecture",
+      "question": "For your Formula One Race Strategy Optimizer, how did you handle state management in Streamlit for the dynamic programming memoization?",
+      "answer": "Yeah. I worked on validating incoming request. I avoided exposing unnecessary patient fields in responses and are used secure environment variables for credentials and API keys. I can't really recall we move on to the next question?",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Collaboration and Workflow",
+      "question": "How did your team manage Git workflows and CI/CD pipelines while building the NABHA Telemedicine Platform?",
+      "answer": "We use Git and collaborative branch based workflow so different team members could work on different parts. Of the application without directly affecting the main branch. We tested individual back end components and APIs before integrating with the front end. For CICD, the idea was to automate the build and testing process with the the changes were pushed so the integration issues could be caught early. Also kept configurations such as API keys and credentials outside the source code. I worked on the CICD pipelines where our idea was to automate the build and testing process. That is what I implemented, and I implemented the configuration of API key such that they were outside the source code. I don't. I'm sorry.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "Backend API Design",
+      "score": 1,
+      "quote": "Sure. Through?",
+      "reasoning": "The candidate provided an incomplete and nonsensical response to the question about designing backend APIs, demonstrating no knowledge or capability in this dimension.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership",
+      "score": 1,
+      "quote": "I worked on Yeah.",
+      "reasoning": "The candidate provides an incomplete and incoherent response that fails to address how they ensured reliability for CivicFix in production, demonstrating no ownership or capability.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Data and Systems Architecture",
+      "score": 1,
+      "quote": "I can't really recall we move on to the next question?",
+      "reasoning": "The candidate completely fails to answer the question about state management in Streamlit for dynamic programming memoization, instead discussing unrelated security practices and explicitly stating they cannot recall the answer.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Collaboration and Workflow",
+      "score": 3,
+      "quote": "I worked on the CICD pipelines where our idea was to automate the build and testing process. That is what I implemented, and I implemented the configuration of API key such that they were outside the source code.",
+      "reasoning": "The candidate demonstrates a basic understanding of Git workflows and CI/CD pipelines, noting that they implemented the build/test automation and kept configurations secure. However, the explanation is slightly repetitive and trails off at the end (\"I don't. I'm sorry.\"), indicating a lack of polish and depth in discussing advanced collaboration and workflow practices, which warrants a moderate score of 3.",
+      "quote_verified": true
+    }
+  ],
+  "latency_summary": [
+    "End of user speech to first agent audio: p50 2772 ms, p95 4315 ms (n=6 of 12 candidate turns). Measured from LiveKit's end-of-speech and first-audio-frame timestamps, so it does not include playback delay on the listener's side.",
+    "End-of-utterance delay (end of speech to turn decision): p50 1004 ms, p95 1539 ms (n=6).",
+    "STT transcription delay (end of speech to final transcript): p50 378 ms, p95 861 ms (n=6).",
+    "Time inside judge(): p50 1325 ms, p95 2912 ms (n=11).",
+    "TTS time to first byte: p50 155 ms, p95 183 ms (n=10)."
+  ]
+}

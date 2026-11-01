@@ -1,0 +1,250 @@
+{
+  "room": "console",
+  "candidate_name": "Alex Rivera",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level (2-4 years)",
+  "started_at": "2026-10-04T21:11:49",
+  "ended_at": "2026-10-04T21:16:16",
+  "duration_seconds": 268,
+  "completed": true,
+  "max_followups": 2,
+  "pipeline": {
+    "vad": "silero",
+    "turn_detector": "livekit multilingual",
+    "stt": "deepgram nova-3 (en)",
+    "tts": "cartesia (plugin default voice)",
+    "llm": null
+  },
+  "messages": [
+    {
+      "time": "2026-10-04T21:11:50",
+      "speaker": "agent",
+      "text": "Hi, thanks for joining. I'll ask you a few questions about the projects on your resume.",
+      "kind": "greeting"
+    },
+    {
+      "time": "2026-10-04T21:11:50",
+      "speaker": "agent",
+      "text": "For the Order Fulfillment Service, walk me through how you redesigned the retry and dead-letter logic when moving from the monolithic cron job to Celery and Redis. What API or data contract design decisions did you make to ensure idempotency and prevent duplicate processing under heavy peak traffic?",
+      "kind": "question",
+      "dimension": "API Design and Architecture"
+    },
+    {
+      "time": "2026-10-04T21:12:23",
+      "speaker": "candidate",
+      "text": "I'm just waiting for you.",
+      "kind": "answer",
+      "dimension": "API Design and Architecture",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 3264.7099000168964
+    },
+    {
+      "time": "2026-10-04T21:12:27",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "API Design and Architecture"
+    },
+    {
+      "time": "2026-10-04T21:12:45",
+      "speaker": "candidate",
+      "text": "I'm sorry. Could you repeat the question?",
+      "kind": "answer",
+      "dimension": "API Design and Architecture",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1434.912800003076
+    },
+    {
+      "time": "2026-10-04T21:12:47",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "API Design and Architecture"
+    },
+    {
+      "time": "2026-10-04T21:13:02",
+      "speaker": "candidate",
+      "text": "I'm not sure. I met with a group of people.",
+      "kind": "answer",
+      "dimension": "API Design and Architecture",
+      "verdict": null,
+      "judge_ms": null
+    },
+    {
+      "time": "2026-10-04T21:13:02",
+      "speaker": "agent",
+      "text": "For the Campus Marketplace App, since you used MongoDB for the backend, can you walk me through how you designed your database schema and applied indexing strategies to optimize query performance as you scaled to over 300 active users?",
+      "kind": "question",
+      "dimension": "Database Performance and Optimization"
+    },
+    {
+      "time": "2026-10-04T21:13:18",
+      "speaker": "candidate",
+      "text": "I was just familiar with MongoDB. That's why I used it.",
+      "kind": "answer",
+      "dimension": "Database Performance and Optimization",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1325.1543000224046
+    },
+    {
+      "time": "2026-10-04T21:13:19",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Database Performance and Optimization"
+    },
+    {
+      "time": "2026-10-04T21:13:27",
+      "speaker": "candidate",
+      "text": "No. I can't recall it.",
+      "kind": "answer",
+      "dimension": "Database Performance and Optimization",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1730.2244000020437
+    },
+    {
+      "time": "2026-10-04T21:13:29",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Database Performance and Optimization"
+    },
+    {
+      "time": "2026-10-04T21:13:38",
+      "speaker": "candidate",
+      "text": "Country calls.",
+      "kind": "answer",
+      "dimension": "Database Performance and Optimization",
+      "verdict": null,
+      "judge_ms": null
+    },
+    {
+      "time": "2026-10-04T21:13:38",
+      "speaker": "agent",
+      "text": "During your work on the Order Fulfillment Service, how did you handle on-call rotations and ensure the reliability of the new event-driven architecture during peak season, especially when managing the redesigned retry and dead-letter logic?",
+      "kind": "question",
+      "dimension": "Production Ownership and Reliability"
+    },
+    {
+      "time": "2026-10-04T21:14:09",
+      "speaker": "candidate",
+      "text": "You move on to the next question.",
+      "kind": "answer",
+      "dimension": "Production Ownership and Reliability",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1870.935599989025
+    },
+    {
+      "time": "2026-10-04T21:14:10",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Production Ownership and Reliability"
+    },
+    {
+      "time": "2026-10-04T21:14:19",
+      "speaker": "candidate",
+      "text": "Can we move on to the next question?",
+      "kind": "answer",
+      "dimension": "Production Ownership and Reliability",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1879.5290999987628
+    },
+    {
+      "time": "2026-10-04T21:14:21",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Production Ownership and Reliability"
+    },
+    {
+      "time": "2026-10-04T21:14:30",
+      "speaker": "candidate",
+      "text": "I don't remember.",
+      "kind": "answer",
+      "dimension": "Production Ownership and Reliability",
+      "verdict": null,
+      "judge_ms": null
+    },
+    {
+      "time": "2026-10-04T21:14:30",
+      "speaker": "agent",
+      "text": "For the Campus Marketplace App, since you worked solo on the backend API and deployment pipeline, how did you ensure code quality and test coverage before pushing updates to production, and what strategies did you use to manage the CI/CD pipeline efficiently?",
+      "kind": "question",
+      "dimension": "Engineering Practices and Collaboration"
+    },
+    {
+      "time": "2026-10-04T21:14:49",
+      "speaker": "candidate",
+      "text": "Again, I don't know.",
+      "kind": "answer",
+      "dimension": "Engineering Practices and Collaboration",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 2157.097599992994
+    },
+    {
+      "time": "2026-10-04T21:14:51",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Engineering Practices and Collaboration"
+    },
+    {
+      "time": "2026-10-04T21:15:01",
+      "speaker": "candidate",
+      "text": "No idea.",
+      "kind": "answer",
+      "dimension": "Engineering Practices and Collaboration",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 5020.05459999782
+    },
+    {
+      "time": "2026-10-04T21:15:06",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Engineering Practices and Collaboration"
+    },
+    {
+      "time": "2026-10-04T21:15:15",
+      "speaker": "candidate",
+      "text": "No.",
+      "kind": "answer",
+      "dimension": "Engineering Practices and Collaboration",
+      "verdict": null,
+      "judge_ms": null
+    },
+    {
+      "time": "2026-10-04T21:15:15",
+      "speaker": "agent",
+      "text": "Thanks, that's all my questions. The hiring team will review this and get back to you.",
+      "kind": "closing"
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "For the Order Fulfillment Service, walk me through how you redesigned the retry and dead-letter logic when moving from the monolithic cron job to Celery and Redis. What API or data contract design decisions did you make to ensure idempotency and prevent duplicate processing under heavy peak traffic?",
+      "answer": "I'm just waiting for you. I'm sorry. Could you repeat the question? I'm not sure. I met with a group of people.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Database Performance and Optimization",
+      "question": "For the Campus Marketplace App, since you used MongoDB for the backend, can you walk me through how you designed your database schema and applied indexing strategies to optimize query performance as you scaled to over 300 active users?",
+      "answer": "I was just familiar with MongoDB. That's why I used it. No. I can't recall it. Country calls.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "During your work on the Order Fulfillment Service, how did you handle on-call rotations and ensure the reliability of the new event-driven architecture during peak season, especially when managing the redesigned retry and dead-letter logic?",
+      "answer": "You move on to the next question. Can we move on to the next question? I don't remember.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Engineering Practices and Collaboration",
+      "question": "For the Campus Marketplace App, since you worked solo on the backend API and deployment pipeline, how did you ensure code quality and test coverage before pushing updates to production, and what strategies did you use to manage the CI/CD pipeline efficiently?",
+      "answer": "Again, I don't know. No idea. No.",
+      "followups_asked": 2
+    }
+  ]
+}

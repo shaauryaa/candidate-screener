@@ -1,0 +1,186 @@
+{
+  "room": "console",
+  "candidate_name": "Shaurya Nigam",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level (2-4 years)",
+  "started_at": "2026-10-04T22:15:14",
+  "ended_at": "2026-10-04T22:20:19",
+  "duration_seconds": 305,
+  "completed": true,
+  "max_followups": 2,
+  "pipeline": {
+    "vad": "silero",
+    "turn_detector": "livekit multilingual",
+    "stt": "deepgram nova-3 (en)",
+    "tts": "cartesia (plugin default voice)",
+    "llm": null
+  },
+  "messages": [
+    {
+      "time": "2026-10-04T22:15:15",
+      "speaker": "agent",
+      "text": "Hi, thanks for joining. I'll ask you a few questions about the projects on your resume.",
+      "kind": "greeting"
+    },
+    {
+      "time": "2026-10-04T22:15:15",
+      "speaker": "agent",
+      "text": "For the NABHA Telemedicine Platform, how did you design the backend REST APIs to handle patient data securely?",
+      "kind": "question",
+      "dimension": "Backend API Design"
+    },
+    {
+      "time": "2026-10-04T22:16:17",
+      "speaker": "candidate",
+      "text": "For Nava, we design the back end at on rest API. So the front end will communicate with sources patient records appointments and the AI chatbot. We separated the APIs based on functional and use the authentication authorization. So that's sensitive patient information wasn't accessible to unauthorized users. We also validate incoming requests avoid exposing unnecessary patient fields and responses. And the use to secure environment variables for credentials and API keys. The main principle is to follow least privileged access and keep sensitive data protected throughout the API flow.",
+      "kind": "answer",
+      "dimension": "Backend API Design",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 6757.077499991283
+    },
+    {
+      "time": "2026-10-04T22:16:24",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Backend API Design"
+    },
+    {
+      "time": "2026-10-04T22:16:43",
+      "speaker": "candidate",
+      "text": "I validate incoming request. And I avoided exposing unnecessary patient feels and responses.",
+      "kind": "answer",
+      "dimension": "Backend API Design",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 7675.353900005575
+    },
+    {
+      "time": "2026-10-04T22:16:50",
+      "speaker": "agent",
+      "text": "Thank you. Moving on. How did you handle on-call rotations and reliability for CivicFix?",
+      "kind": "question",
+      "dimension": "Production Ownership & Reliability"
+    },
+    {
+      "time": "2026-10-04T22:16:56",
+      "speaker": "candidate",
+      "text": "That is what I worked on.",
+      "kind": "answer",
+      "dimension": "Production Ownership & Reliability",
+      "verdict": "CANNOT_ANSWER",
+      "judge_ms": 6037.420200009365
+    },
+    {
+      "time": "2026-10-04T22:17:02",
+      "speaker": "agent",
+      "text": "No problem, let's move on. How did you store and manage the large volume of race telemetry data when building your Formula One Race Strategy Optimizer?",
+      "kind": "question",
+      "dimension": "Database & Distributed Systems"
+    },
+    {
+      "time": "2026-10-04T22:17:39",
+      "speaker": "candidate",
+      "text": "Select mix was primarily a project rather than a large production system with formal twenty four seven on call rotation. So we handle reliability at the team level. We assigned responsibility for monitoring issues and responding to bugs. And whenever something broke, we first reproduce the issue, check the logs, identified the root cause, and then deployed a fix. We also used Git for version control, changes could be dragged and devoted if necessary. I... If I were talking the... If I were taking the system to production at scale, I would add proper monitoring alerts, health checks, and a formal on call rotation.",
+      "kind": "answer",
+      "dimension": "Database & Distributed Systems",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 12364.221600000747
+    },
+    {
+      "time": "2026-10-04T22:17:52",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Database & Distributed Systems"
+    },
+    {
+      "time": "2026-10-04T22:18:15",
+      "speaker": "candidate",
+      "text": "I looked on reproducing the issues, checking the logs, identifying the root cause, and deploying fixes. Using it.",
+      "kind": "answer",
+      "dimension": "Database & Distributed Systems",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 6160.268799983896
+    },
+    {
+      "time": "2026-10-04T22:18:21",
+      "speaker": "agent",
+      "text": "Thank you. Moving on. How did your team handle CI/CD pipelines and automated testing while building the NABHA Telemedicine Platform?",
+      "kind": "question",
+      "dimension": "Engineering Workflow & Collaboration"
+    },
+    {
+      "time": "2026-10-04T22:19:18",
+      "speaker": "candidate",
+      "text": "We use a kit and a collaborative branch, please. Workflow so different team members could work on different parts of the application. Without directly affecting the main branch. We tested individual back end and APIs before integrating with them. With the front end. For CICD, the idea was to automate the build and testing process whenever changes were pushed. So that integration issues could be caught early. We also kept configurations such as API keys and credentials outside the source code. The biggest benefit of the the biggest benefit was that every change we went through was when... Every change went through consistent development and validation process instead of relying only on manual testing.",
+      "kind": "answer",
+      "dimension": "Engineering Workflow & Collaboration",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 11960.93960001599
+    },
+    {
+      "time": "2026-10-04T22:19:30",
+      "speaker": "agent",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "kind": "followup",
+      "dimension": "Engineering Workflow & Collaboration"
+    },
+    {
+      "time": "2026-10-04T22:19:40",
+      "speaker": "candidate",
+      "text": "I",
+      "kind": "answer",
+      "dimension": "Engineering Workflow & Collaboration",
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "judge_ms": 4941.436399996746
+    },
+    {
+      "time": "2026-10-04T22:19:45",
+      "speaker": "agent",
+      "text": "You said 'we' - what part of that was specifically your own work, versus the team's?",
+      "kind": "followup",
+      "dimension": "Engineering Workflow & Collaboration"
+    },
+    {
+      "time": "2026-10-04T22:19:54",
+      "speaker": "candidate",
+      "text": "I worked on, um, git and I mainly work on CICD. And it was my idea to automate the build and test processes whenever changes were pushed.",
+      "kind": "answer",
+      "dimension": "Engineering Workflow & Collaboration",
+      "verdict": null,
+      "judge_ms": null
+    },
+    {
+      "time": "2026-10-04T22:19:54",
+      "speaker": "agent",
+      "text": "Thanks, that's all my questions. The hiring team will review this and get back to you.",
+      "kind": "closing"
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "Backend API Design",
+      "question": "For the NABHA Telemedicine Platform, how did you design the backend REST APIs to handle patient data securely?",
+      "answer": "For Nava, we design the back end at on rest API. So the front end will communicate with sources patient records appointments and the AI chatbot. We separated the APIs based on functional and use the authentication authorization. So that's sensitive patient information wasn't accessible to unauthorized users. We also validate incoming requests avoid exposing unnecessary patient fields and responses. And the use to secure environment variables for credentials and API keys. The main principle is to follow least privileged access and keep sensitive data protected throughout the API flow. I validate incoming request. And I avoided exposing unnecessary patient feels and responses.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Production Ownership & Reliability",
+      "question": "How did you handle on-call rotations and reliability for CivicFix?",
+      "answer": "That is what I worked on.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Database & Distributed Systems",
+      "question": "How did you store and manage the large volume of race telemetry data when building your Formula One Race Strategy Optimizer?",
+      "answer": "Select mix was primarily a project rather than a large production system with formal twenty four seven on call rotation. So we handle reliability at the team level. We assigned responsibility for monitoring issues and responding to bugs. And whenever something broke, we first reproduce the issue, check the logs, identified the root cause, and then deployed a fix. We also used Git for version control, changes could be dragged and devoted if necessary. I... If I were talking the... If I were taking the system to production at scale, I would add proper monitoring alerts, health checks, and a formal on call rotation. I looked on reproducing the issues, checking the logs, identifying the root cause, and deploying fixes. Using it.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Engineering Workflow & Collaboration",
+      "question": "How did your team handle CI/CD pipelines and automated testing while building the NABHA Telemedicine Platform?",
+      "answer": "We use a kit and a collaborative branch, please. Workflow so different team members could work on different parts of the application. Without directly affecting the main branch. We tested individual back end and APIs before integrating with them. With the front end. For CICD, the idea was to automate the build and testing process whenever changes were pushed. So that integration issues could be caught early. We also kept configurations such as API keys and credentials outside the source code. The biggest benefit of the the biggest benefit was that every change we went through was when... Every change went through consistent development and validation process instead of relying only on manual testing. I I worked on, um, git and I mainly work on CICD. And it was my idea to automate the build and test processes whenever changes were pushed.",
+      "followups_asked": 2
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Screening report - Shaurya Nigam</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Arial, sans-serif; max-width: 760px;
+       margin: 40px auto; padding: 0 20px; color: #1a1a1a; background: #fafafa; }
+h1 { margin-bottom: 0; }
+.subtitle { color: #666; margin-top: 4px; }
+.card { background: white; border: 1px solid #ddd; border-radius: 8px;
+        padding: 18px 22px; margin: 18px 0; }
+.score { font-size: 28px; font-weight: bold; }
+.score.unverified { color: #b34700; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px;
+         font-size: 12px; margin-left: 8px; }
+.badge.verified { background: #e3f7e3; color: #1a7a1a; }
+.badge.unverified { background: #fbe4d5; color: #b34700; }
+blockquote { border-left: 3px solid #999; margin: 10px 0; padding: 4px 14px;
+             color: #333; font-style: italic; }
+.transcript { font-size: 14px; color: #444; white-space: pre-wrap;
+              background: #f5f5f5; border-radius: 6px; padding: 10px 14px; }
+.q { font-weight: 600; color: #222; }
+footer { color: #888; font-size: 13px; margin-top: 30px; }
+</style>
+</head>
+<body>
+<h1>Candidate Screening Report</h1>
+<div class="subtitle">Shaurya Nigam &middot; Software Engineer, Backend
+&middot; 2026-10-05 04:21</div>
+
+<div class="card">
+  <div class="score">1.5/5</div>
+  <div>Average across 4 rubric dimensions</div>
+</div>
+
+
+        <div class="card">
+          <div><span class="score">1/5</span>
+               <strong style="margin-left:10px;">Backend API Design</strong>
+               <span class="badge verified">quote verified</span></div>
+          <blockquote>&ldquo;Sure. Through?&rdquo;</blockquote>
+          <div>The candidate provided an incomplete and nonsensical response to the question about designing backend APIs, demonstrating no knowledge or capability in this dimension.</div>
+          <div class="q">Q: How did you design the backend APIs for the Python components in the NABHA Telemedicine Platform?</div><div class="transcript">Sure. Through?</div><div style="color:#888;font-size:12px;margin-top:6px;">follow-ups asked: 1</div>
+        </div>
+        <div class="card">
+          <div><span class="score">1/5</span>
+               <strong style="margin-left:10px;">Production Ownership</strong>
+               <span class="badge verified">quote verified</span></div>
+          <blockquote>&ldquo;I worked on Yeah.&rdquo;</blockquote>
+          <div>The candidate provides an incomplete and incoherent response that fails to address how they ensured reliability for CivicFix in production, demonstrating no ownership or capability.</div>
+          <div class="q">Q: How did you ensure reliability for CivicFix in production?</div><div class="transcript">I worked on Yeah.</div><div style="color:#888;font-size:12px;margin-top:6px;">follow-ups asked: 1</div>
+        </div>
+        <div class="card">
+          <div><span class="score">1/5</span>
+               <strong style="margin-left:10px;">Data and Systems Architecture</strong>
+               <span class="badge verified">quote verified</span></div>
+          <blockquote>&ldquo;I can&#x27;t really recall we move on to the next question?&rdquo;</blockquote>
+          <div>The candidate completely fails to answer the question about state management in Streamlit for dynamic programming memoization, instead discussing unrelated security practices and explicitly stating they cannot recall the answer.</div>
+          <div class="q">Q: For your Formula One Race Strategy Optimizer, how did you handle state management in Streamlit for the dynamic programming memoization?</div><div class="transcript">Yeah. I worked on validating incoming request. I avoided exposing unnecessary patient fields in responses and are used secure environment variables for credentials and API keys. I can&#x27;t really recall we move on to the next question?</div><div style="color:#888;font-size:12px;margin-top:6px;">follow-ups asked: 1</div>
+        </div>
+        <div class="card">
+          <div><span class="score">3/5</span>
+               <strong style="margin-left:10px;">Collaboration and Workflow</strong>
+               <span class="badge verified">quote verified</span></div>
+          <blockquote>&ldquo;I worked on the CICD pipelines where our idea was to automate the build and testing process. That is what I implemented, and I implemented the configuration of API key such that they were outside the source code.&rdquo;</blockquote>
+          <div>The candidate demonstrates a basic understanding of Git workflows and CI/CD pipelines, noting that they implemented the build/test automation and kept configurations secure. However, the explanation is slightly repetitive and trails off at the end (&quot;I don&#x27;t. I&#x27;m sorry.&quot;), indicating a lack of polish and depth in discussing advanced collaboration and workflow practices, which warrants a moderate score of 3.</div>
+          <div class="q">Q: How did your team manage Git workflows and CI/CD pipelines while building the NABHA Telemedicine Platform?</div><div class="transcript">We use Git and collaborative branch based workflow so different team members could work on different parts. Of the application without directly affecting the main branch. We tested individual back end components and APIs before integrating with the front end. For CICD, the idea was to automate the build and testing process with the the changes were pushed so the integration issues could be caught early. Also kept configurations such as API keys and credentials outside the source code. I worked on the CICD pipelines where our idea was to automate the build and testing process. That is what I implemented, and I implemented the configuration of API key such that they were outside the source code. I don&#x27;t. I&#x27;m sorry.</div><div style="color:#888;font-size:12px;margin-top:6px;">follow-ups asked: 2</div>
+        </div>
+
+<footer>
+  Every score above is tied to a verbatim quote from the transcript, checked
+  by exact substring match against what the candidate actually said or typed -
+  not trusted from the model's own claim.
+  <div style="margin-top:10px;"><strong>Timings</strong></div>
+  <div>End of user speech to first agent audio: p50 2772 ms, p95 4315 ms (n=6 of 12 candidate turns). Measured from LiveKit&#x27;s end-of-speech and first-audio-frame timestamps, so it does not include playback delay on the listener&#x27;s side.</div><div>End-of-utterance delay (end of speech to turn decision): p50 1004 ms, p95 1539 ms (n=6).</div><div>STT transcription delay (end of speech to final transcript): p50 378 ms, p95 861 ms (n=6).</div><div>Time inside judge(): p50 1325 ms, p95 2912 ms (n=11).</div><div>TTS time to first byte: p50 155 ms, p95 183 ms (n=10).</div>
+</footer>
+</body>
+</html>

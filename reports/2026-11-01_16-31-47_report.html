@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Screening report - Shaurya Nigam</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Arial, sans-serif; max-width: 760px;
+       margin: 40px auto; padding: 0 20px; color: #1a1a1a; background: #fafafa; }
+h1 { margin-bottom: 0; }
+.subtitle { color: #666; margin-top: 4px; }
+.card { background: white; border: 1px solid #ddd; border-radius: 8px;
+        padding: 18px 22px; margin: 18px 0; }
+.score { font-size: 28px; font-weight: bold; }
+.score.unverified { color: #b34700; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px;
+         font-size: 12px; margin-left: 8px; }
+.badge.verified { background: #e3f7e3; color: #1a7a1a; }
+.badge.unverified { background: #fbe4d5; color: #b34700; }
+blockquote { border-left: 3px solid #999; margin: 10px 0; padding: 4px 14px;
+             color: #333; font-style: italic; }
+.transcript { font-size: 14px; color: #444; white-space: pre-wrap;
+              background: #f5f5f5; border-radius: 6px; padding: 10px 14px; }
+.q { font-weight: 600; color: #222; }
+footer { color: #888; font-size: 13px; margin-top: 30px; }
+</style>
+</head>
+<body>
+<h1>Candidate Screening Report</h1>
+<div class="subtitle">Shaurya Nigam &middot; Software Engineer, Backend
+&middot; 2026-11-01 16:34</div>
+
+<div class="card">
+  <div class="score">1.0/5</div>
+  <div>Average across 4 rubric dimensions</div>
+</div>
+
+
+        <div class="card">
+          <div><span class="score">1/5</span>
+               <strong style="margin-left:10px;">API Design and Architecture</strong>
+               <span class="badge verified">quote verified</span></div>
+          <blockquote>&ldquo;I built the clinic lookup for the emergency SOS feature.&rdquo;</blockquote>
+          <div>The candidate mentions building a specific feature, but fails to discuss any architectural patterns, scaling techniques, caching, load balancing, or strategies to handle growing user loads efficiently as required by the rubric.</div>
+          <div class="q">Q: How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?</div><div class="transcript">We build APIs so they could scale as more users came in. I built the clinic lookup for the emergency SOS feature. Which finds nearby clinics from the user&#x27;s location. It covered fifty plus clinics and was tested with over hundred users.</div><div style="color:#888;font-size:12px;margin-top:6px;">follow-ups asked: 1</div>
+        </div>
+        <div class="card">
+          <div><span class="score">1/5</span>
+               <strong style="margin-left:10px;">Production Ownership and Reliability</strong>
+               <span class="badge verified">quote verified</span></div>
+          <blockquote>&ldquo;Could you please repeat the question?&rdquo;</blockquote>
+          <div>The candidate failed to provide any information regarding production ownership or reliability, instead asking for the question to be repeated.</div>
+          <div class="q">Q: How did you ensure high reliability and stability for the CivicFix platform in production?</div><div class="transcript">Could you please repeat the question?</div><div style="color:#888;font-size:12px;margin-top:6px;">follow-ups asked: 0</div>
+        </div>
+        <div class="card">
+          <div><span class="score">1/5</span>
+               <strong style="margin-left:10px;">Cross-Functional Collaboration</strong>
+               <span class="badge verified">quote verified</span></div>
+          <blockquote>&ldquo;I I built the issue analyzer seven day duplicate detections so repeat reports of the same problem get caught.&rdquo;</blockquote>
+          <div>The candidate discusses building features independently rather than describing any collaboration with product or frontend teams to define them, showing a lack of evidence for cross-functional teamwork as evaluated by this dimension.</div>
+          <div class="q">Q: For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app&#x27;s features?</div><div class="transcript">I I built the issue analyzer seven day duplicate detections so repeat reports of the same problem get caught. We were a team of four, and it&#x27;s run with over hundred registered users and more than fifty ish... Fifty issues logged.</div><div style="color:#888;font-size:12px;margin-top:6px;">follow-ups asked: 1</div>
+        </div>
+        <div class="card">
+          <div><span class="score">1/5</span>
+               <strong style="margin-left:10px;">Core Backend and Tooling Proficiency</strong>
+               <span class="badge verified">quote verified</span></div>
+          <blockquote>&ldquo;I do not remember&rdquo;</blockquote>
+          <div>The candidate stated they do not remember the Python tools used, failing to demonstrate any core backend and tooling proficiency.</div>
+          <div class="q">Q: For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?</div><div class="transcript">I do not remember</div><div style="color:#888;font-size:12px;margin-top:6px;">follow-ups asked: 0</div>
+        </div>
+
+<footer>
+  Every score above is tied to a verbatim quote from the transcript, checked
+  by exact substring match against what the candidate actually said or typed -
+  not trusted from the model's own claim.
+  <div style="margin-top:10px;"><strong>Timings</strong></div>
+  <div>End of user speech to first agent audio: p50 4087 ms, p95 27184 ms (n=7 of 7 candidate turns). Measured from LiveKit&#x27;s end-of-speech and first-audio-frame timestamps, so it does not include playback delay on the listener&#x27;s side.</div><div>End-of-utterance delay (end of speech to turn decision): p50 1010 ms, p95 2011 ms (n=7).</div><div>STT transcription delay (end of speech to final transcript): p50 438 ms, p95 550 ms (n=7).</div><div>Time inside judge(): p50 1447 ms, p95 25877 ms (n=7).</div><div>TTS time to first byte: p50 127 ms, p95 142 ms (n=7).</div>
+</footer>
+</body>
+</html>

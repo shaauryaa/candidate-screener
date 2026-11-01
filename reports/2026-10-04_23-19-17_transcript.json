@@ -1,0 +1,223 @@
+{
+  "room": "console",
+  "candidate_name": "Shaurya Nigam",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level (2-4 years)",
+  "started_at": "2026-10-04T23:19:17",
+  "ended_at": "2026-10-04T23:23:05",
+  "duration_seconds": 229,
+  "completed": true,
+  "max_followups": 2,
+  "pipeline": {
+    "vad": "silero",
+    "turn_detector": "livekit multilingual",
+    "stt": "deepgram nova-3 (en)",
+    "tts": "cartesia (plugin default voice)",
+    "llm": null
+  },
+  "messages": [
+    {
+      "time": "2026-10-04T23:19:18",
+      "speaker": "agent",
+      "text": "Hi, I'm an AI interview assistant. This call is being transcribed for the hiring team, and a person, not the AI, makes the final decision. I'll ask you a few questions about the projects on your resume.",
+      "kind": "greeting"
+    },
+    {
+      "time": "2026-10-04T23:19:18",
+      "speaker": "agent",
+      "text": "For the NABHA Telemedicine Platform, how did you design the backend REST APIs to handle patient data securely?",
+      "kind": "question",
+      "dimension": "Backend API Design"
+    },
+    {
+      "time": "2026-10-04T23:19:23",
+      "speaker": "candidate",
+      "text": "Must be so frustrating.",
+      "kind": "answer",
+      "dimension": "Backend API Design",
+      "verdict": "CANNOT_ANSWER",
+      "judge_ms": 2631.6759000183083
+    },
+    {
+      "time": "2026-10-04T23:19:25",
+      "speaker": "agent",
+      "text": "No problem, let's move on. How did you handle on-call rotations and reliability for CivicFix?",
+      "kind": "question",
+      "dimension": "Production Ownership & Reliability"
+    },
+    {
+      "time": "2026-10-04T23:19:37",
+      "speaker": "candidate",
+      "text": "I'm sorry. Can you repeat the question?",
+      "kind": "answer",
+      "dimension": "Production Ownership & Reliability",
+      "verdict": "REPEAT_REQUEST",
+      "judge_ms": 993.2364000123926
+    },
+    {
+      "time": "2026-10-04T23:19:38",
+      "speaker": "agent",
+      "text": "How did you handle on-call rotations and reliability for CivicFix?",
+      "kind": "repeat",
+      "dimension": "Production Ownership & Reliability"
+    },
+    {
+      "time": "2026-10-04T23:19:47",
+      "speaker": "candidate",
+      "text": "Give me a second.",
+      "kind": "answer",
+      "dimension": "Production Ownership & Reliability",
+      "verdict": "CANNOT_ANSWER",
+      "judge_ms": 1328.4828999894671
+    },
+    {
+      "time": "2026-10-04T23:19:48",
+      "speaker": "agent",
+      "text": "No problem, let's move on. How did you store and manage the large volume of race telemetry data when building your Formula One Race Strategy Optimizer?",
+      "kind": "question",
+      "dimension": "Database & Distributed Systems"
+    },
+    {
+      "time": "2026-10-04T23:20:26",
+      "speaker": "candidate",
+      "text": "Okay. So Civic Fix was primarily a project rather than a large production system. With a formal twenty four by seven on call rotation we handled reliability at the team level. We assigned responsibility for monitoring issues and responding to bugs. Whenever something broke, we first reproduced it, checked the logs, identified the root cause, and then deployed a fix. Also use gate for version control so changes could be tracked and reverted if necessary. If I were taking the system to production, I would add proper monitoring alerts, health checks.",
+      "kind": "answer",
+      "dimension": "Database & Distributed Systems",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1300.03309994936
+    },
+    {
+      "time": "2026-10-04T23:20:27",
+      "speaker": "agent",
+      "text": "You said \"Civic Fix\". What exactly did you do there, step by step?",
+      "kind": "followup",
+      "dimension": "Database & Distributed Systems"
+    },
+    {
+      "time": "2026-10-04T23:20:44",
+      "speaker": "candidate",
+      "text": "And a formal on call rotation.",
+      "kind": "answer",
+      "dimension": "Database & Distributed Systems",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1285.2478999993764
+    },
+    {
+      "time": "2026-10-04T23:20:45",
+      "speaker": "agent",
+      "text": "Thank you. Moving on. How did your team handle CI/CD pipelines and automated testing while building the NABHA Telemedicine Platform?",
+      "kind": "question",
+      "dimension": "Engineering Workflow & Collaboration"
+    },
+    {
+      "time": "2026-10-04T23:21:36",
+      "speaker": "candidate",
+      "text": "We used Git and collaborative branch based workflow, so team members could work on different parts of the application. Without directly affecting the main branch. We test for individual end components and APIs before integrating them with the front end. For CICD, the idea was to automate the build and testing process whenever changes were pushed. So that integration issues could be caught early. We also kept configurations such as API keys and credentials outside of source code. The biggest benefit of that was that every change went through consistent development and validation process instead of relying only on manual testing.",
+      "kind": "answer",
+      "dimension": "Engineering Workflow & Collaboration",
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "judge_ms": 1804.4034999911673
+    },
+    {
+      "time": "2026-10-04T23:21:38",
+      "speaker": "agent",
+      "text": "You said 'we' - what part of that was specifically your own work, versus the team's?",
+      "kind": "followup",
+      "dimension": "Engineering Workflow & Collaboration"
+    },
+    {
+      "time": "2026-10-04T23:21:55",
+      "speaker": "candidate",
+      "text": "I basically worked on the CICD pipelines where I brought the idea to automate the build and testing process whenever the changes were pushed.",
+      "kind": "answer",
+      "dimension": "Engineering Workflow & Collaboration",
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "judge_ms": 1970.7344999769703
+    },
+    {
+      "time": "2026-10-04T23:21:57",
+      "speaker": "agent",
+      "text": "You said \"CICD pipelines\". Do you have a number for that - how much, how many, or how fast?",
+      "kind": "followup",
+      "dimension": "Engineering Workflow & Collaboration"
+    },
+    {
+      "time": "2026-10-04T23:22:12",
+      "speaker": "candidate",
+      "text": "I'm sorry. I don't",
+      "kind": "answer",
+      "dimension": "Engineering Workflow & Collaboration",
+      "verdict": null,
+      "judge_ms": null
+    },
+    {
+      "time": "2026-10-04T23:22:12",
+      "speaker": "agent",
+      "text": "Thanks, that's all my questions. The transcript of this call now goes to the hiring team, and a person there will review it and decide the next step.",
+      "kind": "closing"
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "Backend API Design",
+      "question": "For the NABHA Telemedicine Platform, how did you design the backend REST APIs to handle patient data securely?",
+      "answer": "Must be so frustrating.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Production Ownership & Reliability",
+      "question": "How did you handle on-call rotations and reliability for CivicFix?",
+      "answer": "Give me a second.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Database & Distributed Systems",
+      "question": "How did you store and manage the large volume of race telemetry data when building your Formula One Race Strategy Optimizer?",
+      "answer": "Okay. So Civic Fix was primarily a project rather than a large production system. With a formal twenty four by seven on call rotation we handled reliability at the team level. We assigned responsibility for monitoring issues and responding to bugs. Whenever something broke, we first reproduced it, checked the logs, identified the root cause, and then deployed a fix. Also use gate for version control so changes could be tracked and reverted if necessary. If I were taking the system to production, I would add proper monitoring alerts, health checks. And a formal on call rotation.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Engineering Workflow & Collaboration",
+      "question": "How did your team handle CI/CD pipelines and automated testing while building the NABHA Telemedicine Platform?",
+      "answer": "We used Git and collaborative branch based workflow, so team members could work on different parts of the application. Without directly affecting the main branch. We test for individual end components and APIs before integrating them with the front end. For CICD, the idea was to automate the build and testing process whenever changes were pushed. So that integration issues could be caught early. We also kept configurations such as API keys and credentials outside of source code. The biggest benefit of that was that every change went through consistent development and validation process instead of relying only on manual testing. I basically worked on the CICD pipelines where I brought the idea to automate the build and testing process whenever the changes were pushed. I'm sorry. I don't",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "Backend API Design",
+      "score": 1,
+      "quote": "Must be so frustrating.",
+      "reasoning": "The candidate's answer is completely irrelevant to backend API design, data structures, algorithms, or secure patient data handling for the NABHA Telemedicine Platform, demonstrating a total lack of relevant technical knowledge.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership & Reliability",
+      "score": 1,
+      "quote": "Give me a second.",
+      "reasoning": "The candidate failed to provide any information regarding production ownership, on-call rotations, or reliability, responding only with \"Give me a second.\".",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Database & Distributed Systems",
+      "score": 1,
+      "quote": "Okay. So Civic Fix was primarily a project rather than a large production system.",
+      "reasoning": "The candidate fails to address the question about storing and managing large volumes of race telemetry data for a Formula One Race Strategy Optimizer, instead discussing a different project and providing irrelevant details about on-call rotations and version control.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Engineering Workflow & Collaboration",
+      "score": 3,
+      "quote": "For CICD, the idea was to automate the build and testing process whenever changes were pushed. So that integration issues could be caught early.",
+      "reasoning": "The candidate demonstrates a foundational understanding of CI/CD and testing workflows, mentioning version control, component testing, and build automation. However, the answer cuts off abruptly and lacks depth regarding advanced deployment strategies, monitoring, or cross-functional collaboration details.",
+      "quote_verified": true
+    }
+  ],
+  "latency_summary": [
+    "End of user speech to first agent audio: p50 3701 ms, p95 14777 ms (n=6 of 8 candidate turns). Measured from LiveKit's end-of-speech and first-audio-frame timestamps, so it does not include playback delay on the listener's side.",
+    "End-of-utterance delay (end of speech to turn decision): p50 767 ms, p95 2985 ms (n=7).",
+    "STT transcription delay (end of speech to final transcript): p50 457 ms, p95 1027 ms (n=7).",
+    "Time inside judge(): p50 1328 ms, p95 2632 ms (n=7).",
+    "TTS time to first byte: p50 371 ms, p95 523 ms (n=7)."
+  ]
+}

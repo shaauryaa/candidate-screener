@@ -1,0 +1,3 @@
+time,dimension,verdict,end_of_utterance_delay_ms,stt_transcription_delay_ms,judge_ms,tts_ttfb_ms,user_stopped_speaking_at,agent_started_speaking_at,speech_end_to_first_audio_ms
+2026-10-05T10:50:32,Backend API Design,CANNOT_ANSWER,978,0,3734,116,1791177631.6747918,1791177636.7223883,5048
+2026-10-05T10:50:45,Database and System Reliability,CANNOT_ANSWER,1005,0,3202,157,1791177644.8977268,1791177651.9229143,7025

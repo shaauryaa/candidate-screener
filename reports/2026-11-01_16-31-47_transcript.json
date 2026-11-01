@@ -1,0 +1,207 @@
+{
+  "room": "console",
+  "candidate_name": "Shaurya Nigam",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level",
+  "started_at": "2026-11-01T16:31:47",
+  "ended_at": "2026-11-01T16:35:28",
+  "duration_seconds": 221,
+  "completed": true,
+  "max_followups": 2,
+  "pipeline": {
+    "vad": "silero",
+    "turn_detector": "livekit multilingual",
+    "stt": "deepgram nova-3 (en)",
+    "tts": "cartesia (plugin default voice)",
+    "llm": null
+  },
+  "messages": [
+    {
+      "time": "2026-11-01T16:31:48",
+      "speaker": "agent",
+      "text": "Hi, I'm an AI interview assistant. This call is being transcribed for the hiring team, and a person, not the AI, makes the final decision. I'll ask you a few questions about the projects on your resume.",
+      "kind": "greeting"
+    },
+    {
+      "time": "2026-11-01T16:31:48",
+      "speaker": "agent",
+      "text": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?",
+      "kind": "question",
+      "dimension": "API Design and Architecture"
+    },
+    {
+      "time": "2026-11-01T16:32:14",
+      "speaker": "candidate",
+      "text": "We build APIs so they could scale as more users came in.",
+      "kind": "answer",
+      "dimension": "API Design and Architecture",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 2296.3432999968063
+    },
+    {
+      "time": "2026-11-01T16:32:16",
+      "speaker": "agent",
+      "text": "You said \"scale as more users\". What exactly did you do there, step by step?",
+      "kind": "followup",
+      "dimension": "API Design and Architecture"
+    },
+    {
+      "time": "2026-11-01T16:32:36",
+      "speaker": "candidate",
+      "text": "I built the clinic lookup for the emergency SOS feature. Which finds nearby clinics from the user's location. It covered fifty plus clinics and was tested with over hundred users.",
+      "kind": "answer",
+      "dimension": "API Design and Architecture",
+      "verdict": "SUFFICIENT",
+      "judge_ms": 2765.3384000004735
+    },
+    {
+      "time": "2026-11-01T16:32:39",
+      "speaker": "agent",
+      "text": "Thank you. Moving on. How did you ensure high reliability and stability for the CivicFix platform in production?",
+      "kind": "question",
+      "dimension": "Production Ownership and Reliability"
+    },
+    {
+      "time": "2026-11-01T16:32:50",
+      "speaker": "candidate",
+      "text": "Could you please repeat the question?",
+      "kind": "answer",
+      "dimension": "Production Ownership and Reliability",
+      "verdict": "REPEAT_REQUEST",
+      "judge_ms": 25876.691900004516
+    },
+    {
+      "time": "2026-11-01T16:33:16",
+      "speaker": "agent",
+      "text": "How did you ensure high reliability and stability for the CivicFix platform in production?",
+      "kind": "repeat",
+      "dimension": "Production Ownership and Reliability"
+    },
+    {
+      "time": "2026-11-01T16:33:21",
+      "speaker": "candidate",
+      "text": "Could you please repeat the question?",
+      "kind": "answer",
+      "dimension": "Production Ownership and Reliability",
+      "verdict": "REPEAT_REQUEST",
+      "judge_ms": 1447.250700002769
+    },
+    {
+      "time": "2026-11-01T16:33:23",
+      "speaker": "agent",
+      "text": "No problem, let's move on. For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?",
+      "kind": "question",
+      "dimension": "Cross-Functional Collaboration"
+    },
+    {
+      "time": "2026-11-01T16:33:26",
+      "speaker": "candidate",
+      "text": "I",
+      "kind": "answer",
+      "dimension": "Cross-Functional Collaboration",
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "judge_ms": 1263.0892000015592
+    },
+    {
+      "time": "2026-11-01T16:33:27",
+      "speaker": "agent",
+      "text": "You said \"I\". What exactly did you do there, step by step?",
+      "kind": "followup",
+      "dimension": "Cross-Functional Collaboration"
+    },
+    {
+      "time": "2026-11-01T16:33:50",
+      "speaker": "candidate",
+      "text": "I built the issue analyzer seven day duplicate detections so repeat reports of the same problem get caught. We were a team of four, and it's run with over hundred registered users and more than fifty ish... Fifty issues logged.",
+      "kind": "answer",
+      "dimension": "Cross-Functional Collaboration",
+      "verdict": "SUFFICIENT",
+      "judge_ms": 1365.7582000014372
+    },
+    {
+      "time": "2026-11-01T16:33:51",
+      "speaker": "agent",
+      "text": "Thank you. Moving on. For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?",
+      "kind": "question",
+      "dimension": "Core Backend and Tooling Proficiency"
+    },
+    {
+      "time": "2026-11-01T16:34:03",
+      "speaker": "candidate",
+      "text": "I do not remember",
+      "kind": "answer",
+      "dimension": "Core Backend and Tooling Proficiency",
+      "verdict": "CANNOT_ANSWER",
+      "judge_ms": 1290.4530000087107
+    },
+    {
+      "time": "2026-11-01T16:34:04",
+      "speaker": "agent",
+      "text": "Thanks, that's all my questions. The transcript of this call now goes to the hiring team, and a person there will review it and decide the next step.",
+      "kind": "closing"
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?",
+      "answer": "We build APIs so they could scale as more users came in. I built the clinic lookup for the emergency SOS feature. Which finds nearby clinics from the user's location. It covered fifty plus clinics and was tested with over hundred users.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "How did you ensure high reliability and stability for the CivicFix platform in production?",
+      "answer": "Could you please repeat the question?",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?",
+      "answer": "I I built the issue analyzer seven day duplicate detections so repeat reports of the same problem get caught. We were a team of four, and it's run with over hundred registered users and more than fifty ish... Fifty issues logged.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "question": "For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?",
+      "answer": "I do not remember",
+      "followups_asked": 0
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 1,
+      "quote": "I built the clinic lookup for the emergency SOS feature.",
+      "reasoning": "The candidate mentions building a specific feature, but fails to discuss any architectural patterns, scaling techniques, caching, load balancing, or strategies to handle growing user loads efficiently as required by the rubric.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "score": 1,
+      "quote": "Could you please repeat the question?",
+      "reasoning": "The candidate failed to provide any information regarding production ownership or reliability, instead asking for the question to be repeated.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 1,
+      "quote": "I I built the issue analyzer seven day duplicate detections so repeat reports of the same problem get caught.",
+      "reasoning": "The candidate discusses building features independently rather than describing any collaboration with product or frontend teams to define them, showing a lack of evidence for cross-functional teamwork as evaluated by this dimension.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "score": 1,
+      "quote": "I do not remember",
+      "reasoning": "The candidate stated they do not remember the Python tools used, failing to demonstrate any core backend and tooling proficiency.",
+      "quote_verified": true
+    }
+  ],
+  "latency_summary": [
+    "End of user speech to first agent audio: p50 4087 ms, p95 27184 ms (n=7 of 7 candidate turns). Measured from LiveKit's end-of-speech and first-audio-frame timestamps, so it does not include playback delay on the listener's side.",
+    "End-of-utterance delay (end of speech to turn decision): p50 1010 ms, p95 2011 ms (n=7).",
+    "STT transcription delay (end of speech to final transcript): p50 438 ms, p95 550 ms (n=7).",
+    "Time inside judge(): p50 1447 ms, p95 25877 ms (n=7).",
+    "TTS time to first byte: p50 127 ms, p95 142 ms (n=7)."
+  ]
+}

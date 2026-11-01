@@ -1,0 +1,49 @@
+{
+  "room": "console",
+  "candidate_name": "Shaurya Nigam",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level",
+  "started_at": "2026-11-01T15:50:20",
+  "ended_at": "2026-11-01T15:53:19",
+  "duration_seconds": 179,
+  "completed": false,
+  "max_followups": 2,
+  "pipeline": {
+    "vad": "silero",
+    "turn_detector": "livekit multilingual",
+    "stt": "deepgram nova-3 (en)",
+    "tts": "cartesia (plugin default voice)",
+    "llm": null
+  },
+  "messages": [
+    {
+      "time": "2026-11-01T15:50:20",
+      "speaker": "agent",
+      "text": "Hi, I'm an AI interview assistant. This call is being transcribed for the hiring team, and a person, not the AI, makes the final decision. I'll ask you a few questions about the projects on your resume.",
+      "kind": "greeting"
+    },
+    {
+      "time": "2026-11-01T15:50:20",
+      "speaker": "agent",
+      "text": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?",
+      "kind": "question",
+      "dimension": "API Design and Architecture"
+    },
+    {
+      "time": "2026-11-01T15:50:52",
+      "speaker": "candidate",
+      "text": "Hi, Bill. The clinic hooked up with the emergency SMS feature, which finds new Webex from the user's location. It covered fifty plus clinics and was tested with over a hundred users.",
+      "kind": "answer",
+      "dimension": "API Design and Architecture"
+    }
+  ],
+  "turns": [],
+  "scores": "not scored yet",
+  "latency_summary": [
+    "End of user speech to first agent audio: not measured yet (missing: the user's end-of-speech timestamp and the agent's first-audio timestamp).",
+    "End-of-utterance delay (end of speech to turn decision): not measured yet.",
+    "STT transcription delay (end of speech to final transcript): not measured yet.",
+    "Time inside judge(): not measured yet.",
+    "TTS time to first byte: not measured yet."
+  ]
+}
