@@ -34,6 +34,7 @@ import os
 import random
 import time
 
+import httpx
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -46,6 +47,10 @@ MOCK = False  # flipped by main.py when --mock is passed
 MAX_RETRIES = 5
 BASE_DELAY_SECONDS = 2.0  # free tier is ~10-15 RPM, so backoff needs real weight
 
+# A stuck request must not leave a voice call silent forever. Normal judge calls
+# took 1-3 s and the slowest seen was 25.9 s, so 15 s only cuts off real stalls.
+REQUEST_TIMEOUT_MS = 15000
+
 _client = None
 
 
@@ -53,6 +58,7 @@ def _get_client():
     global _client
     if _client is None:
         from google import genai
+        from google.genai import types
 
         api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:
@@ -60,7 +66,7 @@ def _get_client():
                 "GEMINI_API_KEY is not set. Copy .env.example to .env and fill "
                 "it in, or run with --mock."
             )
-        _client = genai.Client(api_key=api_key)
+        _client = genai.Client(api_key=api_key, http_options=types.HttpOptions(timeout=REQUEST_TIMEOUT_MS))
     return _client
 
 
@@ -70,8 +76,9 @@ def call_gemini(model: str, prompt: str, schema):
     `schema` is a pydantic model, or a list of one (e.g. list[Dimension]) -
     Gemini's structured output supports both, and response.parsed mirrors
     whichever shape you asked for.
-    Retries with exponential backoff on 429 (rate limited) or 503 (model
-    temporarily overloaded - seen live during testing, and transient).
+    Retries with exponential backoff on 429 (rate limited), 503 (model
+    temporarily overloaded - seen live during testing, and transient) or a
+    request that passed REQUEST_TIMEOUT_MS.
     Never called when MOCK is True - callers branch on llm.MOCK themselves.
     """
     from google.genai import types
@@ -92,7 +99,7 @@ def call_gemini(model: str, prompt: str, schema):
         except Exception as e:
             last_error = e
             msg = str(e)
-            is_retryable = any(
+            is_retryable = isinstance(e, httpx.TimeoutException) or any(
                 marker in msg
                 for marker in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE")
             )
