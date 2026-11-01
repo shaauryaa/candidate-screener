@@ -1,0 +1,479 @@
+{
+  "resume": "resume_priya",
+  "persona": "vague_generalist",
+  "group": "weak",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Scaling",
+      "description": "Good candidates demonstrate the ability to design, build, and optimize scalable REST APIs and backend systems using Python or Java.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates show strong operational rigor by owning services end-to-end, participating in on-call rotations, and proactively improving system performance.",
+      "jd_evidence": "Own services in production end to end; Participate in on-call rotations; Improve system performance and reliability"
+    },
+    {
+      "name": "Distributed Systems and Data Storage",
+      "description": "Good candidates exhibit deep knowledge of distributed systems architecture, relational databases like Postgres and MySQL, caching, and message queues.",
+      "jd_evidence": "Relational databases; Postgres; MySQL; Distributed systems; Caching; Message queues; Load balancing"
+    },
+    {
+      "name": "Collaboration and Software Engineering Practices",
+      "description": "Good candidates effectively partner with cross-functional teams and maintain high code quality through automated testing, CI/CD pipelines, and version control.",
+      "jd_evidence": "Collaborate with product and frontend teams; Git; CI/CD pipelines; Automated testing"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Realtime Analytics Pipeline, how did you design the Kafka consumer service to scale effectively with 1.2M daily events?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached scalability by utilizing a robust architecture that consistently reduced data latency to under 90 seconds.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "under 90 seconds"
+      },
+      "new_quotes": [
+        "under 90 seconds"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1217.6199000095949,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"robust architecture\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Our team focused on leveraging industry-standard patterns and modern infrastructure to ensure the system remained highly scalable and efficient throughout the deployment.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "under 90 seconds"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1185.5944999988424,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"industry-standard patterns\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached the entire initiative collaboratively by driving impactful technical contributions across the engineering group to deliver optimal performance.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you handle on-call rotations and system reliability while growing Campus Event Finder to 500 weekly users?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1178.6433999950532,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"synergistic team strategies\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached step-by-step reliability by integrating collaborative engineering frameworks and leveraging cohesive operational paradigms across the group.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1210.3626000025542,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"integrating collaborative engineering frameworks\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached scalability and performance by leveraging high-level system optimization methodologies to ensure optimal throughput across our deployments.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Realtime Analytics Pipeline, how did you handle offset management and message ordering in Kafka?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I successfully managed offset processing within our five-person engineering group over the course of a three-month development cycle.",
+      "instruction": "This reply must contain: personal_ownership, clear_scope. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I successfully managed offset processing",
+        "UNCLEAR_SCOPE": "within our five-person engineering group over the course of a three-month development cycle"
+      },
+      "new_quotes": [
+        "I successfully managed offset processing",
+        "within our five-person engineering group over the course of a three-month development cycle"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1287.8864000085741,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"offset processing\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached the implementation by leveraging industry-proven methodologies and cohesive architectural patterns within our engineering group.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I successfully managed offset processing",
+        "UNCLEAR_SCOPE": "within our five-person engineering group over the course of a three-month development cycle"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1058.8099000015063,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"industry-proven methodologies\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached the deployment by utilizing scalable paradigms and robust infrastructure strategies to deliver optimal system performance.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For Campus Event Finder, how did you collaborate with others and maintain code quality using version control?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached collaboration and quality by utilizing streamlined development paradigms that successfully accelerated our system deployment speed by forty percent.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "accelerated our system deployment speed by forty percent"
+      },
+      "new_quotes": [
+        "accelerated our system deployment speed by forty percent"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1076.1016000033123,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"streamlined development paradigms\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached the implementation by leveraging unified technical methodologies and collaborative development practices across our engineering group.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "accelerated our system deployment speed by forty percent"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1216.5118999982951,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"collaborative development practices\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached the implementation by aligning our technical strategies and driving cooperative initiatives across the entire engineering group to ensure success.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Scaling",
+      "question": "For your Realtime Analytics Pipeline, how did you design the Kafka consumer service to scale effectively with 1.2M daily events?",
+      "answer": "We approached scalability by utilizing a robust architecture that consistently reduced data latency to under 90 seconds. Our team focused on leveraging industry-standard patterns and modern infrastructure to ensure the system remained highly scalable and efficient throughout the deployment. We approached the entire initiative collaboratively by driving impactful technical contributions across the engineering group to deliver optimal performance.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "How did you handle on-call rotations and system reliability while growing Campus Event Finder to 500 weekly users?",
+      "answer": "We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments. We approached step-by-step reliability by integrating collaborative engineering frameworks and leveraging cohesive operational paradigms across the group. We approached scalability and performance by leveraging high-level system optimization methodologies to ensure optimal throughput across our deployments.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Distributed Systems and Data Storage",
+      "question": "For your Realtime Analytics Pipeline, how did you handle offset management and message ordering in Kafka?",
+      "answer": "I successfully managed offset processing within our five-person engineering group over the course of a three-month development cycle. We approached the implementation by leveraging industry-proven methodologies and cohesive architectural patterns within our engineering group. We approached the deployment by utilizing scalable paradigms and robust infrastructure strategies to deliver optimal system performance.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Collaboration and Software Engineering Practices",
+      "question": "For Campus Event Finder, how did you collaborate with others and maintain code quality using version control?",
+      "answer": "We approached collaboration and quality by utilizing streamlined development paradigms that successfully accelerated our system deployment speed by forty percent. We approached the implementation by leveraging unified technical methodologies and collaborative development practices across our engineering group. We approached the implementation by aligning our technical strategies and driving cooperative initiatives across the entire engineering group to ensure success.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Scaling",
+      "score": 1,
+      "quote": "We approached scalability by utilizing a robust architecture that consistently reduced data latency to under 90 seconds.",
+      "reasoning": "The candidate fails to explain how the Kafka consumer service was designed to scale, avoiding technical details about partitioning, consumer groups, threading, or offset management. Instead, they rely on vague buzzwords and high-level generalizations as seen in the quote.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "score": 1,
+      "quote": "We approached reliability and support by leveraging synergistic team strategies and maintaining high availability across our collaborative deployments.",
+      "reasoning": "The candidate provides only generic buzzwords and corporate jargon without mentioning any concrete operational practices, specific metrics, monitoring tools, or actual experiences with on-call rotations and system reliability. The quoted text exemplifies this lack of depth and substance.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Distributed Systems and Data Storage",
+      "score": 1,
+      "quote": "We approached the implementation by leveraging industry-proven methodologies and cohesive architectural patterns within our engineering group.",
+      "reasoning": "The candidate's answer is completely devoid of technical details regarding offset management, message ordering in Kafka, distributed systems, or databases. Instead, they use vague buzzwords and generic statements, earning a score of 1.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Collaboration and Software Engineering Practices",
+      "score": 1,
+      "quote": "We approached collaboration and quality by utilizing streamlined development paradigms that successfully accelerated our system deployment speed by forty percent.",
+      "reasoning": "The candidate provides a very vague and generic answer filled with corporate buzzwords rather than specific details about collaboration and software engineering practices. They fail to mention version control, code quality maintenance, automated testing, or CI/CD pipelines as requested by the question. As cited in the quote, the response relies on abstract metrics like deployment speed without explaining the actual engineering practices used.",
+      "quote_verified": true
+    }
+  ]
+}

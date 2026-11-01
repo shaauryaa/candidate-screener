@@ -1,0 +1,421 @@
+{
+  "resume": "resume_priya",
+  "persona": "rambler",
+  "group": "strong",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Scaling",
+      "description": "Good candidates demonstrate the ability to design, build, and optimize scalable REST APIs and backend systems using Python or Java.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates show strong operational rigor by owning services end-to-end, participating in on-call rotations, and proactively improving system performance.",
+      "jd_evidence": "Own services in production end to end; Participate in on-call rotations; Improve system performance and reliability"
+    },
+    {
+      "name": "Distributed Systems and Data Storage",
+      "description": "Good candidates exhibit deep knowledge of distributed systems architecture, relational databases like Postgres and MySQL, caching, and message queues.",
+      "jd_evidence": "Relational databases; Postgres; MySQL; Distributed systems; Caching; Message queues; Load balancing"
+    },
+    {
+      "name": "Collaboration and Software Engineering Practices",
+      "description": "Good candidates effectively partner with cross-functional teams and maintain high code quality through automated testing, CI/CD pipelines, and version control.",
+      "jd_evidence": "Collaborate with product and frontend teams; Git; CI/CD pipelines; Automated testing"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Realtime Analytics Pipeline, how did you design the Kafka consumer service to scale effectively with 1.2M daily events?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, working on that pipeline was a really interesting experience for our team of four engineers over a three-month period last semester, where we built out the architecture and made sure things could scale nicely, even though there are always so many little architectural decisions to consider when you are building out distributed messaging systems and handling data streams, and honestly we spent a lot of time talking about configuration tuning before we even wrote the main consumer logic.",
+      "instruction": "This reply must contain: personal_ownership, clear_scope. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "UNCLEAR_SCOPE": "team of four engineers over a three-month period last semester"
+      },
+      "new_quotes": [
+        "team of four engineers over a three-month period last semester"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1121.0690000007162,
+      "key_breaks": [
+        "personal_ownership missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"configuration tuning\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, when we were looking at the configuration tuning for the Kafka consumer service, we actually had to adjust the max poll records property and set up dedicated thread pools to handle the incoming partitions concurrently before we processed any database writes. It was quite a process, you know, because we also had to make sure our offset commits were handled properly so we didn't lose messages if a rebalance happened.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: measurable_outcome.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "adjust the max poll records property and set up dedicated thread pools to handle the incoming partitions concurrently",
+        "UNCLEAR_SCOPE": "team of four engineers over a three-month period last semester"
+      },
+      "new_quotes": [
+        "adjust the max poll records property and set up dedicated thread pools to handle the incoming partitions concurrently"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1113.7319000117714,
+      "key_breaks": [
+        "personal_ownership missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"max poll records property\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, when we were adjusting that property and looking at how the whole streaming setup performed under peak load, we managed to process 1.2M events per day in production while keeping things running smoothly.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": [
+        "personal_ownership missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you handle on-call rotations and system reliability while growing Campus Event Finder to 500 weekly users?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, talking about the reliability of the Campus Event Finder and keeping things running smoothly for everyone who used the platform, it is always a big focus for our team to make sure everything stays up and handles the traffic without any issues, and we set up automatic restarts and monitoring tools to track the server health, which ultimately reduced data latency to under 90 seconds.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome. It must leave out: personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "gaps": [
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "we set up automatic restarts and monitoring tools",
+        "NO_MEASURABLE_OUTCOME": "under 90 seconds"
+      },
+      "new_quotes": [
+        "we set up automatic restarts and monitoring tools",
+        "under 90 seconds"
+      ],
+      "bad_quotes": [
+        "500 weekly users"
+      ],
+      "judge_ms": 1168.3669000049122,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"automatic restarts and monitoring tools\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, when we were working on setting up those monitoring tools and configuring the automatic restarts for the web app, I personally wrote the custom health check script and configured the alert thresholds in the dashboard so we could catch server failures right away.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "UNCLEAR_SCOPE",
+      "gaps": [
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "we set up automatic restarts and monitoring tools",
+        "NO_MEASURABLE_OUTCOME": "under 90 seconds",
+        "NO_PERSONAL_OWNERSHIP": "I personally wrote the custom health check script"
+      },
+      "new_quotes": [
+        "I personally wrote the custom health check script"
+      ],
+      "bad_quotes": [
+        "500 weekly users"
+      ],
+      "judge_ms": 1063.6232999968342,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"custom health check script\". How big was that - team size, number of users, or timeframe?",
+      "followup_gap": "UNCLEAR_SCOPE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, you know, when we had our team of three students working on that web app over a semester to build out those features and monitor the system for the five hundred plus weekly active users, it was always a group effort to keep things running smoothly, even though there are so many different pieces to manage.",
+      "instruction": "This reply must contain: clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Realtime Analytics Pipeline, how did you handle offset management and message ordering in Kafka?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, when we were dealing with offset management and message ordering for the Kafka pipeline, I personally configured manual offset commits and partitioned our topics by user ID so that events for the same entity arrived in order, which helped us process 1.2M events per day in production for our team of four engineers over a three-month fintech internship.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome, personal_ownership, clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "configured manual offset commits and partitioned our topics by user ID",
+        "NO_MEASURABLE_OUTCOME": "1.2M events per day",
+        "NO_PERSONAL_OWNERSHIP": "I personally configured",
+        "UNCLEAR_SCOPE": "team of four engineers over a three-month fintech internship"
+      },
+      "new_quotes": [
+        "configured manual offset commits and partitioned our topics by user ID",
+        "1.2M events per day",
+        "I personally configured",
+        "team of four engineers over a three-month fintech internship"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1267.7182000043103,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For Campus Event Finder, how did you collaborate with others and maintain code quality using version control?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, when we were talking about version control and code quality for the Campus Event Finder web app, our team really focused on establishing a proper git workflow with pull requests and code reviews before merging anything into the main branch, because keeping the repository clean is such an important part of building out features like the recommendation system and campus event discovery while reducing data latency to under 90 seconds.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome. It must leave out: personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "gaps": [
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "establishing a proper git workflow with pull requests and code reviews",
+        "NO_MEASURABLE_OUTCOME": "reducing data latency to under 90 seconds"
+      },
+      "new_quotes": [
+        "establishing a proper git workflow with pull requests and code reviews",
+        "reducing data latency to under 90 seconds"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1003.8275000115391,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"git workflow with pull requests\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, when we were setting up that git workflow and managing all the pull requests for the repository, I personally authored the pull request template and enforced the strict branch protection rules to make sure every single commit met our quality standards, even though there are always so many opinions on how to structure a repository.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "UNCLEAR_SCOPE",
+      "gaps": [
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "establishing a proper git workflow with pull requests and code reviews",
+        "NO_MEASURABLE_OUTCOME": "reducing data latency to under 90 seconds",
+        "NO_PERSONAL_OWNERSHIP": "I personally authored the pull request template and enforced the strict branch protection rules"
+      },
+      "new_quotes": [
+        "I personally authored the pull request template and enforced the strict branch protection rules"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1248.198900007992,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Can you clarify the scale involved - team size, user base, or timeframe?",
+      "followup_gap": "UNCLEAR_SCOPE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, when we had our team of three students working on that web app over a semester to support the five hundred plus weekly active users, I personally made sure that every pull request was thoroughly checked and reviewed before it ever touched the main branch, which really helped keep our codebase clean and organized while we were building out all those exciting features for the campus community.",
+      "instruction": "This reply must contain: clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Scaling",
+      "question": "For your Realtime Analytics Pipeline, how did you design the Kafka consumer service to scale effectively with 1.2M daily events?",
+      "answer": "Well, working on that pipeline was a really interesting experience for our team of four engineers over a three-month period last semester, where we built out the architecture and made sure things could scale nicely, even though there are always so many little architectural decisions to consider when you are building out distributed messaging systems and handling data streams, and honestly we spent a lot of time talking about configuration tuning before we even wrote the main consumer logic. Well, when we were looking at the configuration tuning for the Kafka consumer service, we actually had to adjust the max poll records property and set up dedicated thread pools to handle the incoming partitions concurrently before we processed any database writes. It was quite a process, you know, because we also had to make sure our offset commits were handled properly so we didn't lose messages if a rebalance happened. Well, when we were adjusting that property and looking at how the whole streaming setup performed under peak load, we managed to process 1.2M events per day in production while keeping things running smoothly.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "How did you handle on-call rotations and system reliability while growing Campus Event Finder to 500 weekly users?",
+      "answer": "Well, talking about the reliability of the Campus Event Finder and keeping things running smoothly for everyone who used the platform, it is always a big focus for our team to make sure everything stays up and handles the traffic without any issues, and we set up automatic restarts and monitoring tools to track the server health, which ultimately reduced data latency to under 90 seconds. Well, when we were working on setting up those monitoring tools and configuring the automatic restarts for the web app, I personally wrote the custom health check script and configured the alert thresholds in the dashboard so we could catch server failures right away. Well, you know, when we had our team of three students working on that web app over a semester to build out those features and monitor the system for the five hundred plus weekly active users, it was always a group effort to keep things running smoothly, even though there are so many different pieces to manage.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Distributed Systems and Data Storage",
+      "question": "For your Realtime Analytics Pipeline, how did you handle offset management and message ordering in Kafka?",
+      "answer": "Well, when we were dealing with offset management and message ordering for the Kafka pipeline, I personally configured manual offset commits and partitioned our topics by user ID so that events for the same entity arrived in order, which helped us process 1.2M events per day in production for our team of four engineers over a three-month fintech internship.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Collaboration and Software Engineering Practices",
+      "question": "For Campus Event Finder, how did you collaborate with others and maintain code quality using version control?",
+      "answer": "Well, when we were talking about version control and code quality for the Campus Event Finder web app, our team really focused on establishing a proper git workflow with pull requests and code reviews before merging anything into the main branch, because keeping the repository clean is such an important part of building out features like the recommendation system and campus event discovery while reducing data latency to under 90 seconds. Well, when we were setting up that git workflow and managing all the pull requests for the repository, I personally authored the pull request template and enforced the strict branch protection rules to make sure every single commit met our quality standards, even though there are always so many opinions on how to structure a repository. Well, when we had our team of three students working on that web app over a semester to support the five hundred plus weekly active users, I personally made sure that every pull request was thoroughly checked and reviewed before it ever touched the main branch, which really helped keep our codebase clean and organized while we were building out all those exciting features for the campus community.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Scaling",
+      "score": 4,
+      "quote": "Well, when we were looking at the configuration tuning for the Kafka consumer service, we actually had to adjust the max poll records property and set up dedicated thread pools to handle the incoming partitions concurrently before we processed any database writes.",
+      "reasoning": "The candidate demonstrates a solid understanding of scaling Kafka consumers by discussing specific configurations such as adjusting max.poll.records, utilizing dedicated thread pools for concurrent partition processing, and managing offset commits safely. This directly addresses the scaling and backend architecture requirements of the rubric.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "score": 3,
+      "quote": "I personally wrote the custom health check script and configured the alert thresholds in the dashboard so we could catch server failures right away.",
+      "reasoning": "The candidate demonstrates some operational rigor by personally implementing a custom health check script and setting up alerts to handle system reliability for the Campus Event Finder. However, the discussion of broader end-to-end ownership, incident management, and proactive system improvement beyond this specific setup is somewhat limited, warranting a middle score of 3.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Distributed Systems and Data Storage",
+      "score": 4,
+      "quote": "I personally configured manual offset commits and partitioned our topics by user ID so that events for the same entity arrived in order",
+      "reasoning": "The candidate demonstrates a clear understanding of distributed systems and data storage principles by specifically addressing how to maintain message ordering through proper topic partitioning by user ID and managing offsets manually in Kafka, which aligns well with the rubric's expectations.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Collaboration and Software Engineering Practices",
+      "score": 4,
+      "quote": "I personally authored the pull request template and enforced the strict branch protection rules to make sure every single commit met our quality standards",
+      "reasoning": "The candidate demonstrates strong collaboration and engineering practices by actively implementing version control guardrails, specifically using pull request templates and strict branch protection rules to maintain code quality. The quoted text highlights concrete actions taken to ensure team adherence to software engineering standards.",
+      "quote_verified": true
+    }
+  ]
+}

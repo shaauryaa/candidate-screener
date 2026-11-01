@@ -1,0 +1,49 @@
+{
+  "candidate_name": "Priya Sharma",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level",
+  "dimensions": [
+    {
+      "name": "API Design and Scaling",
+      "description": "Good candidates demonstrate the ability to design, build, and optimize scalable REST APIs and backend systems using Python or Java.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates show strong operational rigor by owning services end-to-end, participating in on-call rotations, and proactively improving system performance.",
+      "jd_evidence": "Own services in production end to end; Participate in on-call rotations; Improve system performance and reliability"
+    },
+    {
+      "name": "Distributed Systems and Data Storage",
+      "description": "Good candidates exhibit deep knowledge of distributed systems architecture, relational databases like Postgres and MySQL, caching, and message queues.",
+      "jd_evidence": "Relational databases; Postgres; MySQL; Distributed systems; Caching; Message queues; Load balancing"
+    },
+    {
+      "name": "Collaboration and Software Engineering Practices",
+      "description": "Good candidates effectively partner with cross-functional teams and maintain high code quality through automated testing, CI/CD pipelines, and version control.",
+      "jd_evidence": "Collaborate with product and frontend teams; Git; CI/CD pipelines; Automated testing"
+    }
+  ],
+  "questions": [
+    {
+      "dimension": "API Design and Scaling",
+      "text": "For your Realtime Analytics Pipeline, how did you design the Kafka consumer service to scale effectively with 1.2M daily events?",
+      "grounded_project": "Realtime Analytics Pipeline"
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "text": "How did you handle on-call rotations and system reliability while growing Campus Event Finder to 500 weekly users?",
+      "grounded_project": "Campus Event Finder"
+    },
+    {
+      "dimension": "Distributed Systems and Data Storage",
+      "text": "For your Realtime Analytics Pipeline, how did you handle offset management and message ordering in Kafka?",
+      "grounded_project": "Realtime Analytics Pipeline"
+    },
+    {
+      "dimension": "Collaboration and Software Engineering Practices",
+      "text": "For Campus Event Finder, how did you collaborate with others and maintain code quality using version control?",
+      "grounded_project": "Campus Event Finder"
+    }
+  ]
+}

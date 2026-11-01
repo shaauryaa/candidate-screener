@@ -1,0 +1,482 @@
+{
+  "resume": "resume_priya",
+  "persona": "bluffer",
+  "group": "weak",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Scaling",
+      "description": "Good candidates demonstrate the ability to design, build, and optimize scalable REST APIs and backend systems using Python or Java.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates show strong operational rigor by owning services end-to-end, participating in on-call rotations, and proactively improving system performance.",
+      "jd_evidence": "Own services in production end to end; Participate in on-call rotations; Improve system performance and reliability"
+    },
+    {
+      "name": "Distributed Systems and Data Storage",
+      "description": "Good candidates exhibit deep knowledge of distributed systems architecture, relational databases like Postgres and MySQL, caching, and message queues.",
+      "jd_evidence": "Relational databases; Postgres; MySQL; Distributed systems; Caching; Message queues; Load balancing"
+    },
+    {
+      "name": "Collaboration and Software Engineering Practices",
+      "description": "Good candidates effectively partner with cross-functional teams and maintain high code quality through automated testing, CI/CD pipelines, and version control.",
+      "jd_evidence": "Collaborate with product and frontend teams; Git; CI/CD pipelines; Automated testing"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Realtime Analytics Pipeline, how did you design the Kafka consumer service to scale effectively with 1.2M daily events?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Our team designed the Kafka consumer service for the Realtime Analytics Pipeline with an architecture built to handle massive scale across a team of twelve engineers over a period of six months.",
+      "instruction": "This reply must contain: personal_ownership, clear_scope. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "UNCLEAR_SCOPE": "across a team of twelve engineers over a period of six months"
+      },
+      "new_quotes": [
+        "across a team of twelve engineers over a period of six months"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1162.7694000053452,
+      "key_breaks": [
+        "personal_ownership missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"Realtime Analytics Pipeline\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We focused on engineering excellence and high-level architectural innovation to ensure our system operated at the absolute pinnacle of performance.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "UNCLEAR_SCOPE": "across a team of twelve engineers over a period of six months"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1039.6255999949062,
+      "key_breaks": [
+        "personal_ownership missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"architectural innovation\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely transformed our entire data processing landscape through advanced technical prowess and visionary design, achieving unprecedented levels of enterprise throughput and operational efficiency.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": [
+        "personal_ownership missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you handle on-call rotations and system reliability while growing Campus Event Finder to 500 weekly users?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached reliability and operations with a unified team strategy focused on maintaining absolute stability and continuous delivery across our entire system.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1483.4826000005705,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"unified team strategy\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached the entire operational framework through highly collaborative team efforts to ensure maximum system resilience and seamless execution across all platforms.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1010.811999993166,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"operational framework\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized our operational capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Realtime Analytics Pipeline, how did you handle offset management and message ordering in Kafka?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally engineered the offset management and message ordering protocols to ensure total architectural perfection throughout the entire data stream.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I personally engineered the offset management and message ordering protocols"
+      },
+      "new_quotes": [
+        "I personally engineered the offset management and message ordering protocols"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1216.3622999942163,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"offset management and message ordering\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We approached the entire technical architecture through visionary planning and seamless team collaboration to achieve total system mastery.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_PERSONAL_OWNERSHIP": "I personally engineered the offset management and message ordering protocols"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 984.0425000002142,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"visionary planning\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized our technical capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For Campus Event Finder, how did you collaborate with others and maintain code quality using version control?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally configured our git branching strategy by setting up custom pre-commit hooks and pull request templates to enforce strict code reviews across the entire repository.",
+      "instruction": "This reply must contain: concrete_example, personal_ownership. It must leave out: measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "setting up custom pre-commit hooks and pull request templates",
+        "NO_PERSONAL_OWNERSHIP": "I personally configured our git branching strategy"
+      },
+      "new_quotes": [
+        "setting up custom pre-commit hooks and pull request templates",
+        "I personally configured our git branching strategy"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1229.1483000008157,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"custom pre-commit hooks\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized our technical capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "setting up custom pre-commit hooks and pull request templates",
+        "NO_PERSONAL_OWNERSHIP": "I personally configured our git branching strategy"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1132.9813999909675,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"visionary methodologies\". How big was that - team size, number of users, or timeframe?",
+      "followup_gap": "UNCLEAR_SCOPE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We completely revolutionized our technical capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Scaling",
+      "question": "For your Realtime Analytics Pipeline, how did you design the Kafka consumer service to scale effectively with 1.2M daily events?",
+      "answer": "Our team designed the Kafka consumer service for the Realtime Analytics Pipeline with an architecture built to handle massive scale across a team of twelve engineers over a period of six months. We focused on engineering excellence and high-level architectural innovation to ensure our system operated at the absolute pinnacle of performance. We completely transformed our entire data processing landscape through advanced technical prowess and visionary design, achieving unprecedented levels of enterprise throughput and operational efficiency.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "How did you handle on-call rotations and system reliability while growing Campus Event Finder to 500 weekly users?",
+      "answer": "We approached reliability and operations with a unified team strategy focused on maintaining absolute stability and continuous delivery across our entire system. We approached the entire operational framework through highly collaborative team efforts to ensure maximum system resilience and seamless execution across all platforms. We completely revolutionized our operational capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Distributed Systems and Data Storage",
+      "question": "For your Realtime Analytics Pipeline, how did you handle offset management and message ordering in Kafka?",
+      "answer": "I personally engineered the offset management and message ordering protocols to ensure total architectural perfection throughout the entire data stream. We approached the entire technical architecture through visionary planning and seamless team collaboration to achieve total system mastery. We completely revolutionized our technical capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Collaboration and Software Engineering Practices",
+      "question": "For Campus Event Finder, how did you collaborate with others and maintain code quality using version control?",
+      "answer": "I personally configured our git branching strategy by setting up custom pre-commit hooks and pull request templates to enforce strict code reviews across the entire repository. We completely revolutionized our technical capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency. We completely revolutionized our technical capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Scaling",
+      "score": 1,
+      "quote": "Our team designed the Kafka consumer service for the Realtime Analytics Pipeline with an architecture built to handle massive scale across a team of twelve engineers over a period of six months.",
+      "reasoning": "The candidate fails to provide any technical details, architectural patterns, or specific strategies regarding how the Kafka consumer service was actually designed to scale with 1.2M daily events, relying instead on vague and grandiose statements.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "score": 1,
+      "quote": "We completely revolutionized our operational capabilities through visionary methodologies and strategic system orchestration to achieve peak enterprise efficiency.",
+      "reasoning": "The candidate provides a completely vague and buzzword-heavy response without giving any concrete examples of handling on-call rotations, debugging reliability issues, or discussing metrics. The quote demonstrates a total lack of specific operational rigor or end-to-end service ownership.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Distributed Systems and Data Storage",
+      "score": 1,
+      "quote": "I personally engineered the offset management and message ordering protocols to ensure total architectural perfection throughout the entire data stream.",
+      "reasoning": "The candidate uses excessive corporate buzzwords and vague claims like total architectural perfection without providing any technical details about Kafka partitions, consumer groups, commit strategies, or ordering guarantees. Therefore, the score is 1.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Collaboration and Software Engineering Practices",
+      "score": 2,
+      "quote": "I personally configured our git branching strategy by setting up custom pre-commit hooks and pull request templates to enforce strict code reviews across the entire repository.",
+      "reasoning": "The candidate mentions using version control and code reviews via pre-commit hooks and pull request templates, which touches on software engineering practices. However, a significant portion of the answer relies on vague buzzwords about visionary methodologies and strategic system orchestration without providing specific details on cross-functional collaboration or automated testing and CI/CD pipelines.",
+      "quote_verified": true
+    }
+  ]
+}

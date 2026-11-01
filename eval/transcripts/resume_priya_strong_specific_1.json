@@ -1,0 +1,293 @@
+{
+  "resume": "resume_priya",
+  "persona": "strong_specific",
+  "group": "strong",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Scaling",
+      "description": "Good candidates demonstrate the ability to design, build, and optimize scalable REST APIs and backend systems using Python or Java.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates show strong operational rigor by owning services end-to-end, participating in on-call rotations, and proactively improving system performance.",
+      "jd_evidence": "Own services in production end to end; Participate in on-call rotations; Improve system performance and reliability"
+    },
+    {
+      "name": "Distributed Systems and Data Storage",
+      "description": "Good candidates exhibit deep knowledge of distributed systems architecture, relational databases like Postgres and MySQL, caching, and message queues.",
+      "jd_evidence": "Relational databases; Postgres; MySQL; Distributed systems; Caching; Message queues; Load balancing"
+    },
+    {
+      "name": "Collaboration and Software Engineering Practices",
+      "description": "Good candidates effectively partner with cross-functional teams and maintain high code quality through automated testing, CI/CD pipelines, and version control.",
+      "jd_evidence": "Collaborate with product and frontend teams; Git; CI/CD pipelines; Automated testing"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "For your Realtime Analytics Pipeline, how did you design the Kafka consumer service to scale effectively with 1.2M daily events?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We designed the consumer service to scale effectively across our engineering team of five developers over a period of three months.",
+      "instruction": "This reply must contain: personal_ownership, clear_scope. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "UNCLEAR_SCOPE": "over a period of three months"
+      },
+      "new_quotes": [
+        "over a period of three months"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1096.8082000035793,
+      "key_breaks": [
+        "personal_ownership missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"consumer service\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We set up consumer groups in Kafka to distribute the partition workload evenly across the instances, and then we implemented asynchronous batch processing in Spring Boot to handle database writes efficiently.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: measurable_outcome.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "We set up consumer groups in Kafka to distribute the partition workload evenly across the instances",
+        "UNCLEAR_SCOPE": "over a period of three months"
+      },
+      "new_quotes": [
+        "We set up consumer groups in Kafka to distribute the partition workload evenly across the instances"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1428.9771000039764,
+      "key_breaks": [
+        "personal_ownership missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"asynchronous batch processing in Spring Boot\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "It reduced data latency from 24 hours to under 90 seconds.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": [
+        "personal_ownership missing"
+      ]
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you handle on-call rotations and system reliability while growing Campus Event Finder to 500 weekly users?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I owned the campus event finder project entirely by myself over a semester, building a recommendation feature that grew the platform to 500 plus weekly active users.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome, personal_ownership, clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "building a recommendation feature",
+        "NO_MEASURABLE_OUTCOME": "500 plus weekly active users",
+        "NO_PERSONAL_OWNERSHIP": "I owned the campus event finder project entirely by myself",
+        "UNCLEAR_SCOPE": "over a semester"
+      },
+      "new_quotes": [
+        "building a recommendation feature",
+        "500 plus weekly active users",
+        "I owned the campus event finder project entirely by myself",
+        "over a semester"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1226.5287999907741,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Realtime Analytics Pipeline, how did you handle offset management and message ordering in Kafka?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I configured manual offset commits in the Java consumer after each successful database batch write, and I used message key partitioning over a three-month development period with a team of four developers to process 1.2M events per day.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome, personal_ownership, clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "configured manual offset commits in the Java consumer after each successful database batch write",
+        "NO_MEASURABLE_OUTCOME": "1.2M events per day",
+        "NO_PERSONAL_OWNERSHIP": "I configured manual offset commits",
+        "UNCLEAR_SCOPE": "three-month development period with a team of four developers"
+      },
+      "new_quotes": [
+        "configured manual offset commits in the Java consumer after each successful database batch write",
+        "1.2M events per day",
+        "I configured manual offset commits",
+        "three-month development period with a team of four developers"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1090.5041999940295,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For Campus Event Finder, how did you collaborate with others and maintain code quality using version control?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I worked alone over a single semester to build and deploy the TypeScript codebase, implementing git branching strategies that grew the platform to 500 plus weekly active users.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome, personal_ownership, clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "implementing git branching strategies",
+        "NO_MEASURABLE_OUTCOME": "500 plus weekly active users",
+        "NO_PERSONAL_OWNERSHIP": "I worked alone",
+        "UNCLEAR_SCOPE": "over a single semester"
+      },
+      "new_quotes": [
+        "implementing git branching strategies",
+        "500 plus weekly active users",
+        "I worked alone",
+        "over a single semester"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1635.723200000939,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Scaling",
+      "question": "For your Realtime Analytics Pipeline, how did you design the Kafka consumer service to scale effectively with 1.2M daily events?",
+      "answer": "We designed the consumer service to scale effectively across our engineering team of five developers over a period of three months. We set up consumer groups in Kafka to distribute the partition workload evenly across the instances, and then we implemented asynchronous batch processing in Spring Boot to handle database writes efficiently. It reduced data latency from 24 hours to under 90 seconds.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "How did you handle on-call rotations and system reliability while growing Campus Event Finder to 500 weekly users?",
+      "answer": "I owned the campus event finder project entirely by myself over a semester, building a recommendation feature that grew the platform to 500 plus weekly active users.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Distributed Systems and Data Storage",
+      "question": "For your Realtime Analytics Pipeline, how did you handle offset management and message ordering in Kafka?",
+      "answer": "I configured manual offset commits in the Java consumer after each successful database batch write, and I used message key partitioning over a three-month development period with a team of four developers to process 1.2M events per day.",
+      "followups_asked": 0
+    },
+    {
+      "dimension": "Collaboration and Software Engineering Practices",
+      "question": "For Campus Event Finder, how did you collaborate with others and maintain code quality using version control?",
+      "answer": "I worked alone over a single semester to build and deploy the TypeScript codebase, implementing git branching strategies that grew the platform to 500 plus weekly active users.",
+      "followups_asked": 0
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Scaling",
+      "score": 4,
+      "quote": "We set up consumer groups in Kafka to distribute the partition workload evenly across the instances, and then we implemented asynchronous batch processing in Spring Boot to handle database writes efficiently.",
+      "reasoning": "The candidate demonstrates a solid understanding of API design and backend scaling by properly utilizing Kafka consumer groups for load distribution and implementing asynchronous batch processing in Spring Boot, which successfully reduced latency.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "score": 3,
+      "quote": "I owned the campus event finder project entirely by myself over a semester, building a recommendation feature that grew the platform to 500 plus weekly active users.",
+      "reasoning": "The candidate mentions owning the project entirely by themselves and growing it, which touches upon end-to-end ownership. However, they do not provide specific details on on-call rotations, incident management, operational rigor, or proactive system performance improvements beyond building a recommendation feature.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Distributed Systems and Data Storage",
+      "score": 4,
+      "quote": "I configured manual offset commits in the Java consumer after each successful database batch write, and I used message key partitioning over a three-month development period with a team of four developers to process 1.2M events per day.",
+      "reasoning": "The candidate demonstrates solid knowledge of distributed systems by explicitly addressing offset management with manual commits after batch writes and addressing message ordering using key partitioning. They could score a 5 if they discussed edge cases like rebalancing or exactly-once semantics further, but the technical explanation of Kafka concepts is accurate.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Collaboration and Software Engineering Practices",
+      "score": 1,
+      "quote": "I worked alone over a single semester to build and deploy the TypeScript codebase, implementing git branching strategies that grew the platform to 500 plus weekly active users.",
+      "reasoning": "The candidate scored a 1 because they worked entirely alone rather than collaborating with cross-functional teams, as evidenced by the quote: 'I worked alone over a single semester to build and deploy the TypeScript codebase, implementing git branching strategies that grew the platform to 500 plus weekly active users.'",
+      "quote_verified": true
+    }
+  ]
+}
