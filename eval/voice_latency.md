@@ -76,9 +76,12 @@ No API calls were made for this analysis.
 
 | Source | p50 total (ms) | p95 total (ms) | n |
 |---|---:|---:|---:|
-| 2026-10-04, earlier judge | 2772 | 4315 | 6 |
+| Earlier judge, `reports/2026-10-05_04-18-15_*` | 2772 | 4315 | 6 of 12 turns |
 | 2026-11-01, all turns | 3006 | 27184 | 15 |
 | 2026-11-01, excluding stall turns | 2809 | 4822 | 13 |
+
+The earlier call is the one previously called "4 Oct": its files are dated 5 Oct 04:18
+local time. Only 6 of its 12 turns have a measured total.
 
 Freeze-Omni figures as supplied for comparison, not checked against the paper:
 non-statistical latency about 160-320 ms; statistical latency avg 745, median 753, p90 1020 ms.
