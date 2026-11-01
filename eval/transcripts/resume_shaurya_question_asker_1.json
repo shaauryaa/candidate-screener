@@ -1,0 +1,523 @@
+{
+  "resume": "resume_shaurya",
+  "persona": "question_asker",
+  "group": "mixed",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates demonstrate the ability to design and build scalable REST APIs that handle growing loads efficiently.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates take full ownership of services in production, ensuring high performance, stability, and reliability.",
+      "jd_evidence": "Own services in production end to end; Improve system performance and reliability"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates effectively partner with product and frontend teams to deliver cohesive features and solutions.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    },
+    {
+      "name": "Core Backend and Tooling Proficiency",
+      "description": "Good candidates possess strong working knowledge of Python, Java, relational databases like Postgres and MySQL, and modern CI/CD pipelines.",
+      "jd_evidence": "Python; Java; Relational databases; Postgres; MySQL; Distributed systems; Git; CI/CD"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Could you please repeat the question?",
+      "instruction": "Ask the interviewer to repeat the question. Say nothing else.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "REPEAT_REQUEST"
+      ],
+      "verdict": "REPEAT_REQUEST",
+      "gaps": [],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1800.868599995738,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, for the NABHA telemedicine platform, we designed the APIs by working together on the general architecture and cloud infrastructure to handle things properly, keeping the backend services connected and making sure the system could manage user requests appropriately.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1757.6040000130888,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"cloud infrastructure\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, regarding the cloud infrastructure, the team handled the various deployment services and setup processes together to ensure everything ran smoothly across the system without focusing on any specific individual steps or measurements.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1226.724500011187,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"cloud infrastructure\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Um, regarding the cloud infrastructure performance, we achieved a latency of 150 milliseconds.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: concrete_example, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you ensure high reliability and stability for the CivicFix platform in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Could you please repeat the question?",
+      "instruction": "Ask the interviewer to repeat the question. Say nothing else.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "REPEAT_REQUEST"
+      ],
+      "verdict": "REPEAT_REQUEST",
+      "gaps": [],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1141.23940000718,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "How did you ensure high reliability and stability for the CivicFix platform in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, for CivicFix, the team set up a 4-step GPS-enabled wizard along with photo evidence uploads and deployed an AI-driven severity analysis feature to handle production stability, and we achieved a lower error rate of 1.2 percent across the platform.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome. It must leave out: personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "gaps": [
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "deployed an AI-driven severity analysis feature",
+        "NO_MEASURABLE_OUTCOME": "lower error rate of 1.2 percent"
+      },
+      "new_quotes": [
+        "deployed an AI-driven severity analysis feature",
+        "lower error rate of 1.2 percent"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1795.1104000094347,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"AI-driven severity analysis feature\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, for the AI-driven severity analysis feature, I specifically wrote the Python script using scikit-learn to classify the issue reports and trained the underlying model using the dataset.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "UNCLEAR_SCOPE",
+      "gaps": [
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "deployed an AI-driven severity analysis feature",
+        "NO_MEASURABLE_OUTCOME": "lower error rate of 1.2 percent",
+        "NO_PERSONAL_OWNERSHIP": "I specifically wrote the Python script using scikit-learn"
+      },
+      "new_quotes": [
+        "I specifically wrote the Python script using scikit-learn"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1202.8490000084275,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"wrote the Python script using scikit-learn\". How big was that - team size, number of users, or timeframe?",
+      "followup_gap": "UNCLEAR_SCOPE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, regarding the scale of the work, the team generally handled various aspects of the project across the platform together without focusing on specific numbers of people or periods of time.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, for the Formula One Race Strategy Optimizer, I designed the Streamlit app features while working in a team of four, and I also collaborated with my team members over a duration of two months.",
+      "instruction": "This reply must contain: personal_ownership, clear_scope. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "I designed the Streamlit app features",
+        "NO_PERSONAL_OWNERSHIP": "I designed the Streamlit app features",
+        "UNCLEAR_SCOPE": "in a team of four"
+      },
+      "new_quotes": [
+        "I designed the Streamlit app features",
+        "I designed the Streamlit app features",
+        "in a team of four"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1102.2309999971185,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"Streamlit app features\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, for the Streamlit app features, the team generally worked on various improvements to enhance performance across the platform.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "I designed the Streamlit app features",
+        "NO_PERSONAL_OWNERSHIP": "I designed the Streamlit app features",
+        "UNCLEAR_SCOPE": "in a team of four"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1448.553099995479,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Could you please repeat the question?",
+      "instruction": "Ask the interviewer to repeat the question. Say nothing else.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "REPEAT_REQUEST"
+      ],
+      "verdict": "REPEAT_REQUEST",
+      "gaps": [],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1249.0049000043655,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, for the NABHA telemedicine platform, we used various Python tools and libraries together to build the backend and support the overall system functionality.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1246.3532000110717,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"Python tools and libraries\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, regarding the Python tools and libraries, the team worked together on the backend setup and general development processes to support the application.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1245.1807000034023,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"Python tools and libraries\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "Well, regarding the Python tools and libraries, we generally focused on improving overall system traffic and handling processes smoothly across the platform.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?",
+      "answer": "Well, for the NABHA telemedicine platform, we designed the APIs by working together on the general architecture and cloud infrastructure to handle things properly, keeping the backend services connected and making sure the system could manage user requests appropriately. Well, regarding the cloud infrastructure, the team handled the various deployment services and setup processes together to ensure everything ran smoothly across the system without focusing on any specific individual steps or measurements. Um, regarding the cloud infrastructure performance, we achieved a latency of 150 milliseconds.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "How did you ensure high reliability and stability for the CivicFix platform in production?",
+      "answer": "Well, for CivicFix, the team set up a 4-step GPS-enabled wizard along with photo evidence uploads and deployed an AI-driven severity analysis feature to handle production stability, and we achieved a lower error rate of 1.2 percent across the platform. Well, for the AI-driven severity analysis feature, I specifically wrote the Python script using scikit-learn to classify the issue reports and trained the underlying model using the dataset. Well, regarding the scale of the work, the team generally handled various aspects of the project across the platform together without focusing on specific numbers of people or periods of time.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?",
+      "answer": "Well, for the Formula One Race Strategy Optimizer, I designed the Streamlit app features while working in a team of four, and I also collaborated with my team members over a duration of two months. Well, for the Streamlit app features, the team generally worked on various improvements to enhance performance across the platform.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "question": "For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?",
+      "answer": "Well, for the NABHA telemedicine platform, we used various Python tools and libraries together to build the backend and support the overall system functionality. Well, regarding the Python tools and libraries, the team worked together on the backend setup and general development processes to support the application. Well, regarding the Python tools and libraries, we generally focused on improving overall system traffic and handling processes smoothly across the platform.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 2,
+      "quote": "Well, for the NABHA telemedicine platform, we designed the APIs by working together on the general architecture and cloud infrastructure to handle things properly, keeping the backend services connected and making sure the system could manage user requests appropriately.",
+      "reasoning": "The candidate provides a very high-level and vague description of API design and architecture. The quote shows that while they mention cloud infrastructure and handling requests, they lack specific technical details regarding scalability, REST principles, bottlenecks, caching, rate limiting, or load balancing, resulting in a weak score.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "score": 2,
+      "quote": "Well, for CivicFix, the team set up a 4-step GPS-enabled wizard along with photo evidence uploads and deployed an AI-driven severity analysis feature to handle production stability, and we achieved a lower error rate of 1.2 percent across the platform.",
+      "reasoning": "The candidate mentions handling production stability by deploying features and achieving a lower error rate, but the explanation focuses heavily on product features and machine learning implementation rather than concrete reliability practices like monitoring, alerting, incident management, or robust deployment strategies. The ownership aspect is also diffused by frequently attributing work to the generic team effort without detailing personal responsibility for service reliability.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 1,
+      "quote": "Well, for the Streamlit app features, the team generally worked on various improvements to enhance performance across the platform.",
+      "reasoning": "The candidate fails to demonstrate collaboration with cross-functional product or frontend teams. Instead, they give a vague statement that the team worked on platform improvements, as highlighted by the quote, lacking any specific details on partnering with product management.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "score": 1,
+      "quote": "Well, regarding the Python tools and libraries, we generally focused on improving overall system traffic and handling processes smoothly across the platform.",
+      "reasoning": "The candidate fails to mention any specific Python tools, frameworks, or libraries used to build the backend for the NABHA Telemedicine Platform, offering only vague generalities as seen in the quote.",
+      "quote_verified": true
+    }
+  ]
+}

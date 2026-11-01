@@ -1,0 +1,49 @@
+{
+  "candidate_name": "Shaurya Nigam",
+  "role": "Software Engineer, Backend",
+  "seniority": "Mid-level",
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates demonstrate the ability to design and build scalable REST APIs that handle growing loads efficiently.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates take full ownership of services in production, ensuring high performance, stability, and reliability.",
+      "jd_evidence": "Own services in production end to end; Improve system performance and reliability"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates effectively partner with product and frontend teams to deliver cohesive features and solutions.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    },
+    {
+      "name": "Core Backend and Tooling Proficiency",
+      "description": "Good candidates possess strong working knowledge of Python, Java, relational databases like Postgres and MySQL, and modern CI/CD pipelines.",
+      "jd_evidence": "Python; Java; Relational databases; Postgres; MySQL; Distributed systems; Git; CI/CD"
+    }
+  ],
+  "questions": [
+    {
+      "dimension": "API Design and Architecture",
+      "text": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?",
+      "grounded_project": "NABHA Telemedicine Platform"
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "text": "How did you ensure high reliability and stability for the CivicFix platform in production?",
+      "grounded_project": "CivicFix"
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "text": "For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?",
+      "grounded_project": "Formula One Race Strategy Optimizer"
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "text": "For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?",
+      "grounded_project": "NABHA Telemedicine Platform"
+    }
+  ]
+}

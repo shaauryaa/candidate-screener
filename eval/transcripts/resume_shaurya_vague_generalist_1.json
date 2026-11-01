@@ -1,0 +1,448 @@
+{
+  "resume": "resume_shaurya",
+  "persona": "vague_generalist",
+  "group": "weak",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates demonstrate the ability to design and build scalable REST APIs that handle growing loads efficiently.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates take full ownership of services in production, ensuring high performance, stability, and reliability.",
+      "jd_evidence": "Own services in production end to end; Improve system performance and reliability"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates effectively partner with product and frontend teams to deliver cohesive features and solutions.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    },
+    {
+      "name": "Core Backend and Tooling Proficiency",
+      "description": "Good candidates possess strong working knowledge of Python, Java, relational databases like Postgres and MySQL, and modern CI/CD pipelines.",
+      "jd_evidence": "Python; Java; Relational databases; Postgres; MySQL; Distributed systems; Git; CI/CD"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We leveraged cutting-edge paradigms and optimized our core architecture to ensure seamless scalability and robust performance across the entire digital ecosystem.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1347.6712999981828,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"optimized our core architecture\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We focused on streamlining the underlying workflows and implementing innovative methodologies to drive high-performance synchronization throughout the system infrastructure.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1452.701900008833,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"implementing innovative methodologies\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We consistently achieved significantly higher efficiency and drastically improved overall system velocity through our advanced architectural optimizations.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you ensure high reliability and stability for the CivicFix platform in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We prioritized robust architectural paradigms and leveraged advanced synchronization strategies to maintain continuous uptime and exceptional system resilience across our entire deployment framework.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1843.2251000049291,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"advanced synchronization strategies\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We focused on streamlining the underlying workflows and implementing innovative methodologies to drive high-performance synchronization throughout the system infrastructure.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 5079.688500001794,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"innovative methodologies\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We consistently achieved significantly higher efficiency and drastically improved overall system velocity through our advanced architectural optimizations.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally integrated the scikit-learn models directly into the Streamlit interface by writing the custom Python backend logic, working closely alongside a cross-functional group of four members over the course of a single month.",
+      "instruction": "This reply must contain: concrete_example, personal_ownership, clear_scope. It must leave out: measurable_outcome.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "integrated the scikit-learn models directly into the Streamlit interface",
+        "NO_PERSONAL_OWNERSHIP": "I personally integrated",
+        "UNCLEAR_SCOPE": "cross-functional group of four members over the course of a single month"
+      },
+      "new_quotes": [
+        "integrated the scikit-learn models directly into the Streamlit interface",
+        "I personally integrated",
+        "cross-functional group of four members over the course of a single month"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1144.7876000020187,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"custom Python backend logic\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We leveraged advanced algorithms and optimized our core data pipelines to ensure seamless performance and superior execution velocity across the entire application ecosystem.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: measurable_outcome.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "integrated the scikit-learn models directly into the Streamlit interface",
+        "NO_PERSONAL_OWNERSHIP": "I personally integrated",
+        "UNCLEAR_SCOPE": "cross-functional group of four members over the course of a single month"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1669.1915999981575,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We leveraged robust technology stacks and utilized comprehensive backend frameworks to drive intelligent processing and ensure seamless data integration across the entire application ecosystem.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1448.7743000063347,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"comprehensive backend frameworks\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We focused on streamlining the underlying workflows and implementing innovative methodologies to drive high-performance synchronization throughout the system infrastructure.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 3438.55629999598,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"streamlining the underlying workflows\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We consistently achieved significantly higher efficiency and drastically improved overall system velocity through our advanced architectural optimizations.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?",
+      "answer": "We leveraged cutting-edge paradigms and optimized our core architecture to ensure seamless scalability and robust performance across the entire digital ecosystem. We focused on streamlining the underlying workflows and implementing innovative methodologies to drive high-performance synchronization throughout the system infrastructure. We consistently achieved significantly higher efficiency and drastically improved overall system velocity through our advanced architectural optimizations.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "How did you ensure high reliability and stability for the CivicFix platform in production?",
+      "answer": "We prioritized robust architectural paradigms and leveraged advanced synchronization strategies to maintain continuous uptime and exceptional system resilience across our entire deployment framework. We focused on streamlining the underlying workflows and implementing innovative methodologies to drive high-performance synchronization throughout the system infrastructure. We consistently achieved significantly higher efficiency and drastically improved overall system velocity through our advanced architectural optimizations.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?",
+      "answer": "I personally integrated the scikit-learn models directly into the Streamlit interface by writing the custom Python backend logic, working closely alongside a cross-functional group of four members over the course of a single month. We leveraged advanced algorithms and optimized our core data pipelines to ensure seamless performance and superior execution velocity across the entire application ecosystem.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "question": "For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?",
+      "answer": "We leveraged robust technology stacks and utilized comprehensive backend frameworks to drive intelligent processing and ensure seamless data integration across the entire application ecosystem. We focused on streamlining the underlying workflows and implementing innovative methodologies to drive high-performance synchronization throughout the system infrastructure. We consistently achieved significantly higher efficiency and drastically improved overall system velocity through our advanced architectural optimizations.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 1,
+      "quote": "We leveraged cutting-edge paradigms and optimized our core architecture to ensure seamless scalability and robust performance across the entire digital ecosystem.",
+      "reasoning": "The candidate provides a very weak answer that relies entirely on buzzwords and vague marketing-style statements without explaining any actual API design patterns, caching strategies, load balancing, or architectural decisions used to handle growing loads.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "score": 1,
+      "quote": "We prioritized robust architectural paradigms and leveraged advanced synchronization strategies to maintain continuous uptime and exceptional system resilience across our entire deployment framework.",
+      "reasoning": "The candidate's answer is extremely vague and full of buzzwords without providing any concrete examples of how they ensured high reliability and stability in production. The quoted sentence demonstrates a complete lack of specific technical details regarding monitoring, incident response, automated testing, or deployment strategies.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 2,
+      "quote": "I personally integrated the scikit-learn models directly into the Streamlit interface by writing the custom Python backend logic, working closely alongside a cross-functional group of four members over the course of a single month.",
+      "reasoning": "The candidate mentions working alongside a cross-functional group, which touches upon collaboration, but the quote fails to describe any specific partnership with product teams to define features, focusing instead on technical integration and backend logic.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "score": 1,
+      "quote": "We leveraged robust technology stacks and utilized comprehensive backend frameworks to drive intelligent processing and ensure seamless data integration across the entire application ecosystem.",
+      "reasoning": "The candidate failed to mention any specific Python tools used to build the backend for the NABHA Telemedicine Platform, instead relying entirely on vague buzzwords and high-level generalizations as seen in the quote.",
+      "quote_verified": true
+    }
+  ]
+}

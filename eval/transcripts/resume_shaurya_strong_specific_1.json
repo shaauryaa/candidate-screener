@@ -1,0 +1,384 @@
+{
+  "resume": "resume_shaurya",
+  "persona": "strong_specific",
+  "group": "strong",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates demonstrate the ability to design and build scalable REST APIs that handle growing loads efficiently.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates take full ownership of services in production, ensuring high performance, stability, and reliability.",
+      "jd_evidence": "Own services in production end to end; Improve system performance and reliability"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates effectively partner with product and frontend teams to deliver cohesive features and solutions.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    },
+    {
+      "name": "Core Backend and Tooling Proficiency",
+      "description": "Good candidates possess strong working knowledge of Python, Java, relational databases like Postgres and MySQL, and modern CI/CD pipelines.",
+      "jd_evidence": "Python; Java; Relational databases; Postgres; MySQL; Distributed systems; Git; CI/CD"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "The team set up a routing framework with caching middleware and optimized database queries to handle incoming traffic smoothly.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "caching middleware and optimized database queries"
+      },
+      "new_quotes": [
+        "caching middleware and optimized database queries"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1514.5323000033386,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"caching middleware\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The system achieved a 1.2 second response time improvement under load.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "gaps": [
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "caching middleware and optimized database queries",
+        "NO_MEASURABLE_OUTCOME": "1.2 second response time improvement"
+      },
+      "new_quotes": [
+        "1.2 second response time improvement"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 970.9399999992456,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"1.2 second response time improvement\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "I wrote the query routing logic and indexed the database tables myself to cut down the latency.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you ensure high reliability and stability for the CivicFix platform in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "The team maintained high reliability for the CivicFix platform, achieving a 99.9 percent uptime across 100 plus registered users and 50 plus logged issues.",
+      "instruction": "This reply must contain: measurable_outcome, clear_scope. It must leave out: concrete_example, personal_ownership.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_MEASURABLE_OUTCOME": "99.9 percent uptime"
+      },
+      "new_quotes": [
+        "99.9 percent uptime"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1386.18800000404,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Can you walk me through one specific example - what exactly did you do, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The team integrated a 4-step GPS-enabled wizard that captured user location coordinates, routed the uploaded photo evidence through an AI-driven severity analysis module, and automatically generated formal complaint letters.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: personal_ownership.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": false,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_PERSONAL_OWNERSHIP"
+      ],
+      "verdict": "NO_PERSONAL_OWNERSHIP",
+      "gaps": [
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "integrated a 4-step GPS-enabled wizard that captured user location coordinates, routed the uploaded photo evidence through an AI-driven severity analysis module, and automatically generated formal complaint letters",
+        "NO_MEASURABLE_OUTCOME": "99.9 percent uptime"
+      },
+      "new_quotes": [
+        "integrated a 4-step GPS-enabled wizard that captured user location coordinates, routed the uploaded photo evidence through an AI-driven severity analysis module, and automatically generated formal complaint letters"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1873.6165999871446,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"4-step GPS-enabled wizard\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally developed the component logic for the 4-step GPS-enabled wizard, writing the geolocation capture function and integrating it directly with the photo upload state.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I worked closely with our cross-functional team of 4 over a 2-month timeframe to build out the Streamlit app. I personally wrote the dynamic programming script for the pit-stop optimization and integrated the gradient boosting model for lap time forecasting.",
+      "instruction": "This reply must contain: concrete_example, personal_ownership, clear_scope. It must leave out: measurable_outcome.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "wrote the dynamic programming script for the pit-stop optimization",
+        "NO_PERSONAL_OWNERSHIP": "I personally wrote the dynamic programming script for the pit-stop optimization and integrated the gradient boosting model for lap time forecasting.",
+        "UNCLEAR_SCOPE": "cross-functional team of 4 over a 2-month timeframe"
+      },
+      "new_quotes": [
+        "wrote the dynamic programming script for the pit-stop optimization",
+        "I personally wrote the dynamic programming script for the pit-stop optimization and integrated the gradient boosting model for lap time forecasting.",
+        "cross-functional team of 4 over a 2-month timeframe"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1488.638599999831,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Do you have a number for that - latency, throughput, users, time saved, error rate?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "The interactive Streamlit web app reduced simulated race time by 30 plus seconds.",
+      "instruction": "This reply must contain: measurable_outcome. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "wrote the dynamic programming script for the pit-stop optimization",
+        "NO_MEASURABLE_OUTCOME": "reduced simulated race time by 30 plus seconds",
+        "NO_PERSONAL_OWNERSHIP": "I personally wrote the dynamic programming script for the pit-stop optimization and integrated the gradient boosting model for lap time forecasting.",
+        "UNCLEAR_SCOPE": "cross-functional team of 4 over a 2-month timeframe"
+      },
+      "new_quotes": [
+        "reduced simulated race time by 30 plus seconds"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1454.0679999918211,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I personally used Python and Scikit-learn to build the backend of the NABHA Telemedicine Platform over a 4-month period in a team of 4 engineers, successfully validating the symptom-analysis chatbot with over 100 users across rural environments.",
+      "instruction": "This reply must contain: concrete_example, measurable_outcome, personal_ownership, clear_scope. It must leave out: nothing.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": true,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "SUFFICIENT"
+      ],
+      "verdict": "SUFFICIENT",
+      "gaps": [],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "build the backend of the NABHA Telemedicine Platform",
+        "NO_MEASURABLE_OUTCOME": "over 100 users",
+        "NO_PERSONAL_OWNERSHIP": "I personally used Python and Scikit-learn",
+        "UNCLEAR_SCOPE": "over a 4-month period in a team of 4 engineers"
+      },
+      "new_quotes": [
+        "build the backend of the NABHA Telemedicine Platform",
+        "over 100 users",
+        "I personally used Python and Scikit-learn",
+        "over a 4-month period in a team of 4 engineers"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1348.8193999946816,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?",
+      "answer": "The team set up a routing framework with caching middleware and optimized database queries to handle incoming traffic smoothly. The system achieved a 1.2 second response time improvement under load. I wrote the query routing logic and indexed the database tables myself to cut down the latency.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "How did you ensure high reliability and stability for the CivicFix platform in production?",
+      "answer": "The team maintained high reliability for the CivicFix platform, achieving a 99.9 percent uptime across 100 plus registered users and 50 plus logged issues. The team integrated a 4-step GPS-enabled wizard that captured user location coordinates, routed the uploaded photo evidence through an AI-driven severity analysis module, and automatically generated formal complaint letters. I personally developed the component logic for the 4-step GPS-enabled wizard, writing the geolocation capture function and integrating it directly with the photo upload state.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?",
+      "answer": "I worked closely with our cross-functional team of 4 over a 2-month timeframe to build out the Streamlit app. I personally wrote the dynamic programming script for the pit-stop optimization and integrated the gradient boosting model for lap time forecasting. The interactive Streamlit web app reduced simulated race time by 30 plus seconds.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "question": "For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?",
+      "answer": "I personally used Python and Scikit-learn to build the backend of the NABHA Telemedicine Platform over a 4-month period in a team of 4 engineers, successfully validating the symptom-analysis chatbot with over 100 users across rural environments.",
+      "followups_asked": 0
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 4,
+      "quote": "I wrote the query routing logic and indexed the database tables myself to cut down the latency.",
+      "reasoning": "The candidate demonstrates strong API design and architecture skills by actively discussing scalability measures such as routing frameworks, caching, database indexing, and query optimization, backed by a measurable improvement in response time.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "score": 3,
+      "quote": "I personally developed the component logic for the 4-step GPS-enabled wizard, writing the geolocation capture function and integrating it directly with the photo upload state.",
+      "reasoning": "The candidate demonstrates personal ownership over a specific feature component of the platform, showing they can build functional parts of a system. However, the answer focuses mostly on feature development rather than broader production reliability practices such as monitoring, incident response, deployment strategies, or failure mitigation for the overall platform, resulting in a moderate score.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 3,
+      "quote": "I worked closely with our cross-functional team of 4 over a 2-month timeframe to build out the Streamlit app.",
+      "reasoning": "The candidate mentions working closely with a cross-functional team of 4 to build the app, which demonstrates some level of collaboration. However, the answer lacks specific details about how they partnered with product and frontend teams to define features, focusing instead mostly on their individual technical contributions.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "score": 3,
+      "quote": "I personally used Python and Scikit-learn to build the backend of the NABHA Telemedicine Platform",
+      "reasoning": "The candidate mentions using Python for the backend, which aligns with the core backend proficiency requirement. However, they only mention Scikit-learn as a tool rather than standard backend frameworks, relational databases, or CI/CD pipelines mentioned in the rubric.",
+      "quote_verified": true
+    }
+  ]
+}

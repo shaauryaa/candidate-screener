@@ -1,0 +1,446 @@
+{
+  "resume": "resume_shaurya",
+  "persona": "nervous_minimal",
+  "group": "weak",
+  "run": 1,
+  "dimensions": [
+    {
+      "name": "API Design and Architecture",
+      "description": "Good candidates demonstrate the ability to design and build scalable REST APIs that handle growing loads efficiently.",
+      "jd_evidence": "Design and build scalable REST APIs"
+    },
+    {
+      "name": "Production Ownership and Reliability",
+      "description": "Good candidates take full ownership of services in production, ensuring high performance, stability, and reliability.",
+      "jd_evidence": "Own services in production end to end; Improve system performance and reliability"
+    },
+    {
+      "name": "Cross-Functional Collaboration",
+      "description": "Good candidates effectively partner with product and frontend teams to deliver cohesive features and solutions.",
+      "jd_evidence": "Collaborate with product and frontend teams"
+    },
+    {
+      "name": "Core Backend and Tooling Proficiency",
+      "description": "Good candidates possess strong working knowledge of Python, Java, relational databases like Postgres and MySQL, and modern CI/CD pipelines.",
+      "jd_evidence": "Python; Java; Relational databases; Postgres; MySQL; Distributed systems; Git; CI/CD"
+    }
+  ],
+  "lines": [
+    {
+      "speaker": "sarah",
+      "text": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I designed the APIs by focusing on the backend structure to make sure we handled the scaling smoothly.",
+      "instruction": "This reply must contain: personal_ownership. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 2132.3879999981727,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"backend structure\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We just worked on improving the backend processes together as a team to handle things better.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1450.1023000048008,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"improving the backend processes\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We worked on making the system faster overall for everyone.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. How did you ensure high reliability and stability for the CivicFix platform in production?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "I set up the server routing by configuring the endpoint paths in a cross-functional team of 4 people.",
+      "instruction": "This reply must contain: concrete_example, personal_ownership, clear_scope. It must leave out: measurable_outcome.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "set up the server routing by configuring the endpoint paths",
+        "NO_PERSONAL_OWNERSHIP": "I set up",
+        "UNCLEAR_SCOPE": "cross-functional team of 4 people"
+      },
+      "new_quotes": [
+        "set up the server routing by configuring the endpoint paths",
+        "I set up",
+        "cross-functional team of 4 people"
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1254.0554000006523,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"configuring the endpoint paths\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We just focused on keeping the system stable for everyone.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: measurable_outcome.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": true,
+        "clear_scope": true
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "set up the server routing by configuring the endpoint paths",
+        "NO_PERSONAL_OWNERSHIP": "I set up",
+        "UNCLEAR_SCOPE": "cross-functional team of 4 people"
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1609.210800001165,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We just worked together to plan things out for the application.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1354.6086999995168,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"plan things out\". What exactly did you do there, step by step?",
+      "followup_gap": "NO_CONCRETE_EXAMPLE",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We just talked about the features and decided what to include in the app together.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_CONCRETE_EXAMPLE",
+      "gaps": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {},
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1898.047199996654,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Do you have a number for that - latency, throughput, users, time saved, error rate?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We just worked on general performance improvements without tracking specific numbers.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: concrete_example, measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": false,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_CONCRETE_EXAMPLE",
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "Thank you. Moving on. For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?"
+    },
+    {
+      "speaker": "candidate",
+      "text": "We used scikit-learn for the symptom analysis chatbot.",
+      "instruction": "This reply must contain: concrete_example. It must leave out: measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "We used scikit-learn for the symptom analysis chatbot."
+      },
+      "new_quotes": [
+        "We used scikit-learn for the symptom analysis chatbot."
+      ],
+      "bad_quotes": [],
+      "judge_ms": 1162.4290999898221,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"scikit-learn for the symptom analysis chatbot\". Do you have a number for that - how much, how many, or how fast?",
+      "followup_gap": "NO_MEASURABLE_OUTCOME",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We just used the tools for the chatbot features together.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": "NO_MEASURABLE_OUTCOME",
+      "gaps": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "judge_quotes": {
+        "NO_CONCRETE_EXAMPLE": "We used scikit-learn for the symptom analysis chatbot."
+      },
+      "new_quotes": [],
+      "bad_quotes": [],
+      "judge_ms": 1038.4562999970512,
+      "key_breaks": []
+    },
+    {
+      "speaker": "sarah",
+      "text": "You said \"chatbot features\". Which part of that was your own work, not the team as a whole?",
+      "followup_gap": "NO_PERSONAL_OWNERSHIP",
+      "gap_was_missing": true
+    },
+    {
+      "speaker": "candidate",
+      "text": "We just worked on the chatbot features together as a team.",
+      "instruction": "This reply must contain: nothing new, stay vague. It must leave out: measurable_outcome, personal_ownership, clear_scope.",
+      "key": {
+        "concrete_example": true,
+        "measurable_outcome": false,
+        "personal_ownership": false,
+        "clear_scope": false
+      },
+      "expected": [
+        "NO_MEASURABLE_OUTCOME",
+        "NO_PERSONAL_OWNERSHIP",
+        "UNCLEAR_SCOPE"
+      ],
+      "verdict": null,
+      "gaps": null,
+      "judge_quotes": null,
+      "new_quotes": null,
+      "bad_quotes": null,
+      "judge_ms": null,
+      "key_breaks": []
+    }
+  ],
+  "turns": [
+    {
+      "dimension": "API Design and Architecture",
+      "question": "How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently?",
+      "answer": "I designed the APIs by focusing on the backend structure to make sure we handled the scaling smoothly. We just worked on improving the backend processes together as a team to handle things better. We worked on making the system faster overall for everyone.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "question": "How did you ensure high reliability and stability for the CivicFix platform in production?",
+      "answer": "I set up the server routing by configuring the endpoint paths in a cross-functional team of 4 people. We just focused on keeping the system stable for everyone.",
+      "followups_asked": 1
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "question": "For your Formula One Race Strategy Optimizer, how did you collaborate with product teams to define the Streamlit app's features?",
+      "answer": "We just worked together to plan things out for the application. We just talked about the features and decided what to include in the app together. We just worked on general performance improvements without tracking specific numbers.",
+      "followups_asked": 2
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "question": "For the NABHA Telemedicine Platform, what Python tools did you use to build the backend?",
+      "answer": "We used scikit-learn for the symptom analysis chatbot. We just used the tools for the chatbot features together. We just worked on the chatbot features together as a team.",
+      "followups_asked": 2
+    }
+  ],
+  "scores": [
+    {
+      "dimension": "API Design and Architecture",
+      "score": 1,
+      "quote": "We just worked on improving the backend processes together as a team to handle things better.",
+      "reasoning": "The candidate provides a very vague and superficial answer without mentioning any specific architectural patterns, scalability techniques, or API design principles required to handle growing loads efficiently. The quoted statement lacks technical depth, offering only a generic teamwork platitude rather than an explanation of REST API design.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Production Ownership and Reliability",
+      "score": 1,
+      "quote": "I set up the server routing by configuring the endpoint paths in a cross-functional team of 4 people. We just focused on keeping the system stable for everyone.",
+      "reasoning": "The candidate provides a very vague and superficial answer regarding production reliability. Instead of detailing specific monitoring, incident response, deployment strategies, or architectural patterns to ensure high availability, they simply state they configured endpoint paths and focused on keeping the system stable, as highlighted in the quote. This lacks the depth and technical ownership expected for a strong score in production reliability.",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Cross-Functional Collaboration",
+      "score": 1,
+      "quote": "We just worked together to plan things out for the application.",
+      "reasoning": "The candidate provides a very vague and superficial description of their collaboration with product teams, lacking specific details, structured processes, or measurable outcomes as demonstrated by the quote 'We just worked together to plan things out for the application.'",
+      "quote_verified": true
+    },
+    {
+      "dimension": "Core Backend and Tooling Proficiency",
+      "score": 1,
+      "quote": "We used scikit-learn for the symptom analysis chatbot.",
+      "reasoning": "The candidate mentions scikit-learn, which is primarily a machine learning library rather than a core backend framework or tool (such as Django, FastAPI, or SQLAlchemy) typically expected for building a robust telemedicine platform backend. Furthermore, they provide very limited detail on actual backend and database tooling, warranting a weak score.",
+      "quote_verified": true
+    }
+  ]
+}
