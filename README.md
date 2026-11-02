@@ -5,6 +5,7 @@
 - **Code:** the Python files in this folder; see [Project layout](#project-layout)
 - **Dataset:** [dataset/README.md](dataset/README.md) maps the data to validation and test splits
 - **Paper:** [paper/SARAH_IEEE.pdf](paper/SARAH_IEEE.pdf), with LaTeX source in [paper/SARAH_IEEE.tex](paper/SARAH_IEEE.tex)
+- **Base papers:** [Judging LLM-as-a-Judge](paper/base_papers/2306.05685v4_MT-Bench_Chatbot_Arena.pdf) and [Freeze-Omni](paper/base_papers/2411.00774v5_Freeze-Omni.pdf)
 - **Slides:** [slides/SARAH_Phase2.pptx](slides/SARAH_Phase2.pptx)
 
 ## Overview
