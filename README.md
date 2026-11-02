@@ -1,5 +1,14 @@
 # AI Candidate Screening Agent
 
+## Submission contents
+
+- **Code:** the Python files in this folder; see [Project layout](#project-layout)
+- **Dataset:** [dataset/README.md](dataset/README.md) maps the data to validation and test splits
+- **Paper:** [paper/SARAH_IEEE.pdf](paper/SARAH_IEEE.pdf), with LaTeX source in [paper/SARAH_IEEE.tex](paper/SARAH_IEEE.tex)
+- **Slides:** [slides/SARAH_Phase2.pptx](slides/SARAH_Phase2.pptx)
+
+## Overview
+
 Interviews a candidate - typed in the terminal or spoken over a voice call -
 grounding every question in both the job description and the candidate's
 actual resume, probes vague answers with targeted follow-ups, and produces a
