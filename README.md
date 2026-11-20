@@ -7,6 +7,7 @@
 - **Paper:** [paper/SARAH_IEEE.pdf](paper/SARAH_IEEE.pdf), with LaTeX source in [paper/SARAH_IEEE.tex](paper/SARAH_IEEE.tex)
 - **Base papers:** [Judging LLM-as-a-Judge](paper/base_papers/2306.05685v4_MT-Bench_Chatbot_Arena.pdf) and [Freeze-Omni](paper/base_papers/2411.00774v5_Freeze-Omni.pdf)
 - **Slides:** [slides/SARAH_Phase2.pptx](slides/SARAH_Phase2.pptx)
+- **Poster:** [poster/SARAH_poster.pdf](poster/SARAH_poster.pdf), presented at the Global AI Summit 2026 (IEEE UP Section, Bennett University); [certificate of presentation](poster/presentation_certificate.pdf)
 
 ## Overview
 
