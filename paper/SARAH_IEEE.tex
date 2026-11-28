@@ -17,6 +17,9 @@
 \pgfplotsset{compat=1.17}
 \usepackage{url}
 
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
 \begin{document}
 
 \title{SARAH: Evidence-Verified LLM Judging in a Bounded Voice Agent for Candidate Screening}
@@ -32,7 +35,7 @@ shauryanigam2006@gmail.com}
 \maketitle
 
 \begin{abstract}
-Structured screening interviews could be made available for all applicants with the help of LLM-based voice agents. There are two issues that prevent them from being used: LLM judges can be biased or quote evidence that was not actually spoken, and voice pipelines need to be fast enough to sound natural. We introduce SARAH, a voice screening agent implemented as a bounded finite-state controller. The LLM only classifies answers, and all probing decisions and all scores are based on a verbatim quote that is verified by code with an exact substring match. We assess SARAH using the LLM-as-a-Judge approach, using held-out simulated interviews with a planted answer key, human raters, and consistency, fairness and verbosity probes. Following Freeze-Omni, we break voice latency down by pipeline stage. The judge found a real missing element in 97.3\% of replies and 94.6\% of follow-ups addressed a real missing element. All 56 scores were supported by verified quotes and no bluffing candidate scored more than 3. Scores agreed with human judges within one point on 89.3\% of turns (quadratic-weighted $\kappa = 0.731$, Spearman $\rho = 0.79$), which is higher than the 85\% judge agreement reported in LLM-as-a-Judge and significantly higher than the correlation of 0.514 reported by G-Eval. A verbosity attack, which succeeded 8.7\% of the time with GPT-4, did not trigger a SARAH score. After each turn, SARAH speaks in a median time of 1.6\,s, which is within 0.4\,s of the real-world estimate by Freeze-Omni, using only cloud APIs; TTS first audio takes 127\,ms.
+Structured screening interviews could be made available for all applicants with the help of LLM-based voice agents. There are two issues that prevent them from being used: LLM judges can be biased or quote evidence that was not actually spoken, and voice pipelines need to be fast enough to sound natural. The authors introduce SARAH, a voice screening agent implemented as a bounded finite-state controller. The LLM only classifies answers, and all probing decisions and all scores are based on a verbatim quote that is verified by code with an exact substring match. The authors assess SARAH using the LLM-as-a-Judge approach, using held-out simulated interviews with a planted answer key, human raters, and consistency, fairness and verbosity probes. Following Freeze-Omni, the authors break voice latency down by pipeline stage. The judge found a real missing element in 97.3\% of replies and 94.6\% of follow-ups addressed a real missing element. All 56 scores were supported by verified quotes and no bluffing candidate scored more than 3. Scores agreed with human judges within one point on 89.3\% of turns (quadratic-weighted $\kappa = 0.731$, Spearman $\rho = 0.79$), which is higher than the 85\% judge agreement reported in LLM-as-a-Judge and significantly higher than the correlation of 0.514 reported by G-Eval. A verbosity attack, which succeeded 8.7\% of the time with GPT-4, did not trigger a SARAH score. After each turn, SARAH speaks in a median time of 1.6\,s, which is within 0.4\,s of the real-world estimate by Freeze-Omni, using only cloud APIs; TTS first audio takes 127\,ms.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -44,7 +47,28 @@ spoken dialogue systems, LLM-as-a-judge, structured interviews, evidence groundi
 
 One of the most reliable methods to evaluate applicants is through structured interviews, which are interviews conducted using a set of questions that are all related to the job~\cite{levashina2014}. They are also expensive and the initial screening round is frequently not conducted or conducted informally. An LLM voice agent could conduct a structured first round for each applicant. Such an agent must be able to interpret each score and be fair to the candidates, as hiring is a high-stakes situation~\cite{raghavan2020}. It also needs to be fast enough to be considered a conversation. These needs are met by two research lines, which are also the foundation for this work. The first is low latency spoken dialogue. Speech recognition, an LLM, and speech synthesis are cascaded in sequence, with each stage introducing a delay. Freeze-Omni~\cite{freezeomni} is a frozen text LLM with speech input and output, with a median latency of 753\,ms from LLM to the first speech chunk (around 1.2\,s in real use) and reports its latency stage by stage. By combining recognition, reasoning and synthesis into a single network, Moshi~\cite{moshi} and LLaMA-Omni~\cite{llamaomni} reduce response latency to approximately 200\,ms.
 
-The second line is LLM-as-a-Judge. Zheng et al.~\cite{zheng2023} showed that a GPT-4 judge agrees with human experts on 85\% of non-tied votes, more than the 81\% that humans reach with each other, and identified position, verbosity and self-enhancement biases. G-Eval~\cite{geval} achieved a Spearman correlation of 0.514 with human ratings. Subsequent research demonstrated that judges are influenced by the order of answers~\cite{wang2023fair} and prefer their own answers~\cite{panickssery2024}. Rubric-aware LLM interviewers have been evaluated on simulated applicants~\cite{stuart2026} and audits have revealed name-related bias in LLM resume screening~\cite{armstrong2024}. These works leave three gaps that are important for a screening interview. \textbf{(G1)} End-to-end speech models speed up by sacrificing the ability to make a separate decision on what the user said, meaning that there is no follow-up question that can be traced back to the answer. The judges for \textbf{(G2)} LLM are validated offline on text, and no judge verifies that the evidence a judge quotes was actually spoken, so a hallucinated quote is as good as a real quote. No joint evaluation of an interview system on agreement with humans, bias and live voice latency has been evaluated. An interview agent is a spoken dialogue system and an LLM judge, making it the obvious choice to close all three gaps at once. We present SARAH, a voice screening agent in which every decision can be checked. SARAH is evaluated using the judge protocol of~\cite{zheng2023} and the latency protocol of~\cite{freezeomni} on the same live system (G3), and verifies every cited quote in code (G2) on every turn (G1). Our contributions are:
+The second line is LLM-as-a-Judge. Zheng et al.~\cite{zheng2023} showed that a GPT-4 judge agrees with human experts on 85\% of non-tied votes, more than the 81\% that humans reach with each other, and identified position, verbosity and self-enhancement biases. G-Eval~\cite{geval} achieved a Spearman correlation of 0.514 with human ratings. Subsequent research demonstrated that judges are influenced by the order of answers~\cite{wang2023fair} and prefer their own answers~\cite{panickssery2024}. Rubric-aware LLM interviewers have been evaluated on simulated applicants~\cite{stuart2026} and audits have revealed name-related bias in LLM resume screening~\cite{armstrong2024}. These works leave three gaps that are important for a screening interview (Fig.~\ref{fig:overview}). \textbf{(G1)} End-to-end speech models speed up by sacrificing the ability to make a separate decision on what the user said, meaning that there is no follow-up question that can be traced back to the answer. The judges for \textbf{(G2)} LLM are validated offline on text, and no judge verifies that the evidence a judge quotes was actually spoken, so a hallucinated quote is as good as a real quote. No joint evaluation of an interview system on agreement with humans, bias and live voice latency has been evaluated. An interview agent is a spoken dialogue system and an LLM judge, making it the obvious choice to close all three gaps at once. The authors present SARAH, a voice screening agent in which every decision can be checked. SARAH is evaluated using the judge protocol of~\cite{zheng2023} and the latency protocol of~\cite{freezeomni} on the same live system (G3), and verifies every cited quote in code (G2) on every turn (G1). The contributions of the proposed research are:
+\begin{figure}[t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[
+  font=\scriptsize,
+  line/.style={draw, rounded corners=2pt, align=left, inner sep=3pt, text width=3.9cm},
+  arr/.style={-{Stealth[length=1.6mm]}, thick},
+  gap/.style={font=\scriptsize\bfseries, text=red!70!black}
+]
+\node[line, fill=blue!8] (sd) {\textbf{Spoken dialogue}~\cite{freezeomni,moshi,llamaomni}\\ $+$ 200--753\,ms to first audio\\ $-$ no checkable content decision};
+\node[line, fill=blue!8, below=0.18cm of sd] (lj) {\textbf{LLM-as-a-Judge}~\cite{zheng2023,geval}\\ $+$ 85\% agreement with humans\\ $-$ cited evidence never verified};
+\node[line, fill=orange!10, below=0.18cm of lj] (ai) {\textbf{AI interviewing}~\cite{stuart2026,armstrong2024}\\ $+$ rubric-aware LLM interviewers\\ $-$ no joint test of agreement, bias, latency};
+\node[draw, rounded corners=3pt, very thick, fill=green!10, align=center, text width=3.0cm, inner sep=3pt, right=1.0cm of lj] (s) {\textbf{\small SARAH}\\[1pt] checkable decision every turn\\ every quote verified in code\\ tested on agreement, bias, latency};
+\draw[arr] (sd.east) -- node[gap, above, sloped] {G1} (s.north west);
+\draw[arr] (lj.east) -- node[gap, above] {G2} (s.west);
+\draw[arr] (ai.east) -- node[gap, below, sloped] {G3} (s.south west);
+\end{tikzpicture}}
+\caption{Positioning of SARAH: each research line leaves one gap open (G1--G3), and SARAH closes all three.}
+\label{fig:overview}
+\end{figure}
+\newpage
 \begin{enumerate}
 \item \textbf{A bounded probing policy.} A finite-state controller asks questions based on the job description and the candidate's resume. The LLM only categorizes answers, and follow-ups are pre-defined and limited to two per question.
 \item \textbf{An evidence-verified judge.} The LLM is required to cite the candidate word for word for each of four evidence elements. A hallucinated quote will never be evidence because code verifies each quote and calculates the gaps.
@@ -56,6 +80,10 @@ The rest of the paper is organised as follows. In Section~\ref{sec:related}, rel
 
 %% ---------------------------------------------------------------------
 \section{Related Works}\label{sec:related}
+
+%% >>> NEW INTRO PARAGRAPH (Related Works) -- humanized
+In this section, three works are reviewed that SARAH builds upon: low-latency spoken dialogue, which is the base paper for latency, Freeze-Omni~\cite{freezeomni}; LLM-as-a-Judge, which is the base paper for the judge, Zheng et al.~\cite{zheng2023}; and LLMs in interviewing and hiring. For each, the review summarizes its accomplishments and its open questions and Table~\ref{tab:compare} summarizes the gap that SARAH fills.
+%% <<< END NEW PARAGRAPH
 
 \textbf{Spoken dialogue latency.} To preserve the text-level intelligence of the model during speech, Wang et al.~\cite{freezeomni} introduced Freeze-Omni, which links speech input and output with a frozen text LLM (Qwen2-7B-Instruct). They report latency from interruption of LLM to the first chunk of speech audio (average 745\,ms, median 753\,ms, 90th percentile 1020\,ms). By combining recognition, reasoning and synthesis into a single network, D\'efossez et al.~\cite{moshi} (Moshi) and Fang et al.~\cite{llamaomni} (LLaMA-Omni) achieve a speed of approximately 200\,ms, sacrificing an explicit inspection of the user's statement. Skantze~\cite{skantze2021} summarizes turn taking and demonstrates the fundamental trade-off between endpointing, which is to avoid interrupting the user, and delay, which is to be added to each turn.
 
@@ -91,7 +119,7 @@ Armstrong et al.~\cite{armstrong2024} & 2024 & Name-based hiring bias audit & St
 %% ---------------------------------------------------------------------
 \section{Datasets}\label{sec:data}
 
-There is no public dataset of screening interviews with turn-level ground truth. We thus created an evaluation set based on one job description (mid-level backend software engineer) and three resumes. The system generates four dimensions of the rubric for each resume and four questions, with each question identifying a project from that resume.
+There is no public dataset of screening interviews with turn-level ground truth. The authors thus created an evaluation set based on one job description (mid-level backend software engineer) and three resumes. The system generates four dimensions of the rubric for each resume and four questions, with each question identifying a project from that resume.
 
 \subsection{Simulated Candidates with a Planted Answer Key}
 
@@ -107,6 +135,10 @@ To test for human agreement as in~\cite{zheng2023} 28 held-out turns (two per in
 
 %% ---------------------------------------------------------------------
 \section{Proposed Methodology}\label{sec:method}
+
+%% >>> NEW INTRO PARAGRAPH (Proposed Methodology) -- humanized
+This section explains how SARAH interviews and rates an interview. The design is based on one principle: the LLM can classify and score, but all decisions must be verifiable from the candidate's own words. It covers the architecture, the bounded probing policy, the evidence-verified judge, evidence-bound scoring, the latency budget of a turn and the evaluation metrics.
+%% <<< END NEW PARAGRAPH
 
 \subsection{System Architecture}
 
@@ -227,7 +259,7 @@ Following the call, each dimension is rated on the entire answer from 1 to 5. Th
 
 \subsection{Runtime Latency Budget}
 
-We divide each turn's latency by stage as done in~\cite{freezeomni}:
+The authors divide each turn's latency by stage as done in~\cite{freezeomni}:
 \begin{equation}
 T_{\mathit{total}} = T_{\mathit{EOU}} + T_{\mathit{judge}} + T_{\mathit{TTS}} + T_{\mathit{other}}
 \end{equation}
@@ -235,16 +267,46 @@ End of utterance wait ($T_{\mathit{EOU}}$) is a minimum of 1.0\,s of silence at 
 
 \subsection{Evaluation Metrics}\label{sec:metrics}
 
-There are two ways to measure the accuracy of the judge. It is \textbf{forgiving} if the verdict mentions any truly missing element, and it is \textbf{harsh} if it mentions the first missing element in the priority order. \textbf{Targeting} is the percentage of follow-ups that inquired about a genuine missing component. Proportions are presented as Wilson 95\% intervals. For agreement with humans~\cite{zheng2023} we report exact agreement, within-one agreement and quadratic-weighted Cohen's kappa~\cite{cohen1968}:
+There are two ways to measure the accuracy of the judge. It is \textbf{forgiving} if the verdict mentions any truly missing element, and it is \textbf{harsh} if it mentions the first missing element in the priority order. \textbf{Targeting} is the percentage of follow-ups that inquired about a genuine missing component. Proportions are presented as Wilson 95\% intervals. For agreement with humans~\cite{zheng2023} the authors report exact agreement, within-one agreement and quadratic-weighted Cohen's kappa~\cite{cohen1968}:
 \begin{equation}
 \kappa_w = 1 - \frac{\sum_{i,j} w_{ij} O_{ij}}{\sum_{i,j} w_{ij} E_{ij}}, \qquad w_{ij} = \frac{(i-j)^2}{(k-1)^2}
 \end{equation}
-The observed and chance-expected score matrices are used, where $k = 5$. After the bias tests in~\cite{zheng2023} we employ three probes. \textbf{Consistency:} each turn is scored three more times. \textbf{Counterfactual fairness:} we start a sentence with a statement that only includes excluded attributes (``As a woman from a tier-3 college\ldots'' or ``As a man from an IIT\ldots''). \textbf{Verbosity attack:} we add filler with no evidence. Like in~\cite{freezeomni} latency is reported in terms of average, median and 90th percentile.
+The observed and chance-expected score matrices are used, where $k = 5$. After the bias tests in~\cite{zheng2023} the authors employ three probes.
+
+\noindent\textbf{Consistency:} each turn is scored three more times.
+
+\noindent\textbf{Counterfactual fairness:} the authors start a sentence with a statement that only includes excluded attributes (``As a woman from a tier-3 college\ldots'' or ``As a man from an IIT\ldots'').
+
+\noindent\textbf{Verbosity attack:} the authors add filler with no evidence.
+
+\noindent Like in~\cite{freezeomni} latency is reported in terms of average, median and 90th percentile.
 
 %% ---------------------------------------------------------------------
 \section{Results and Observations}\label{sec:results}
 
 The following results are from the held-out set, using the frozen judge. 95\% Wilson intervals are provided by brackets.
+
+\begin{table*}[t]
+\caption{SARAH Compared with the Published Results of the Base Papers and Reference Systems}
+\label{tab:vsbase}
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.0}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.6cm} >{\raggedright\arraybackslash}p{4.1cm} >{\raggedright\arraybackslash}p{4.9cm} >{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Measure} & \textbf{SARAH (proposed)} & \textbf{Reference result [source]} & \textbf{Note} \\
+\midrule
+Agreement with human raters & \textbf{89.3\%} within one point ($\kappa_w$ 0.731) & 85\% GPT-4 vs human; 81\% human vs human~\cite{zheng2023} & Above both; 1--5 scores vs pairwise votes \\
+Rank correlation with humans & \textbf{$\rho$ = 0.79} (Rater 1), 0.75 (Rater 2) & $\rho$ = 0.514, G-Eval~\cite{geval} & 1.5$\times$ higher; interviews vs summaries \\
+Verbosity attack: judge fooled & \textbf{0\%} (0/16 scores raised) & 8.7\% GPT-4; 91.3\% GPT-3.5~\cite{zheng2023} & Filler adds no quotable evidence \\
+Judge self-consistency & \textbf{87.5\%} identical on rescoring & 65.0\% GPT-4, position swap~\cite{zheng2023} & Different probes; both test stability \\
+Cited evidence verified & \textbf{98.1\%} judge, \textbf{100\%} score quotes & Not checked~\cite{zheng2023,geval} & Failed quotes become gaps \\
+Latency, turn decision to first audio & \textbf{1594\,ms} median (cloud APIs, no GPU) & 753\,ms local GPU; $\approx$1.2\,s with network~\cite{freezeomni} & Within 0.4\,s of real-world estimate \\
+Speech synthesis, first audio & \textbf{127\,ms} median & 200--226\,ms end-to-end~\cite{moshi,llamaomni} & SARAH component only \\
+Inspectable decision per turn & \textbf{Yes} (verdict + verified quotes) & No~\cite{freezeomni,moshi,llamaomni} & Every follow-up traceable \\
+\bottomrule
+\end{tabularx}
+\end{table*}
 
 \subsection{Performance Evaluation of the Judge and Probing}
 
@@ -279,7 +341,7 @@ Mean score: strong / mixed / weak & 3.06 / 1.63 / 1.13 \\
 \begin{tikzpicture}
 \begin{axis}[
   ybar, bar width=13pt, bar shift=0pt,
-  width=\columnwidth, height=6.2cm,
+  width=\columnwidth, height=3.5cm,
   ymin=0, ymax=4.2, ytick={1,2,3,4},
   ylabel={Mean score (1--5)}, ylabel style={font=\footnotesize},
   symbolic x coords={ss,ra,ho,qa,vg,bl,nm},
@@ -305,7 +367,7 @@ Mean score: strong / mixed / weak & 3.06 / 1.63 / 1.13 \\
 
 \subsection{Performance Evaluation of Human Agreement and Bias}
 
-Following~\cite{zheng2023}, we compared SARAH with two human raters (Table~\ref{tab:agree}). SARAH was within one point of the raters on 89.3\% and 85.7\% of turns, and the quadratic-weighted kappa was 0.731 and 0.681 (substantial agreement) and the Spearman correlation was 0.79 and 0.75 ($p < 10^{-5}$). SARAH was more demanding: it demands a specific quote for each mark awarded, whereas a human might award credit for what a candidate implies.
+Following~\cite{zheng2023}, the authors compared SARAH with two human raters (Table~\ref{tab:agree}). SARAH was within one point of the raters on 89.3\% and 85.7\% of turns, and the quadratic-weighted kappa was 0.731 and 0.681 (substantial agreement) and the Spearman correlation was 0.79 and 0.75 ($p < 10^{-5}$). SARAH was more demanding: it demands a specific quote for each mark awarded, whereas a human might award credit for what a candidate implies.
 
 The results of both the bias probes from~\cite{zheng2023} were good. Filler did not increase a score and it decreased by 0.25 on average. This is the reverse of the verbosity bias that~\cite{zheng2023} found in weaker judges. The inclusion of a gender and college-tier sentence resulted in 81.2\% of scores remaining the same, with mean changes of less than 0.19 points at most. On 87.5\% of turns, identical scores were obtained on repeat scoring.
 
@@ -330,6 +392,29 @@ Verbosity attack: score increased & 0/16 (mean $-0.25$) \\
 \end{tabularx}
 \end{table}
 
+\begin{table}[t]
+\caption{Held-out Excerpt (\textit{strong\_specific} Persona), with the Judge's Verdict and the Evidence Verified so Far}
+\label{tab:excerpt}
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.0}
+\begin{tabularx}{\columnwidth}{@{}l >{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Speaker} & \textbf{Utterance and judge output} \\
+\midrule
+SARAH & How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently? \\
+Candidate & The team set up a routing framework with caching middleware and optimized database queries to handle incoming traffic smoothly. \\
+\textit{Judge} & \textit{Example verified: ``caching middleware and optimized database queries''. Verdict: no measurable outcome.} \\
+SARAH & You said ``caching middleware''. Do you have a number for that -- how much, how many, or how fast? \\
+Candidate & The system achieved a 1.2 second response time improvement under load. \\
+\textit{Judge} & \textit{Outcome verified: ``1.2 second response time improvement''. Verdict: no personal ownership.} \\
+SARAH & You said ``1.2 second response time improvement''. Which part of that was your own work, not the team as a whole? \\
+Candidate & I wrote the query routing logic and indexed the database tables myself to cut down the latency. \\
+\textit{Judge} & \textit{All elements proven. Moves on. Score 4/5, quoting the last reply.} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \subsection{Performance Evaluation of Voice Latency}
 
 Table~\ref{tab:latency} is presented in the same format as Freeze-Omni~\cite{freezeomni} and the median for each stage is shown in Fig.~\ref{fig:latency}. The speech components are fast: TTS takes a median of 127\,ms to get to the first audio, and speech recognition (441\,ms) is completely contained in the end-of-utterance wait. The median time from the end of the candidate's speech to SARAH's first audio is 3.0\,s. Most of it consists of two parts: the intentional 1.0\,s turn-end guard and the 1.45\,s judge call. The fair comparison is with Freeze-Omni, which measures from the LLM to the first speech chunk: SARAH's median from the turn decision to first audio is 1594\,ms, against 753\,ms on a local GPU and approximately 1.2\,s with network delay for Freeze-Omni. SARAH achieves this through hosted APIs and without a GPU, and uses that time to make another decision on the answer content, which is what makes each follow-up explainable. The high p90 is due to a single API stall of 25.9\,s, which is not observed otherwise ($n = 13$), and is mitigated by a timeout of 15\,s with a retry.
@@ -340,7 +425,7 @@ Table~\ref{tab:latency} is presented in the same format as Freeze-Omni~\cite{fre
 \begin{tikzpicture}
 \begin{axis}[
   xbar, bar width=9pt, bar shift=0pt,
-  width=\columnwidth, height=6.4cm,
+  width=0.84\columnwidth, height=3.6cm,
   xmin=0, xmax=3700,
   xlabel={Median latency (ms)}, xlabel style={font=\footnotesize},
   symbolic y coords={fo,tts,stt,eou,judge,total},
@@ -385,59 +470,16 @@ Freeze-Omni~\cite{freezeomni}: LLM to first speech chunk & 745 & 753 & 1020 \\
 
 Table~\ref{tab:vsbase} compares SARAH's results with published numbers of the base papers~\cite{zheng2023,freezeomni} and the closest reference systems. The tasks are not the same, and the note column indicates what each pair measures. SARAH meets or surpasses the reference value on all of the judge measures. Its agreement with humans (89.3\%) is above GPT-4's 85\% and the 81\% human--human level in~\cite{zheng2023}, and its rank correlation (0.79) is 1.5 times G-Eval's 0.514. It was able to withstand the verbosity attack entirely, while the attack was successful on GPT-4 8.7\% of the time and on GPT-3.5 91.3\%. It's also the only system that checks the evidence it quotes. Without a local GPU, SARAH's latency after the turn decision is within 0.4\,s of the real-world estimate by Freeze-Omni.
 
-\begin{table*}[t]
-\caption{SARAH Compared with the Published Results of the Base Papers and Reference Systems}
-\label{tab:vsbase}
-\centering
-\footnotesize
-\renewcommand{\arraystretch}{1.12}
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.6cm} >{\raggedright\arraybackslash}p{4.1cm} >{\raggedright\arraybackslash}p{4.9cm} >{\raggedright\arraybackslash}X@{}}
-\toprule
-\textbf{Measure} & \textbf{SARAH (ours)} & \textbf{Reference result [source]} & \textbf{Note} \\
-\midrule
-Agreement with human raters & \textbf{89.3\%} within one point ($\kappa_w$ 0.731) & 85\% GPT-4 vs human; 81\% human vs human~\cite{zheng2023} & Above both; 1--5 scores vs pairwise votes \\
-Rank correlation with humans & \textbf{$\rho$ = 0.79} (Rater 1), 0.75 (Rater 2) & $\rho$ = 0.514, G-Eval~\cite{geval} & 1.5$\times$ higher; interviews vs summaries \\
-Verbosity attack: judge fooled & \textbf{0\%} (0/16 scores raised) & 8.7\% GPT-4; 91.3\% GPT-3.5~\cite{zheng2023} & Filler adds no quotable evidence \\
-Judge self-consistency & \textbf{87.5\%} identical on rescoring & 65.0\% GPT-4, position swap~\cite{zheng2023} & Different probes; both test stability \\
-Cited evidence verified & \textbf{98.1\%} judge, \textbf{100\%} score quotes & Not checked~\cite{zheng2023,geval} & Failed quotes become gaps \\
-Latency, turn decision to first audio & \textbf{1594\,ms} median (cloud APIs, no GPU) & 753\,ms local GPU; $\approx$1.2\,s with network~\cite{freezeomni} & Within 0.4\,s of real-world estimate \\
-Speech synthesis, first audio & \textbf{127\,ms} median & 200--226\,ms end-to-end~\cite{moshi,llamaomni} & SARAH component only \\
-Inspectable decision per turn & \textbf{Yes} (verdict + verified quotes) & No~\cite{freezeomni,moshi,llamaomni} & Every follow-up traceable \\
-\bottomrule
-\end{tabularx}
-\end{table*}
 
 \subsection{Illustrative Interview Excerpt}
 
 One held-out exchange, unedited, with a \textit{strong specific} persona is displayed in Table~\ref{tab:excerpt}. Every response contributes to the evidence and every follow-up focuses on the most critical missing component. SARAH also quotes the candidate's own words, but never writes a sentence. After three replies, all four elements are proven and SARAH moves on. The final score of 4/5 cites the candidate's ownership statement word for word. The \textit{bluffer} is the opposite. In three responses on a Kafka pipeline, it provided only claims like ``achieving unprecedented levels of enterprise throughput''. In all the replies, the judge did not find any concrete example and the scorer awarded 1/5 based on the only factual sentence the candidate mentioned.
 
-\begin{table}[t]
-\caption{Held-out Excerpt (\textit{strong\_specific} Persona), with the Judge's Verdict and the Evidence Verified so Far}
-\label{tab:excerpt}
-\centering
-\footnotesize
-\renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\columnwidth}{@{}l >{\raggedright\arraybackslash}X@{}}
-\toprule
-\textbf{Speaker} & \textbf{Utterance and judge output} \\
-\midrule
-SARAH & How did you design the REST APIs for the NABHA Telemedicine Platform to handle growing user loads efficiently? \\
-Candidate & The team set up a routing framework with caching middleware and optimized database queries to handle incoming traffic smoothly. \\
-\textit{Judge} & \textit{Example verified: ``caching middleware and optimized database queries''. Verdict: no measurable outcome.} \\
-SARAH & You said ``caching middleware''. Do you have a number for that -- how much, how many, or how fast? \\
-Candidate & The system achieved a 1.2 second response time improvement under load. \\
-\textit{Judge} & \textit{Outcome verified: ``1.2 second response time improvement''. Verdict: no personal ownership.} \\
-SARAH & You said ``1.2 second response time improvement''. Which part of that was your own work, not the team as a whole? \\
-Candidate & I wrote the query routing logic and indexed the database tables myself to cut down the latency. \\
-\textit{Judge} & \textit{All elements proven. Moves on. Score 4/5, quoting the last reply.} \\
-\bottomrule
-\end{tabularx}
-\end{table}
 
 %% ---------------------------------------------------------------------
 \section{Conclusion}\label{sec:conclusion}
 
-SARAH demonstrates that a voice screening agent may be both conversational and completely checkable. Building on LLM-as-a-Judge~\cite{zheng2023}, its judge named a truly missing element in 97.3\% of held-out replies and aimed 94.6\% of follow-ups at real gaps. All scores were supported by a verified quote, no bluffer scored more than 3 and no filler raised a score. It achieved a correlation of 0.79 with human raters, compared to 0.514 for G-Eval~\cite{geval}, and one-point agreement on 89.3\% of turns, compared to 85\% for the GPT-4 judge~\cite{zheng2023}. We found that the speech components of SARAH are fast, with the first audio of the TTS component being 127\,ms, and that the response after the turn decision (1.6\,s) is within 0.4\,s of Freeze-Omni's real-world estimate~\cite{freezeomni}. The 3.0\,s median turn is largely due to a purposeful turn end guard and a single call from a cloud judge. Future work will involve testing SARAH with real candidates and independent raters, adding a streaming or local judge with a spoken filler to reduce latency to the level of end-to-end models~\cite{freezeomni,moshi}, using separate models for candidates and judge to avoid self-preference~\cite{panickssery2024} and allowing candidates to ask grounded questions about the role.
+SARAH demonstrates that a voice screening agent may be both conversational and completely checkable. Building on LLM-as-a-Judge~\cite{zheng2023}, its judge named a truly missing element in 97.3\% of held-out replies and aimed 94.6\% of follow-ups at real gaps. All scores were supported by a verified quote, no bluffer scored more than 3 and no filler raised a score. It achieved a correlation of 0.79 with human raters, compared to 0.514 for G-Eval~\cite{geval}, and one-point agreement on 89.3\% of turns, compared to 85\% for the GPT-4 judge~\cite{zheng2023}. The authors found that the speech components of SARAH are fast, with the first audio of the TTS component being 127\,ms, and that the response after the turn decision (1.6\,s) is within 0.4\,s of Freeze-Omni's real-world estimate~\cite{freezeomni}. The 3.0\,s median turn is largely due to a purposeful turn end guard and a single call from a cloud judge. Future work will involve testing SARAH with real candidates and independent raters, adding a streaming or local judge with a spoken filler to reduce latency to the level of end-to-end models~\cite{freezeomni,moshi}, using separate models for candidates and judge to avoid self-preference~\cite{panickssery2024} and allowing candidates to ask grounded questions about the role.
 
 
 \section*{Acknowledgment}
